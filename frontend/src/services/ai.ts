@@ -4,7 +4,8 @@
  * Note: API keys are strictly kept server-side and never exposed in client code.
  */
 
-import { apiFetch } from './api';
+import { apiFetch, ApiFetchError } from './api';
+import { generateFallbackAIBriefing } from './mockData';
 
 export interface SettlementTimelineItem {
   settlement_id: string;
@@ -45,9 +46,17 @@ export const aiService = {
     const endpoint = isCaseStudy
       ? `/case-studies/${id}/ai-briefing`
       : `/scenarios/${id}/ai-briefing`;
-    return apiFetch<AIBriefingResponse>(endpoint, {
-      method: 'POST',
-      body: payload ? JSON.stringify(payload) : JSON.stringify({}),
-    });
+    try {
+      return await apiFetch<AIBriefingResponse>(endpoint, {
+        method: 'POST',
+        body: payload ? JSON.stringify(payload) : JSON.stringify({}),
+      });
+    } catch (err: unknown) {
+      if ((err as ApiFetchError)?.isNetworkError) {
+        return generateFallbackAIBriefing(id, isCaseStudy);
+      }
+      throw err;
+    }
   },
 };
+

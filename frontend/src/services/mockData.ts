@@ -326,3 +326,110 @@ export function generateBenchmarkResults(
     arrival_time_first_settlement_minutes: 18,
   };
 }
+
+export function generateFallbackAIBriefing(
+  scenarioId: string,
+  isCaseStudy: boolean = false
+): {
+  scenario_id: string;
+  headline: string;
+  evacuation_urgency: string;
+  executive_summary: string;
+  settlement_timeline: {
+    settlement_id: string;
+    name: string;
+    district: string;
+    state: string;
+    arrival_time_minutes: number;
+    estimated_depth_m: number | null;
+    evacuation_priority: string;
+    recommended_action: string;
+  }[];
+  resource_staging_advisory: string[];
+  public_advisory_bulletin: string;
+  model_used: string;
+  is_fallback: boolean;
+  generated_at: string;
+} {
+  const caseStudy = BENCHMARK_CASE_STUDIES.find((cs) => cs.id === scenarioId);
+  const localScenarios = getLocalScenarios();
+  const scenario = localScenarios.find((s) => s.id === scenarioId);
+
+  const scenarioName =
+    caseStudy?.name || scenario?.name || (isCaseStudy ? 'Historical Benchmark' : 'Dam Breach Incident');
+
+  return {
+    scenario_id: scenarioId,
+    headline: `CRITICAL FLASH FLOOD EVACUATION: Wave arrives at Rini Village in T+18 min (Max Depth: 14.5m).`,
+    evacuation_urgency: 'IMMEDIATE',
+    executive_summary: `TACTICAL SITUATION REPORT: Breach analysis for ${scenarioName} indicates catastrophic discharge propagation downstream. Severe hydrodynamic wave front is projected to reach Rini Village by T+18m and Tapovan Barrage by T+42m, with peak inundation heights exceeding 14.5m. Immediate vertical evacuation of riverbank terraces, tunnel portals, and transport bridges is compulsory.`,
+    settlement_timeline: [
+      {
+        settlement_id: 'settlement-01',
+        name: 'Rini Village',
+        district: 'Chamoli',
+        state: 'Uttarakhand',
+        arrival_time_minutes: 18,
+        estimated_depth_m: 14.5,
+        evacuation_priority: 'IMMEDIATE',
+        recommended_action:
+          'Immediate vertical evacuation to safe high-ground zones at least 30m above riverbed datum. Abandon vehicular transit.',
+      },
+      {
+        settlement_id: 'settlement-02',
+        name: 'Tapovan Barrage & High Camp',
+        district: 'Chamoli',
+        state: 'Uttarakhand',
+        arrival_time_minutes: 42,
+        estimated_depth_m: 11.2,
+        evacuation_priority: 'IMMEDIATE',
+        recommended_action:
+          'Trigger acoustic rechirp sirens. Sound immediate evacuation across barrage floor and clear all tunnel workers above 2,120m datum.',
+      },
+      {
+        settlement_id: 'settlement-03',
+        name: 'Joshimath Sub-District',
+        district: 'Chamoli',
+        state: 'Uttarakhand',
+        arrival_time_minutes: 72,
+        estimated_depth_m: 7.8,
+        evacuation_priority: 'HIGH',
+        recommended_action:
+          'Enforce strict vehicular embargo along low-lying river roads. Direct riverside residents to designated district shelter points.',
+      },
+      {
+        settlement_id: 'settlement-04',
+        name: 'Helang Transit Point',
+        district: 'Chamoli',
+        state: 'Uttarakhand',
+        arrival_time_minutes: 95,
+        estimated_depth_m: 5.4,
+        evacuation_priority: 'STANDBY',
+        recommended_action:
+          'Halt all civilian traffic across NH-07 Bailey Bridge. Prepare emergency buses for elderly and vulnerable residents.',
+      },
+      {
+        settlement_id: 'settlement-05',
+        name: 'Pipalkoti Urban Basin',
+        district: 'Chamoli',
+        state: 'Uttarakhand',
+        arrival_time_minutes: 130,
+        estimated_depth_m: 3.8,
+        evacuation_priority: 'STANDBY',
+        recommended_action:
+          'Open reservoir spillway gates to maximize retention surge buffer. Stage local disaster response teams at high school grounds.',
+      },
+    ],
+    resource_staging_advisory: [
+      'Deploy NDRF Swift Water Rescue Units and motorized inflatable rescue boats (IRBs) to staging bases upstream of Rini.',
+      'Coordinate with District Police & ITBP to immediately close all low-water bridges and riverbank roadways.',
+      'Establish secondary medical triage and muster points above forecasted flood contour lines (minimum +35m elevation).',
+      'Alert State Disaster Management Authority (SDMA) for emergency helicopter air-lift assets on standby.',
+    ],
+    public_advisory_bulletin: `EMERGENCY DISASTER BROADCAST: Flash flood wave imminent along river valley following upstream breach at ${scenarioName}. Residents of Rini, Tapovan, and downstream lowlands must move to designated high ground immediately. Do NOT enter riverbanks or attempt bridge crossings. Tune to official emergency channels for continuous SITREP updates.`,
+    model_used: 'Qwen 2.5 72B / Expert Tactical Engine (Standalone Fallback)',
+    is_fallback: true,
+    generated_at: new Date().toISOString(),
+  };
+}
+
