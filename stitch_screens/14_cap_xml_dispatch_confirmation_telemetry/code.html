@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#cce5ff", "primary": "#003857", "outline": "#72787f", "surface-container": "#e3efff", "on-tertiary": "#ffffff", "surface-tint": "#326286", "tertiary": "#163653", "on-error-container": "#93000a", "on-error": "#ffffff", "tertiary-fixed-dim": "#abc9ec", "on-primary-fixed": "#001e31", "surface-container-lowest": "#ffffff", "secondary-container": "#cfe1fc", "background": "#f7f9ff", "on-secondary-fixed-variant": "#36485d", "error": "#ba1a1a", "on-primary-container": "#92c0e9", "surface-variant": "#d7e4f4", "tertiary-fixed": "#cfe4ff", "primary-fixed-dim": "#9dcbf4", "inverse-primary": "#9dcbf4", "outline-variant": "#c1c7cf", "on-tertiary-fixed-variant": "#2b4966", "on-secondary-fixed": "#091d30", "primary-container": "#1b4f72", "surface-container-low": "#edf4ff", "secondary-fixed": "#d1e4fe", "surface": "#f7f9ff", "surface-container-highest": "#d7e4f4", "on-tertiary-container": "#a0bee0", "secondary": "#4e6076", "inverse-surface": "#26313e", "secondary-fixed-dim": "#b6c8e2", "on-primary": "#ffffff", "tertiary-container": "#2f4d6b", "on-tertiary-fixed": "#001d34", "surface-bright": "#f7f9ff", "surface-container-high": "#dde9f9", "on-background": "#111d28", "on-primary-fixed-variant": "#154b6d", "inverse-on-surface": "#e8f2ff", "surface-dim": "#cfdbeb", "on-surface": "#111d28", "on-secondary": "#ffffff", "on-secondary-container": "#52647a", "on-surface-variant": "#41474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "32px", "nav-height": "48px", "space-md": "12px", "panel-width-md": "420px", "space-lg": "16px", "space-xl": "24px", "panel-width-sm": "320px", "space-2xs": "2px", "space-sm": "8px", "timeline-height": "72px", "space-xs": "4px", "panel-width-lg": "560px" }, "fontFamily": { "code-sm": [ "JetBrains Mono" ], "body-md": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-md": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "body-sm": [ "IBM Plex Sans" ], "headline-sm": [ "IBM Plex Sans" ], "code-lg": [ "JetBrains Mono" ], "headline-xl": [ "IBM Plex Sans" ], "label-sm": [ "IBM Plex Sans" ], "code-md": [ "JetBrains Mono" ], "headline-lg": [ "IBM Plex Sans" ] }, "fontSize": { "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "600" } ], "code-lg": [ "16px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "code-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-tertiary text-on-tertiary h-nav-height"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-fixed">water_voc</span><span class="font-headline-sm text-headline-sm text-on-tertiary tracking-tight">FloodPath</span></div><span class="font-code-sm text-code-sm bg-tertiary-container text-on-tertiary-container px-space-xs py-space-2xs rounded">SIH 26161 - Inundation Model v1.2</span><nav class="hidden xl:flex items-center gap-space-xs ml-space-md" data-active-classes="bg-primary-container text-on-primary font-label-md"><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="dashboard" href="#">Dashboard</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="scenario-workbench" href="#">New Scenario</a><a aria-current="page" class="px-space-md py-space-xs rounded transition-colors bg-primary-container text-on-primary font-label-md" data-path="historical-cases" href="#">Historical Case Studies</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="model-settings" href="#">Settings</a></nav></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-tertiary-container px-space-sm py-space-2xs rounded"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-code-sm text-code-sm text-on-tertiary-container">DEM Grid: SRTM 30m Active</span></div><div class="flex items-center gap-space-sm pl-space-md"><div class="text-right hidden sm:block"><div class="font-label-sm text-label-sm text-on-tertiary">Anjali</div><div class="font-code-sm text-code-sm text-on-tertiary-container">DDMA Officer</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xy7v4veH8e3oTI877FEdQrvPJjbmZ7gtI0OOQuixD7pcVjY2CqZpRgXgdCJmynPlLonsniCwQMA8F9lV2VvF5Q6roeH_WXb3K_WlgejvSuZwelKM895EIkBLPm3k0QXjKBLG7rQhOR6WF9st7y2-Yh8OALVnWEqYhnhvnFWXXBhfe9ofboPbEOVptyYR65aZZRd4ykoJHYH3wr8VVSFkJK9QFIXS_qofJhW0PIiTPf9tXXUTSQTSRK7G50"/></div></div></div></header><aside class="fixed left-0 top-nav-height bottom-0 w-panel-width-sm bg-surface-container-low z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-sm px-space-xs">Operational Telemetry</div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-primary-container text-on-primary"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-base">dashboard</span><span>Overview &amp; Alerts</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="scenario-workbench" href="#"><span class="material-symbols-outlined text-base">layers</span><span>Scenario Workbench</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm transition-colors bg-primary-container text-on-primary" data-path="historical-cases" href="#"><span class="material-symbols-outlined text-base">history_edu</span><span>Historical Records</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="model-settings" href="#"><span class="material-symbols-outlined text-base">tune</span><span>DEM &amp; Engine Settings</span></a></nav></div><div class="p-space-md bg-surface-container"><div class="font-label-sm text-label-sm text-on-surface font-semibold mb-space-2xs">GIS Node Status</div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between"><span>CRS Projection</span><span>EPSG:4326 WGS84</span></div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between mt-space-2xs"><span>Hydraulic Mode</span><span>2D Shallow Water</span></div></div></aside><div class="pl-panel-width-sm"><main class="relative pt-nav-height bg-background min-h-screen w-full"><div class="flex flex-col w-full">
+<!-- Map Canvas Underlay & Operational Viewport -->
+<div class="relative w-full h-[calc(100vh-48px)] overflow-hidden bg-surface-container-highest">
+<!-- Background Satellite / Hydraulic Surface Simulation Canvas (Static Context) -->
+<div class="absolute inset-0 bg-surface-dim opacity-90 overflow-hidden pointer-events-none">
+<!-- Topographic Grid Line Simulation -->
+<svg class="w-full h-full opacity-35" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="80" id="carto-grid" patternunits="userSpaceOnUse" width="80">
+<path d="M 80 0 L 0 0 0 80" fill="none" stroke="#6B7785" stroke-dasharray="2 4" stroke-width="0.75"></path>
+<circle cx="80" cy="80" fill="#4E6076" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#carto-grid)" height="100%" width="100%"></rect>
+<!-- Synthetic Inundation Vectors -->
+<path d="M -100 240 Q 280 290 540 410 T 1100 680 T 1800 820" fill="none" stroke="#1B4F72" stroke-opacity="0.35" stroke-width="28"></path>
+<path d="M -100 240 Q 280 290 540 410 T 1100 680 T 1800 820" fill="none" stroke="#92C0E9" stroke-opacity="0.55" stroke-width="12"></path>
+<!-- Acoustic Radius Overlay -->
+<circle cx="680" cy="460" fill="#BA1A1A" fill-opacity="0.08" r="140" stroke="#BA1A1A" stroke-dasharray="4 3" stroke-width="1.5"></circle>
+<circle cx="840" cy="510" fill="#BA1A1A" fill-opacity="0.08" r="110" stroke="#BA1A1A" stroke-dasharray="4 3" stroke-width="1.5"></circle>
+</svg>
+<!-- Coordinate HUD Overlay on Base Canvas -->
+<div class="absolute top-space-md left-space-md bg-surface-container-lowest/90 px-space-sm py-space-xs rounded-none shadow-sm flex items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant">
+<span>LAT: 30°29'42.1"N</span>
+<span>LON: 79°41'28.9"E</span>
+<span>CRS: EPSG:32644 (UTM 44N)</span>
+<span class="text-primary font-semibold">GLOF SURGE RUN: 4,420 m³/s</span>
+</div>
+</div>
+<!-- Backdrop Dimming Layer for High-Priority Alert State -->
+<div class="absolute inset-0 bg-inverse-surface/65 backdrop-blur-[2px] z-10 flex items-center justify-center p-space-md lg:p-space-xl overflow-y-auto">
+<!-- Operational Dispatch Verification Modal Window -->
+<div class="relative w-full max-w-[1240px] bg-surface-container-lowest shadow-xl flex flex-col my-auto transition-all" id="dispatch-modal-container">
+<!-- MODAL HEADER BAR: CAP OASIS Protocol Bar -->
+<div class="bg-tertiary px-space-lg py-space-md text-on-tertiary flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start lg:items-center gap-space-md">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-2xl">cell_tower</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-space-2xs bg-surface-container-lowest text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-surface-tint animate-ping"></span>
+                  DISPATCH TRANSMITTED &amp; ACTIVE
+                </span>
+<span class="font-code-sm text-code-sm bg-tertiary-container text-on-tertiary-container px-space-xs py-space-2xs">
+                  ITU-T X.1303 / OASIS CAP v1.2
+                </span>
+<span class="font-code-sm text-code-sm text-primary-fixed-dim">
+                  SACHET-CORE #SC-998241
+                </span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-tertiary tracking-tight mt-0.5">
+                Common Alerting Protocol (CAP-XML) Broadcast Confirmation
+              </h1>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">
+                National Early Warning Dissemination Engine · NDMA / SACHET Gateway Hub &amp; Uttarakhand SDMA Command
+              </p>
+</div>
+</div>
+<!-- Quick Actions & Dismiss -->
+<div class="flex items-center gap-space-sm self-end lg:self-center">
+<div class="text-right hidden md:block">
+<div class="font-code-sm text-code-sm text-on-tertiary-container">HMAC INTEGRITY</div>
+<div class="font-code-sm text-code-sm text-surface-bright flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary-fixed">verified_user</span>
+                SHA-256: 9f8a...33c2
+              </div>
+</div>
+<button class="w-8 h-8 flex items-center justify-center bg-tertiary-container text-on-tertiary hover:bg-primary-container transition-colors" onclick="document.getElementById('dispatch-modal-container').classList.toggle('opacity-50')" title="Minimize overlay viewport">
+<span class="material-symbols-outlined text-lg">unfold_less</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-tertiary-container text-on-tertiary hover:bg-error hover:text-on-error transition-colors" onclick="window.history.back()" title="Return to scenario workspace">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+<!-- META BAR: Identifier, Authority, Digital Signature Hash -->
+<div class="bg-surface-container px-space-lg py-space-xs flex flex-wrap items-center justify-between gap-y-1 gap-x-space-lg font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface uppercase">IDENTIFIER:</span>
+<span class="text-primary font-semibold">IN-UTK-GLOF-2024-009-ALERT</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface uppercase">DISPATCH TIMESTAMP:</span>
+<span>2024-10-29 10:43:18 IST (T+00:00:14)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface uppercase">DEOC TOKEN:</span>
+<span>SDMA-CHAMOLI-04-AUTH</span>
+</div>
+<div class="flex items-center gap-space-xs text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>AIR 102.8 FM + CBS CARRIER LOCKED</span>
+</div>
+</div>
+<!-- BODY CONTENT CONTAINER -->
+<div class="p-space-lg flex flex-col gap-space-lg max-h-[778px] overflow-y-auto bg-background">
+<!-- SECTION 1: High-Density Telemetry Metrics Grid (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Devices Handshake -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Devices Reached (CBS)</span>
+<span class="material-symbols-outlined text-primary text-base">smartphone</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">2,684</span>
+<span class="font-code-md text-code-md text-on-surface-variant">/ 2,765</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-xs">arrow_upward</span>
+<span>97.1% in 14.2s</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[97%]"></div>
+</div>
+</div>
+</div>
+<!-- Metric 2: CBS Cell Radios -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Cell Broadcast Radios</span>
+<span class="material-symbols-outlined text-primary text-base">settings_input_antenna</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">12 of 12</span>
+<span class="font-code-md text-code-md text-primary font-semibold">ONLINE</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>BSNL · Jio · Airtel</span>
+<span class="bg-surface-container px-space-xs py-space-2xs text-on-surface">Sector 1 &amp; 2</span>
+</div>
+</div>
+<!-- Metric 3: Rotary Siren Audio Radii -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Physical Rotary Sirens</span>
+<span class="material-symbols-outlined text-primary text-base">campaign</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">3 of 3</span>
+<span class="font-code-md text-code-md text-primary font-semibold">125 dB SOUNDING</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>4.2 km Combined Iso-Radius</span>
+<span class="text-primary font-semibold">Rini / Tapovan / Subhai</span>
+</div>
+</div>
+<!-- Metric 4: NDMA SACHET Ack -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">NDMA SACHET Bridge</span>
+<span class="material-symbols-outlined text-primary text-base">hub</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">ACK 200</span>
+<span class="font-code-sm text-code-sm bg-surface-container px-space-xs text-primary font-semibold">OK</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Packet SC-998241</span>
+<span>SEOC Dehradun Recv</span>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Split View - Multi-Channel Receipt Table & Radio Ingress Waveform -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Side: Granular Tower Telemetry Table (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="bg-surface-container-low px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-primary">router</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Downstream Cell Broadcast (CBS) Receipt Matrix</span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant">
+<span>Protocol: 3GPP TS 23.041</span>
+<span class="hidden sm:inline">Priority: DEFENSE / IMMINENT</span>
+</div>
+</div>
+<!-- Tower Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse font-body-sm text-body-sm">
+<thead class="bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<tr>
+<th class="py-space-xs px-space-sm">Tower Identifier &amp; Site</th>
+<th class="py-space-xs px-space-sm">Sec / Azim</th>
+<th class="py-space-xs px-space-sm">Cell-ID (PLMN)</th>
+<th class="py-space-xs px-space-sm">Latency</th>
+<th class="py-space-xs px-space-sm">Delivery Ratio</th>
+<th class="py-space-xs px-space-sm">Siren Rel.</th>
+<th class="py-space-xs px-space-sm text-right">Receipt State</th>
+</tr>
+</thead>
+<tbody class="font-code-sm text-code-sm divide-y divide-surface-container">
+<!-- Row 1: Rini Cliff -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="font-semibold text-primary">BSNL Mast CM-04</div>
+<div class="text-on-surface-variant text-xs">Rini Cliff Ridge Ingress</div>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Sec 01 / 140°</td>
+<td class="py-space-xs px-space-sm text-on-surface">404-72-8812</td>
+<td class="py-space-xs px-space-sm text-primary font-semibold">1.8s</td>
+<td class="py-space-xs px-space-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span>312/318</span>
+<span class="text-on-surface-variant">(98.1%)</span>
+</div>
+</td>
+<td class="py-space-xs px-space-sm">
+<span class="bg-surface-container text-primary font-label-sm text-xs px-1 py-0.5">ACTIVE</span>
+</td>
+<td class="py-space-xs px-space-sm text-right">
+<span class="inline-flex items-center gap-1 text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                          ACK CONFIRMED
+                        </span>
+</td>
+</tr>
+<!-- Row 2: Tapovan Intake -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/40">
+<td class="py-space-xs px-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="font-semibold text-primary">Jio Micro-Site UT-41</div>
+<div class="text-on-surface-variant text-xs">Tapovan Intake Camp</div>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Sec 02 / 220°</td>
+<td class="py-space-xs px-space-sm text-on-surface">404-86-9041</td>
+<td class="py-space-xs px-space-sm text-primary font-semibold">0.9s</td>
+<td class="py-space-xs px-space-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span>418/422</span>
+<span class="text-on-surface-variant">(99.1%)</span>
+</div>
+</td>
+<td class="py-space-xs px-space-sm">
+<span class="bg-surface-container text-primary font-label-sm text-xs px-1 py-0.5">ACTIVE</span>
+</td>
+<td class="py-space-xs px-space-sm text-right">
+<span class="inline-flex items-center gap-1 text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                          ACK CONFIRMED
+                        </span>
+</td>
+</tr>
+<!-- Row 3: Tapovan Barrage -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="font-semibold text-primary">Airtel Tower AT-19</div>
+<div class="text-on-surface-variant text-xs">Tapovan Barrage Station</div>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Sec 02 / 310°</td>
+<td class="py-space-xs px-space-sm text-on-surface">404-45-1299</td>
+<td class="py-space-xs px-space-sm text-primary font-semibold">1.2s</td>
+<td class="py-space-xs px-space-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span>189/195</span>
+<span class="text-on-surface-variant">(96.9%)</span>
+</div>
+</td>
+<td class="py-space-xs px-space-sm">
+<span class="bg-surface-container text-primary font-label-sm text-xs px-1 py-0.5">ACTIVE</span>
+</td>
+<td class="py-space-xs px-space-sm text-right">
+<span class="inline-flex items-center gap-1 text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                          ACK CONFIRMED
+                        </span>
+</td>
+</tr>
+<!-- Row 4: Subhai Terraces -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/40">
+<td class="py-space-xs px-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="font-semibold text-primary">BSNL Mast CM-08</div>
+<div class="text-on-surface-variant text-xs">Subhai Terraces Shelf</div>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Sec 03 / 180°</td>
+<td class="py-space-xs px-space-sm text-on-surface">404-72-8854</td>
+<td class="py-space-xs px-space-sm text-primary font-semibold">2.1s</td>
+<td class="py-space-xs px-space-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span>174/180</span>
+<span class="text-on-surface-variant">(96.7%)</span>
+</div>
+</td>
+<td class="py-space-xs px-space-sm">
+<span class="bg-surface-container text-primary font-label-sm text-xs px-1 py-0.5">ACTIVE</span>
+</td>
+<td class="py-space-xs px-space-sm text-right">
+<span class="inline-flex items-center gap-1 text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                          ACK CONFIRMED
+                        </span>
+</td>
+</tr>
+<!-- Row 5: Joshimath Marwari -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="font-semibold text-primary">Jio Mast UT-102</div>
+<div class="text-on-surface-variant text-xs">Joshimath Marwari Ridge</div>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Sec 04 / 260°</td>
+<td class="py-space-xs px-space-sm text-on-surface">404-86-7721</td>
+<td class="py-space-xs px-space-sm text-primary font-semibold">1.4s</td>
+<td class="py-space-xs px-space-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span>864/880</span>
+<span class="text-on-surface-variant">(98.2%)</span>
+</div>
+</td>
+<td class="py-space-xs px-space-sm">
+<span class="bg-surface-container text-primary font-label-sm text-xs px-1 py-0.5">STANDBY</span>
+</td>
+<td class="py-space-xs px-space-sm text-right">
+<span class="inline-flex items-center gap-1 text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                          ACK CONFIRMED
+                        </span>
+</td>
+</tr>
+<!-- Row 6: Helang Valley -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/40">
+<td class="py-space-xs px-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="font-semibold text-primary">Airtel Base AT-03</div>
+<div class="text-on-surface-variant text-xs">Helang Valley Junction</div>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Sec 04 / 090°</td>
+<td class="py-space-xs px-space-sm text-on-surface">404-45-6610</td>
+<td class="py-space-xs px-space-sm text-primary font-semibold">1.6s</td>
+<td class="py-space-xs px-space-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span>727/770</span>
+<span class="text-on-surface-variant">(94.4%)</span>
+</div>
+</td>
+<td class="py-space-xs px-space-sm">
+<span class="bg-surface-container text-primary font-label-sm text-xs px-1 py-0.5">STANDBY</span>
+</td>
+<td class="py-space-xs px-space-sm text-right">
+<span class="inline-flex items-center gap-1 text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                          ACK CONFIRMED
+                        </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-space-md py-space-xs bg-surface-container-low border-t border-surface-container flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Total Channel Ingress: 6 Carrier Interfaces</span>
+<span>Retry Envelope: 3x / 30s Window (Zero Packet Loss)</span>
+</div>
+</div>
+<!-- Right Side: Inundation Front vs Siren Isochrone Status (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Card: Siren Diagnostic Relays -->
+<div class="bg-surface-container-lowest shadow-sm p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-sm border-b border-surface-container">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">warning</span>
+                      Physical Acoustic Sirens
+                    </span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">3 / 3 ACTIVE</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Mast 882-A -->
+<div class="bg-surface-container-low p-space-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="font-semibold text-on-surface">Mast #882-A (Rini Village)</span>
+<span class="text-primary font-semibold">125 dB</span>
+</div>
+<div class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                        Dual-tone acoustic sounding @ 10:43:08. Batt: 98% · SatLink OK.
+                      </div>
+</div>
+<!-- Mast 882-B -->
+<div class="bg-surface-container-low p-space-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="font-semibold text-on-surface">Mast #882-B (Tapovan Dam)</span>
+<span class="text-primary font-semibold">125 dB</span>
+</div>
+<div class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                        Barrage evacuation loop. Tunnel ingress tannoy triggered.
+                      </div>
+</div>
+<!-- Mast 882-C -->
+<div class="bg-surface-container-low p-space-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="font-semibold text-on-surface">Mast #882-C (Subhai Post)</span>
+<span class="text-primary font-semibold">120 dB</span>
+</div>
+<div class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                        Active. Audible confirmation acknowledged via VHF channel 4.
+                      </div>
+</div>
+</div>
+</div>
+<!-- Carrier Cut-in (AIR FM) -->
+<div class="mt-space-md pt-space-xs border-t border-surface-container">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">AIR Chamoli Carrier Cut</span>
+<span class="text-primary font-semibold">102.8 FM / 720 AM</span>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-body-sm text-xs text-on-surface">Emergency voice message looping on local relay.</span>
+</div>
+</div>
+</div>
+<!-- Card: CAP XML Payload Inspector Preview -->
+<div class="bg-surface-container-lowest shadow-sm p-space-md flex flex-col flex-1">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs border-b border-surface-container">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">code</span>
+                    CAP-XML v1.2 Wire Payload
+                  </span>
+<button class="font-code-sm text-xs text-primary hover:underline flex items-center gap-1" onclick="navigator.clipboard.writeText('&lt;alert&gt;&lt;identifier&gt;IN-UTK-GLOF-2024-009-ALERT&lt;/identifier&gt;&lt;status&gt;Actual&lt;/status&gt;&lt;msgType&gt;Alert&lt;/msgType&gt;&lt;scope&gt;Public&lt;/scope&gt;&lt;info&gt;&lt;category&gt;Geo&lt;/category&gt;&lt;event&gt;Flash Flood / Dam Breach Wave&lt;/event&gt;&lt;urgency&gt;Immediate&lt;/urgency&gt;&lt;severity&gt;Extreme&lt;/severity&gt;&lt;certainty&gt;Observed&lt;/certainty&gt;&lt;headline&gt;CRITICAL GLOF SURGE INUNDATION REACHING TAPOVAN / RINI SECTOR WITHIN 18 MIN. EVACUATE TO HIGH GROUND IMMEDIATELY.&lt;/headline&gt;&lt;/info&gt;&lt;/alert&gt;')">
+<span class="material-symbols-outlined text-xs">content_copy</span> Copy
+                  </button>
+</div>
+<div class="bg-inverse-surface p-space-xs text-inverse-on-surface font-code-sm text-xs leading-relaxed overflow-x-auto h-28 rounded-none select-all font-mono">
+                  &lt;alert xmlns="urn:oasis:names:tc:emergency:cap:1.2"&gt;<br/>
+                    &lt;identifier&gt;IN-UTK-GLOF-2024-009-ALERT&lt;/identifier&gt;<br/>
+                    &lt;status&gt;Actual&lt;/status&gt;&lt;msgType&gt;Alert&lt;/msgType&gt;<br/>
+                    &lt;urgency&gt;Immediate&lt;/urgency&gt;<br/>
+                    &lt;severity&gt;Extreme&lt;/severity&gt;&lt;certainty&gt;Observed&lt;/certainty&gt;<br/>
+                    &lt;areaDesc&gt;Rini, Tapovan, Subhai, Helang&lt;/areaDesc&gt;<br/>
+                  &lt;/alert&gt;
+                </div>
+<div class="mt-space-xs flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Size: 1,842 bytes</span>
+<span class="text-primary font-semibold">SIG: RSA-SHA256 OK</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Audio Siren Pattern Visualizer & Broadcast Message Transcripts -->
+<div class="bg-surface-container-low p-space-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 bg-tertiary text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-base">record_voice_over</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Dispatched Voice &amp; SMS Broadcast Text (Hindi &amp; English)</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">
+                  "सतर्कता चेतावनी: ऋषिगंगा/धौलीगंगा में जलस्तर खतरनाक रूप से बढ़ रहा है। तपोवन एवं रैणी के सभी नागरिक तुरंत ऊंचे स्थानों की ओर प्रस्थान करें।"
+                </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  "FLASH FLOOD ALERT: Severe GLOF surge in Rishi Ganga / Dhauliganga. Evacuate river bed to designated shelters above +40m immediately."
+                </p>
+</div>
+</div>
+<!-- Acoustic Wave Indicator -->
+<div class="hidden xl:flex items-center gap-1 h-8 px-space-sm bg-surface-container-lowest">
+<span class="w-1 bg-primary h-3 animate-pulse"></span>
+<span class="w-1 bg-primary h-6 animate-pulse" style="animation-delay: 75ms"></span>
+<span class="w-1 bg-primary h-8 animate-pulse" style="animation-delay: 150ms"></span>
+<span class="w-1 bg-primary h-4 animate-pulse" style="animation-delay: 225ms"></span>
+<span class="w-1 bg-primary h-7 animate-pulse" style="animation-delay: 300ms"></span>
+<span class="w-1 bg-primary h-5 animate-pulse" style="animation-delay: 375ms"></span>
+<span class="w-1 bg-primary h-2 animate-pulse" style="animation-delay: 450ms"></span>
+<span class="font-code-sm text-code-sm text-on-surface-variant ml-2">125dB SWEEP</span>
+</div>
+</div>
+</div>
+<!-- MODAL FOOTER: Critical Action Triggers & Verification Packet Export -->
+<div class="bg-surface-container px-space-lg py-space-md border-t border-outline-variant flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<!-- Cryptographic Audit Download Button -->
+<button class="w-full sm:w-auto px-space-md py-space-xs bg-surface-container-lowest text-on-surface font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-xs hover:bg-surface-container-high transition-colors shadow-sm" onclick="alert('Downloading Cryptographic Telemetry Receipt Archive (ZIP: JSON/CSV + SHA256 Tokens)...')">
+<span class="material-symbols-outlined text-base text-primary">download</span>
+<span>Download Audit Packet (.zip)</span>
+</button>
+<!-- Secondary: Map View -->
+<button class="w-full sm:w-auto px-space-md py-space-xs bg-surface-container-lowest text-on-surface font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-xs hover:bg-surface-container-high transition-colors shadow-sm" onclick="window.history.back()">
+<span class="material-symbols-outlined text-base">map</span>
+<span>Live Evacuation Tracking</span>
+</button>
+</div>
+<!-- Hazard / Escalation Actions -->
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<!-- Escalated advisory trigger -->
+<button class="w-full sm:w-auto px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-xs hover:bg-primary-container transition-colors shadow-sm" onclick="alert('Escalation sequence queued for T+15:00 window.')">
+<span class="material-symbols-outlined text-base">campaign</span>
+<span>Send Escalated Advisory (T+15m)</span>
+</button>
+<!-- Cessation guarded action -->
+<button class="w-full sm:w-auto px-space-md py-space-xs bg-error text-on-error font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-xs hover:bg-error-container hover:text-on-error-container transition-colors shadow-sm" onclick="if(confirm('ARE YOU SURE YOU WANT TO ISSUE AN ALL-CLEAR CANCELLATION? This will cease rotary sirens and transmit CAP cancellation packets to cell towers.')){ alert('Cessation broadcast initialized.'); }">
+<span class="material-symbols-outlined text-base">notifications_off</span>
+<span>Broadcast Cessation</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

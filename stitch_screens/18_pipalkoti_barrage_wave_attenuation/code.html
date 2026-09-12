@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#cce5ff", "primary": "#003857", "outline": "#72787f", "surface-container": "#e3efff", "on-tertiary": "#ffffff", "surface-tint": "#326286", "tertiary": "#163653", "on-error-container": "#93000a", "on-error": "#ffffff", "tertiary-fixed-dim": "#abc9ec", "on-primary-fixed": "#001e31", "surface-container-lowest": "#ffffff", "secondary-container": "#cfe1fc", "background": "#f7f9ff", "on-secondary-fixed-variant": "#36485d", "error": "#ba1a1a", "on-primary-container": "#92c0e9", "surface-variant": "#d7e4f4", "tertiary-fixed": "#cfe4ff", "primary-fixed-dim": "#9dcbf4", "inverse-primary": "#9dcbf4", "outline-variant": "#c1c7cf", "on-tertiary-fixed-variant": "#2b4966", "on-secondary-fixed": "#091d30", "primary-container": "#1b4f72", "surface-container-low": "#edf4ff", "secondary-fixed": "#d1e4fe", "surface": "#f7f9ff", "surface-container-highest": "#d7e4f4", "on-tertiary-container": "#a0bee0", "secondary": "#4e6076", "inverse-surface": "#26313e", "secondary-fixed-dim": "#b6c8e2", "on-primary": "#ffffff", "tertiary-container": "#2f4d6b", "on-tertiary-fixed": "#001d34", "surface-bright": "#f7f9ff", "surface-container-high": "#dde9f9", "on-background": "#111d28", "on-primary-fixed-variant": "#154b6d", "inverse-on-surface": "#e8f2ff", "surface-dim": "#cfdbeb", "on-surface": "#111d28", "on-secondary": "#ffffff", "on-secondary-container": "#52647a", "on-surface-variant": "#41474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "32px", "nav-height": "48px", "space-md": "12px", "panel-width-md": "420px", "space-lg": "16px", "space-xl": "24px", "panel-width-sm": "320px", "space-2xs": "2px", "space-sm": "8px", "timeline-height": "72px", "space-xs": "4px", "panel-width-lg": "560px" }, "fontFamily": { "code-sm": [ "JetBrains Mono" ], "body-md": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-md": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "body-sm": [ "IBM Plex Sans" ], "headline-sm": [ "IBM Plex Sans" ], "code-lg": [ "JetBrains Mono" ], "headline-xl": [ "IBM Plex Sans" ], "label-sm": [ "IBM Plex Sans" ], "code-md": [ "JetBrains Mono" ], "headline-lg": [ "IBM Plex Sans" ] }, "fontSize": { "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "600" } ], "code-lg": [ "16px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "code-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><main class="w-full bg-background min-h-screen flex items-center justify-center p-space-lg"><div class="flex flex-col w-full text-on-surface select-none">
+<!-- Top Incident Operations Banner -->
+<div class="w-full bg-primary text-on-primary py-space-xs px-space-md flex flex-wrap items-center justify-between gap-space-sm shadow-md">
+<div class="flex items-center space-x-space-md flex-wrap">
+<div class="flex items-center space-x-space-xs">
+<span class="inline-block w-2.5 h-2.5 bg-error animate-ping"></span>
+<span class="inline-block w-2 h-2 bg-error -ml-3.5"></span>
+<span class="font-code-sm text-code-sm uppercase tracking-wider bg-error/30 px-1.5 py-0.5 rounded text-on-error">OPS LEVEL 2: MANAGED SURGE PASSAGE</span>
+</div>
+<div class="h-3 w-px bg-outline-variant/40"></div>
+<span class="font-code-sm text-code-sm text-surface-variant uppercase tracking-wide">
+        AXIS: <strong class="text-on-primary">THDC PIPALKOTI BARRAGE [1,260.00m AMSL]</strong> • ALAKNANDA CORRIDOR RK 36.8
+      </span>
+<div class="h-3 w-px bg-outline-variant/40"></div>
+<span class="font-code-sm text-code-sm text-primary-fixed">
+        EVENT: <strong>IN-UTK-GLOF-2024-009</strong>
+</span>
+<div class="h-3 w-px bg-outline-variant/40"></div>
+<span class="font-code-sm text-code-sm text-surface-tint">
+        DEM GRID: <span class="text-surface-bright">SRTM 30m / HEC-RAS 2D v6.4</span>
+</span>
+</div>
+<div class="flex items-center space-x-space-lg">
+<div class="font-code-sm text-code-sm flex items-center space-x-space-xs">
+<span class="material-symbols-outlined text-sm text-secondary-fixed">badge</span>
+<span class="text-surface-variant">DDMA OFFICER:</span>
+<span class="font-semibold text-surface-bright">ANJALI C. [EOC-JOSHIMATH]</span>
+</div>
+<div class="font-code-md text-code-md bg-tertiary-container text-on-tertiary px-2 py-0.5 rounded flex items-center space-x-space-xs shadow-inner">
+<span class="text-primary-fixed-dim">T+01:18:00</span>
+<span class="text-surface-variant/70 text-code-sm">11:37:00 IST</span>
+</div>
+</div>
+</div>
+<!-- Operational Command Ribbon & Key Macro Metrics -->
+<div class="w-full bg-surface-container-low px-space-md py-space-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center space-x-space-md flex-wrap">
+<div class="flex items-center space-x-space-xs">
+<span class="material-symbols-outlined text-primary text-base">water_damage</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase">ATTENUATION STATUS:</span>
+<span class="font-code-lg text-code-lg text-primary font-bold">-42.8%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(6,850 → 3,920 m³/s)</span>
+</div>
+<div class="h-4 w-px bg-outline-variant"></div>
+<div class="flex items-center space-x-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase">RADIAL SLUICE GATES:</span>
+<span class="font-code-sm text-code-sm bg-surface-container-highest text-primary font-bold px-1.5 py-0.5 rounded">4/4 FULL OPEN (100%)</span>
+<span class="font-code-sm text-code-sm text-secondary">Q_CAP = 4,200 m³/s</span>
+</div>
+<div class="h-4 w-px bg-outline-variant"></div>
+<div class="flex items-center space-x-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase">PIER THRUST:</span>
+<span class="font-code-md text-code-md text-primary font-semibold">6.4 MN/m²</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">(38.7% YIELD • NOMINAL)</span>
+</div>
+<div class="h-4 w-px bg-outline-variant"></div>
+<div class="flex items-center space-x-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase">STAGE:</span>
+<span class="font-code-md text-code-md text-primary font-semibold">1,248.60 m</span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium bg-secondary-container px-1 rounded">+4.6m FREEBOARD</span>
+</div>
+</div>
+<!-- Quick Action Dispatchers -->
+<div class="flex items-center space-x-space-xs">
+<button class="bg-surface-container-lowest text-primary hover:bg-surface-container-high px-space-sm py-1 font-label-sm text-label-sm uppercase flex items-center space-x-1 shadow-sm transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+<span>DOSSIER (PDF)</span>
+</button>
+<button class="bg-primary text-on-primary hover:bg-primary-container px-space-sm py-1 font-label-sm text-label-sm uppercase flex items-center space-x-1 shadow-sm transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">sensors</span>
+<span>LOG TELEMETRY</span>
+</button>
+<button class="bg-error text-on-error hover:bg-on-error-container px-space-sm py-1 font-label-sm text-label-sm uppercase flex items-center space-x-1 shadow-sm transition-colors cursor-pointer" id="btnChamoliAlert">
+<span class="material-symbols-outlined text-sm animate-pulse">crisis_alert</span>
+<span>CHAMOLI BRIDGE SIREN [ETA 20m]</span>
+</button>
+</div>
+</div>
+<!-- Primary Workspace: 3-Column Instrument Grid -->
+<div class="w-full grid grid-cols-12 gap-space-sm p-space-sm bg-surface">
+<!-- LEFT COLUMN: Attenuation Physics, Hydraulic Ramp & Structural Transducers (3 Cols) -->
+<div class="col-span-12 lg:col-span-3 flex flex-col space-y-space-sm">
+<!-- Wave Hydrodynamic Attenuation Card -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between pb-1 bg-surface-container-low -mx-space-sm -mt-space-sm p-space-xs px-space-sm">
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-primary text-sm">waves</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Hydrodynamic Wave Dampening</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">RK 0.0 → 36.8</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="bg-surface-container-low p-space-xs">
+<span class="font-label-sm text-label-sm text-secondary block">Tapovan Q_peak</span>
+<span class="font-code-lg text-code-lg font-bold text-on-surface">6,850 <span class="text-body-sm font-normal text-outline">m³/s</span></span>
+<span class="font-code-sm text-code-sm text-error block">Debris V: 13.4 m/s</span>
+</div>
+<div class="bg-surface-container p-space-xs">
+<span class="font-label-sm text-label-sm text-primary block">Pipalkoti Q_peak</span>
+<span class="font-code-lg text-code-lg font-bold text-primary">3,920 <span class="text-body-sm font-normal text-outline">m³/s</span></span>
+<span class="font-code-sm text-code-sm text-primary font-medium block">Front V: 7.82 m/s</span>
+</div>
+</div>
+<div class="pt-1">
+<div class="flex justify-between text-body-sm mb-1 font-body-sm">
+<span class="text-on-surface-variant">Canyon Valley Volume Buffer:</span>
+<span class="font-code-sm text-code-sm font-bold text-primary">2.93 × 10⁶ m³</span>
+</div>
+<!-- Inundation Wave Attenuation Mini Graph -->
+<div class="w-full h-16 bg-surface-container-low relative p-1 overflow-hidden">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 280 60">
+<!-- Tapovan Hydrograph Curve (Unattenuated) -->
+<path class="text-outline-variant" d="M0,55 Q35,5 70,8 Q110,12 280,48" fill="none" stroke="currentColor" stroke-dasharray="3,3" stroke-width="1.5"></path>
+<!-- Pipalkoti Dampened Hydrograph Curve -->
+<path class="text-secondary-container/50" d="M0,58 L50,56 Q110,22 150,23 Q200,26 280,42 L280,60 L0,60 Z" fill="currentColor"></path>
+<path class="text-primary" d="M0,58 L50,56 Q110,22 150,23 Q200,26 280,42" fill="none" stroke="currentColor" stroke-width="2"></path>
+<!-- Current T+01:18 Indicator Line -->
+<line class="text-error" stroke="currentColor" stroke-width="1.5" x1="148" x2="148" y1="0" y2="60"></line>
+<circle class="text-error" cx="148" cy="23" fill="currentColor" r="3"></circle>
+</svg>
+<div class="absolute top-1 left-2 text-[9px] font-code-sm text-outline">PEAK Q: 6,850 m³/s (TAPOVAN)</div>
+<div class="absolute top-5 right-2 text-[9px] font-code-sm text-primary font-bold">PIPALKOTI: 3,920 m³/s (-42.8%)</div>
+<div class="absolute bottom-1 right-2 text-[9px] font-code-sm text-error">T+01:18 PEAK NOW</div>
+</div>
+</div>
+<div class="space-y-1 pt-1 font-body-sm">
+<div class="flex justify-between py-0.5 bg-surface-container-low px-1.5">
+<span class="text-on-surface-variant">Sediment Volumetric Fraction:</span>
+<span class="font-code-sm text-code-sm font-semibold text-primary">38% → 21% vol</span>
+</div>
+<div class="flex justify-between py-0.5 bg-surface-container-low px-1.5">
+<span class="text-on-surface-variant">Manning's Bed Roughness (n):</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">0.052 (Boulder-choked)</span>
+</div>
+<div class="flex justify-between py-0.5 bg-surface-container-low px-1.5">
+<span class="text-on-surface-variant">Boulder Settlement Reach:</span>
+<span class="font-code-sm text-code-sm text-on-surface">Helang Gorge (RK 24.2)</span>
+</div>
+</div>
+</div>
+<!-- Live Transducer Telemetry (USBR / CWC Matrix) -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col space-y-space-xs flex-1">
+<div class="flex items-center justify-between pb-1 bg-surface-container-low -mx-space-sm -mt-space-sm p-space-xs px-space-sm">
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-primary text-sm">tune</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Barrage Instrumentation Grid</span>
+</div>
+<span class="font-code-sm text-code-sm text-primary font-semibold">CWC/THDC MATRIX</span>
+</div>
+<!-- Sensor Table -->
+<div class="flex flex-col space-y-1.5 pt-1">
+<!-- Transducer 1: Piezometer -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex justify-between items-center">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">PZ-101..104 (Raft Uplift)</span>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-bold">145 kPa</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 mt-1 overflow-hidden">
+<div class="bg-primary h-full" style="width: 65%;"></div>
+</div>
+<div class="flex justify-between text-[10px] font-code-sm text-outline mt-0.5">
+<span>0 kPa</span>
+<span>Design Limit: 220 kPa (Safe)</span>
+</div>
+</div>
+<!-- Transducer 2: Pier Concrete Strain -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex justify-between items-center">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">SG-07 Pier Web (Strain)</span>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-bold">11.2 MPa</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 mt-1 overflow-hidden">
+<div class="bg-primary h-full" style="width: 35%;"></div>
+</div>
+<div class="flex justify-between text-[10px] font-code-sm text-outline mt-0.5">
+<span>0 MPa</span>
+<span>Elastic Threshold: 32.0 MPa</span>
+</div>
+</div>
+<!-- Transducer 3: Acoustic Doppler Profiler -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex justify-between items-center">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">ADCP-02 (Upstream Approach)</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">7.82 m/s</span>
+</div>
+<div class="flex justify-between text-body-sm font-code-sm text-on-surface-variant mt-1">
+<span>Turbidity: 14,200 NTU</span>
+<span class="text-tertiary font-semibold">Sediment: Heavy Sand/Slurry</span>
+</div>
+</div>
+<!-- Transducer 4: Gate Vibration -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex justify-between items-center">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">ACC-03, 04 (Gate Flutter)</span>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-bold">0.14g RMS</span>
+</div>
+<div class="flex justify-between text-[10px] font-code-sm text-outline mt-0.5">
+<span>Cavitation Trip Threshold: 0.50g</span>
+<span class="text-primary font-medium">STABLE</span>
+</div>
+</div>
+<!-- Transducer 5: Right Abutment Inclinometer -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex justify-between items-center">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">INC-02 (Abutment Shear)</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">&lt; 1.2 mm</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">Foundation: Quartz-Schist Overthrust Stable</span>
+</div>
+</div>
+<!-- Power Tunnel Bulkhead Alert Box -->
+<div class="mt-auto p-space-xs bg-surface-container-highest">
+<div class="flex items-center space-x-1 text-primary">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">HRT Power Intake Sealed</span>
+</div>
+<p class="font-code-sm text-code-sm text-on-surface-variant mt-0.5">Bulkheads closed • Ingress: 0.0 m³/s • Units 1-4 Tripped safely</p>
+</div>
+</div>
+</div>
+<!-- CENTER COLUMN: Interactive Spatial GIS Canvas & Barrage Cross-Section Profile (6 Cols) -->
+<div class="col-span-12 lg:col-span-6 flex flex-col space-y-space-sm">
+<!-- Primary Spatial & Cross-Section Viewport -->
+<div class="bg-surface-container-lowest shadow-sm flex flex-col overflow-hidden">
+<!-- Viewport Toolbar -->
+<div class="bg-surface-container px-space-sm py-space-xs flex items-center justify-between">
+<div class="flex items-center space-x-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary flex items-center space-x-1">
+<span class="material-symbols-outlined text-base">architecture</span>
+<span>BARRAGE HYDRAULIC ELEVATION &amp; SLUICE AXIS</span>
+</span>
+<span class="font-code-sm text-code-sm bg-primary text-on-primary px-1.5 py-0.5 rounded">AXIS 1,260m</span>
+</div>
+<div class="flex items-center space-x-1">
+<button class="px-2 py-0.5 bg-surface-container-highest text-primary font-code-sm text-code-sm font-semibold rounded hover:bg-surface-variant cursor-pointer">2D SECTION</button>
+<button class="px-2 py-0.5 bg-surface-container-low text-secondary font-code-sm text-code-sm rounded hover:bg-surface-container-highest cursor-pointer">PLAN GIS</button>
+<button class="px-2 py-0.5 bg-surface-container-low text-secondary font-code-sm text-code-sm rounded hover:bg-surface-container-highest cursor-pointer">PROFILE SLICE</button>
+</div>
+</div>
+<!-- Technical Cross-Section SVG Canvas -->
+<div class="w-full bg-surface-container-lowest p-space-sm relative">
+<!-- Cross Section Graphic: Pipalkoti Barrage Body, Water Stage, Gates, Stilling Basin -->
+<div class="w-full h-72 relative">
+<svg class="w-full h-full" viewbox="0 0 700 280">
+<defs>
+<lineargradient id="waterFlowRamp" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#1B4F72" stop-opacity="0.85"></stop>
+<stop offset="60%" stop-color="#2F4D6B" stop-opacity="0.95"></stop>
+<stop offset="100%" stop-color="#326286" stop-opacity="0.75"></stop>
+</lineargradient>
+<pattern height="8" id="concreteHatch" patterntransform="rotate(45)" patternunits="userSpaceOnUse" width="8">
+<line stroke="#D7E4F4" stroke-width="2" x1="0" x2="0" y1="0" y2="8"></line>
+</pattern>
+<pattern height="12" id="bedrockHatch" patterntransform="rotate(30)" patternunits="userSpaceOnUse" width="12">
+<line stroke="#CFDBEB" stroke-width="1.5" x1="0" x2="0" y1="0" y2="12"></line>
+</pattern>
+</defs>
+<!-- Bedrock Foundation -->
+<rect fill="url(#bedrockHatch)" height="50" width="700" x="0" y="230"></rect>
+<path d="M0,230 L700,230" stroke="#72787F" stroke-width="2"></path>
+<text class="font-code-sm text-[10px]" fill="#41474E" x="10" y="255">COMPACT QUARTZ-SCHIST ROCK FOUNDATION (IN-SITU BEARING 2.8 MPa)</text>
+<!-- Upstream Water Column (Current Level: 1,248.60m) -->
+<path d="M0,105 L260,105 L260,230 L0,230 Z" fill="url(#waterFlowRamp)"></path>
+<!-- Reservoir Freeboard & Maximum Full Level Markers -->
+<line stroke="#BA1A1A" stroke-dasharray="4,4" stroke-width="1.5" x1="0" x2="260" y1="80" y2="80"></line>
+<text class="font-code-sm text-[10px] font-bold" fill="#BA1A1A" x="8" y="75">FRL: 1,260.00 m (CREST DAM OVERTOP THRESHOLD)</text>
+<!-- Live Water Level Line -->
+<line stroke="#1B4F72" stroke-width="2" x1="0" x2="260" y1="105" y2="105"></line>
+<circle cx="130" cy="105" fill="#003857" r="4"></circle>
+<text class="font-code-sm text-[11px] font-bold" fill="#003857" x="8" y="100">LIVE STAGE: 1,248.60 m AMSL (FREEBOARD: +4.6m SAFE BUFFER)</text>
+<!-- Barrage Concrete Body Structure -->
+<!-- Crest Pier & Ogee Spillway Profile -->
+<path d="M260,70 L290,70 L300,120 Q330,200 390,210 L540,210 L560,195 L575,230 L260,230 Z" fill="#E3EFFF" stroke="#4E6076" stroke-width="2"></path>
+<path d="M260,70 L290,70 L300,120 Q330,200 390,210 L540,210 L560,195 L575,230 L260,230 Z" fill="url(#concreteHatch)" opacity="0.6"></path>
+<!-- Raised Radial Spillway Gate (Gate 4 of 4) -->
+<!-- Trunnion Pin & Radial Arms -->
+<circle cx="340" cy="95" fill="#1C2E42" r="5"></circle>
+<line stroke="#1C2E42" stroke-width="3" x1="340" x2="280" y1="95" y2="45"></line>
+<line stroke="#1C2E42" stroke-width="2.5" x1="340" x2="285" y1="95" y2="70"></line>
+<!-- Gate Leaf Curved Up (Fully Open Aperture) -->
+<path d="M275,35 Q285,60 290,85" fill="none" stroke="#BA1A1A" stroke-width="6"></path>
+<rect fill="#FFF8E7" height="18" stroke="#E8A33D" stroke-width="1" width="100" x="250" y="20"></rect>
+<text class="font-code-sm text-[9px] font-bold" fill="#A06800" x="255" y="32">RADIAL GATE #3 &amp; #4 FULLY HOISTED (100%)</text>
+<!-- Water Jet Discharging Through Spillway -->
+<path d="M260,105 Q285,120 320,165 Q360,215 420,208 Q470,170 510,190 Q540,190 700,195 L700,230 L390,230 Z" fill="url(#waterFlowRamp)" opacity="0.9"></path>
+<!-- Hydraulic Jump in Stilling Basin -->
+<path d="M430,210 Q450,160 480,185 Q510,165 540,190" fill="none" stroke="#FFFFFF" stroke-dasharray="2,2" stroke-width="2.5"></path>
+<!-- Baffle Blocks in Stilling Basin -->
+<rect fill="#26313E" height="12" width="14" x="440" y="198"></rect>
+<rect fill="#26313E" height="12" width="14" x="475" y="198"></rect>
+<rect fill="#26313E" height="12" width="14" x="510" y="198"></rect>
+<text class="font-code-sm text-[10px] font-bold" fill="#003857" x="430" y="150">HYDRAULIC JUMP (Fr = 2.4)</text>
+<text class="font-code-sm text-[9px]" fill="#4E6076" x="430" y="162">Dissipation: 64% by Baffle Array</text>
+<!-- Downstream Channel Flow Vector -->
+<path d="M560,205 L690,205" marker-end="url(#arrow)" stroke="#FFFFFF" stroke-width="1.5"></path>
+<text class="font-code-sm text-[10px] font-bold" fill="#111D28" x="580" y="222">V = 7.82 m/s → ALAKNANDA</text>
+<!-- Pier Web Stress Points -->
+<circle cx="295" cy="140" fill="#BA1A1A" r="4"></circle>
+<text class="font-code-sm text-[10px] font-bold" fill="#BA1A1A" x="205" y="143">SG-07: 11.2 MPa</text>
+<!-- Raft Piezometer Line -->
+<circle cx="330" cy="228" fill="#003857" r="3"></circle>
+<circle cx="410" cy="228" fill="#003857" r="3"></circle>
+<circle cx="500" cy="228" fill="#003857" r="3"></circle>
+<text class="font-code-sm text-[9px]" fill="#003857" x="345" y="245">UPLIFT PZ-ARRAY (145 kPa)</text>
+</svg>
+<!-- Floating Telemetry Badges on Visual Canvas -->
+<div class="absolute top-2 right-2 bg-surface-container-lowest/90 p-space-xs shadow-sm flex flex-col space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary font-bold">SPILLWAY STATUS</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">DISCHARGE: 3,920 m³/s</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">CAPACITY: 4,200 m³/s (93.3% ACTIVE)</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">SURCHARGE BUFFER: NOMINAL</span>
+</div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 p-space-xs shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary font-bold">FOUNDATION STATUS</span>
+<div class="flex space-x-2 font-code-sm text-code-sm text-on-surface">
+<span>SEEPAGE: <strong class="text-primary">12 L/min</strong></span>
+<span>DEFORMATION: <strong class="text-primary">&lt; 1.2 mm</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time Cross-Section Telemetry Strip -->
+<div class="grid grid-cols-4 bg-surface-container-low text-center p-space-xs">
+<div class="p-1">
+<span class="font-label-sm text-label-sm text-secondary block">Tailrace Froude (Fr)</span>
+<span class="font-code-md text-code-md font-bold text-primary">2.40</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Oscillating Regime</span>
+</div>
+<div class="p-1">
+<span class="font-label-sm text-label-sm text-secondary block">Stilling Energy Loss</span>
+<span class="font-code-md text-code-md font-bold text-primary">64.2%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Baffle Absorption</span>
+</div>
+<div class="p-1">
+<span class="font-label-sm text-label-sm text-secondary block">Sediment Transport Rate</span>
+<span class="font-code-md text-code-md font-bold text-primary">1,410 t/min</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Bed Load Flushing</span>
+</div>
+<div class="p-1">
+<span class="font-label-sm text-label-sm text-secondary block">Desilting Basin Status</span>
+<span class="font-code-md text-code-md font-bold text-primary">ISOLATED</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">0 Ingress / HRT Safe</span>
+</div>
+</div>
+</div>
+<!-- Real-Time Alaknanda Inundation Hydrodynamic Map Slice -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between pb-1 bg-surface-container-low -mx-space-sm -mt-space-sm p-space-xs px-space-sm">
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-primary text-sm">map</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Reach GIS Velocity &amp; Depth Corridor (RK 30.0 - 45.0)</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">ALAKNANDA VALLEY HIGHWAY (NH-07)</span>
+</div>
+<div class="relative w-full h-40 bg-surface-container-high overflow-hidden">
+<div class="w-full h-full bg-cover bg-center filter grayscale contrast-125 opacity-40" data-location="Pipalkoti, Uttarakhand, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDywRMOH6jITp-496ZH8LGPGeHKL57uFHFguaQOtFOV4Ey9pv7wJ36H2Hye2_kOLfcH39ZafbXHtdPqNfj2C9ZQt36Gt7oKtM5FsleQEbFO6PS5oYxpq9DPAjhnW6Ur7-jtrNyxemljtApww63jTBYfQSgufGzXW_VDBqta8RELv7sN6Mu61r8yitVzkny3s2qki29khIrcvrIHlwgygYyAWz-EJRmiT_FObX7bM8_m1GRKKMZGPQv2wA');"></div>
+<!-- Vector GIS Overlay on Map -->
+<div class="absolute inset-0 p-2 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="bg-inverse-surface/90 text-inverse-on-surface p-1 px-2 font-code-sm text-code-sm shadow">
+<span>GPS COORD: 30°25'48"N 79°25'54"E</span> • <span>ELEV: 1,260m</span>
+</div>
+<div class="bg-surface-container-lowest/90 p-1 font-code-sm text-code-sm flex items-center space-x-2">
+<span class="inline-block w-2 h-2 bg-primary"></span>
+<span>Active 2D Flood Extent (v=7.8m/s)</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div class="bg-surface-container-lowest/95 p-1.5 font-code-sm text-code-sm shadow">
+<div class="text-primary font-bold">NH-07 Chamoli Highway Reach:</div>
+<div class="text-on-surface-variant">Freeboard to Embankment: <strong class="text-primary">+8.4m</strong> (No Submergence)</div>
+</div>
+<div class="bg-surface-container-lowest/90 px-2 py-1 font-code-sm text-code-sm font-semibold text-primary">
+                RADAR SATELLITE: RISAT-1A SAR OVERPASS T+01:45
+              </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Downstream Wave Propagation Tracker & Early Warning Dispatch (3 Cols) -->
+<div class="col-span-12 lg:col-span-3 flex flex-col space-y-space-sm">
+<!-- Cascade Propagation & Arrival Matrix -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between pb-1 bg-surface-container-low -mx-space-sm -mt-space-sm p-space-xs px-space-sm">
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-primary text-sm">timeline</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Downstream Wave Cascade</span>
+</div>
+<span class="font-code-sm text-code-sm bg-secondary-container text-on-secondary-container px-1 font-bold">TIMED</span>
+</div>
+<!-- River Kilometers Chain Tracker -->
+<div class="space-y-space-xs pt-1">
+<!-- Node 1: Tapovan Barrage (RK 0.0 - Upstream Source) -->
+<div class="p-space-xs bg-surface-container-low opacity-80">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-outline text-sm">check_circle</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Tapovan Barrage (RK 0.0)</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">T+00:36:12</span>
+</div>
+<div class="text-body-sm text-on-surface-variant mt-0.5 flex justify-between font-code-sm">
+<span>Peak: 6,850 m³/s</span>
+<span class="text-outline">Crest Cleared (Receding)</span>
+</div>
+</div>
+<!-- Node 2: Pipalkoti Barrage (RK 36.8 - CURRENT ACTIVE) -->
+<div class="p-space-xs bg-secondary-container/40">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-1">
+<span class="inline-block w-2 h-2 bg-primary"></span>
+<span class="font-label-sm text-label-sm font-bold text-primary">Pipalkoti Barrage (RK 36.8)</span>
+</div>
+<span class="font-code-sm text-code-sm bg-primary text-on-primary px-1 font-bold">T+01:18:00 NOW</span>
+</div>
+<div class="text-body-sm text-primary mt-0.5 flex justify-between font-code-sm font-semibold">
+<span>Peak: 3,920 m³/s (-42.8%)</span>
+<span>4/4 Gates Hoisted</span>
+</div>
+</div>
+<!-- Node 3: Chamoli Bridge (RK 49.2 - NEXT IMMEDIATE) -->
+<div class="p-space-xs bg-surface-container">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-primary text-sm animate-spin">timelapse</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Chamoli Bridge (RK 49.2)</span>
+</div>
+<span class="font-code-sm text-code-sm text-error font-bold">ETA 20 min</span>
+</div>
+<div class="text-body-sm text-on-surface-variant mt-0.5 font-code-sm">
+<div class="flex justify-between">
+<span>Distance: +12.4 km</span>
+<span>Projected Q: <strong>3,450 m³/s</strong></span>
+</div>
+<div class="flex justify-between text-secondary mt-0.5">
+<span>Arrival: 11:57:40 IST</span>
+<span class="text-primary font-bold">Span Clear: +5.2m</span>
+</div>
+</div>
+</div>
+<!-- Node 4: Karnaprayag Confluence (RK 74.5) -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-outline text-sm">schedule</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Karnaprayag Sangam (RK 74.5)</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">ETA 46 min</span>
+</div>
+<div class="text-body-sm text-on-surface-variant mt-0.5 flex justify-between font-code-sm">
+<span>Pindar Confluence (+37.7 km)</span>
+<span>Projected Q: <strong>2,980 m³/s</strong></span>
+</div>
+</div>
+<!-- Node 5: Rudraprayag Terminal (RK 107.0) -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-outline text-sm">schedule</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Rudraprayag Sangam (RK 107.0)</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">ETA 1h 28m</span>
+</div>
+<div class="text-body-sm text-on-surface-variant mt-0.5 flex justify-between font-code-sm">
+<span>Mandakini Confluence</span>
+<span>Projected Q: <strong>2,410 m³/s</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Population & Evacuation Clearance Telemetry -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col space-y-space-xs flex-1">
+<div class="flex items-center justify-between pb-1 bg-surface-container-low -mx-space-sm -mt-space-sm p-space-xs px-space-sm">
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-primary text-sm">cell_tower</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Civil Defense &amp; CAP Broadcast</span>
+</div>
+<span class="font-code-sm text-code-sm text-primary font-bold">SIREN NET ACTIVE</span>
+</div>
+<div class="space-y-space-xs pt-1">
+<!-- Sector Chamoli Ghats -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Chamoli Riverside Ghats</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">100% EVACUATED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">380 residents moved to Zilla Parishad High Ground Camps.</p>
+</div>
+<!-- Sector Nandprayag Bridges -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Nandprayag Pedestrian Spans</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">ACCESS BARRICADED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">ITBP 8th Bn deployed at pedestrian suspension bridges.</p>
+</div>
+<!-- Automated SMS Broadcaster -->
+<div class="p-space-xs bg-surface-container-high">
+<span class="font-label-sm text-label-sm text-secondary block">COMMON ALERTING PROTOCOL (CAP)</span>
+<div class="font-code-sm text-code-sm text-on-surface mt-1 space-y-0.5">
+<div>CELL BROADCAST: <strong>14,820 HANDSETS REACHED</strong></div>
+<div>RADIO FM 101.4: <strong>EMERGENCY OVERRIDE ON</strong></div>
+</div>
+</div>
+</div>
+<!-- Incident Officer Seal -->
+<div class="mt-auto pt-2 bg-surface-container-low -mx-space-sm -mb-space-sm p-space-xs px-space-sm flex items-center justify-between">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary text-sm">verified_user</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">VALIDATED: ANJALI C., DDMA</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">HASH: #8F29A4D</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Fixed-Model Temporal Scrubber (72px Standard) -->
+<div class="w-full bg-surface-container p-space-sm shadow-md flex flex-col space-y-1">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<div class="flex items-center space-x-space-md">
+<span class="text-primary font-bold flex items-center space-x-1">
+<span class="material-symbols-outlined text-sm">fast_forward</span>
+<span>CHRONOLOGIC INUNDATION PROGRESSION</span>
+</span>
+<span class="text-secondary">ELAPSED: <strong class="text-on-surface">01:18:00</strong></span>
+<span class="text-secondary">SIMULATION STEP: <strong class="text-on-surface">Δt = 0.5 sec</strong></span>
+</div>
+<div class="flex items-center space-x-space-lg">
+<span class="text-outline">T+00:00 (Ronti Glacier Shear)</span>
+<span class="text-outline">T+00:36 (Tapovan Hit)</span>
+<span class="text-primary font-bold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-sm">T+01:18 (Pipalkoti Attenuation Peak)</span>
+<span class="text-outline">T+01:38 (Chamoli ETA)</span>
+<span class="text-outline">T+02:04 (Karnaprayag ETA)</span>
+</div>
+</div>
+<!-- Scrubber Track with Milestones -->
+<div class="relative w-full h-7 bg-surface-container-highest flex items-center px-1">
+<!-- Filled Past Bar -->
+<div class="absolute left-0 top-0 bottom-0 bg-primary-container/30" style="width: 62.9%;"></div>
+<div class="absolute left-0 top-1/2 -translate-y-1/2 h-1.5 bg-primary" style="width: 62.9%;"></div>
+<!-- Scrubber Playhead (Current Position T+01:18 = 78 min of 124 min span = ~62.9%) -->
+<div class="absolute top-0 bottom-0 flex flex-col items-center justify-center -ml-2 cursor-pointer z-10" style="left: 62.9%;">
+<div class="w-4 h-4 bg-primary text-on-primary flex items-center justify-center text-[9px] shadow-sm">▼</div>
+<div class="w-0.5 h-full bg-primary"></div>
+</div>
+<!-- Milestone Flags -->
+<!-- M0: Glacial Detachment -->
+<div class="absolute left-0 flex flex-col items-start text-[9px] font-code-sm text-outline pl-1">
+<span class="font-bold text-on-surface">T+00:00</span>
+<span>Shear 0.0 km</span>
+</div>
+<!-- M1: Tapovan Barrage -->
+<div class="absolute flex flex-col items-center text-[9px] font-code-sm text-outline" style="left: 29%;">
+<span class="font-bold text-on-surface">T+00:36</span>
+<span>Tapovan RK 0.0</span>
+</div>
+<!-- M2: Pipalkoti Barrage (CURRENT) -->
+<div class="absolute flex flex-col items-center text-[9px] font-code-sm text-primary font-bold" style="left: 62.9%;">
+<span class="bg-primary text-on-primary px-1 text-[8px]">ACTIVE PEAK</span>
+<span>Pipalkoti RK 36.8</span>
+</div>
+<!-- M3: Chamoli Bridge -->
+<div class="absolute flex flex-col items-center text-[9px] font-code-sm text-secondary" style="left: 79.5%;">
+<span>T+01:38</span>
+<span>Chamoli RK 49.2</span>
+</div>
+<!-- M4: Karnaprayag Sangam -->
+<div class="absolute right-0 flex flex-col items-end text-[9px] font-code-sm text-outline pr-1">
+<span>T+02:04</span>
+<span>Karnaprayag RK 74.5</span>
+</div>
+</div>
+</div>
+<!-- Interactive Script for Alert and Telemetry Dispatch -->
+<script>
+    const btnChamoli = document.getElementById('btnChamoliAlert');
+    if (btnChamoli) {
+      btnChamoli.addEventListener('click', () => {
+        const confirmed = window.confirm("TRANSMIT AUDIO WARNING TO CHAMOLI BRIDGE (RK 49.2)?\\nETA: 20 minutes.\\nProjected Peak Q: 3,450 m³/s.");
+        if (confirmed) {
+          btnChamoli.innerHTML = '<span class="material-symbols-outlined text-sm">done_all</span><span>SIREN DISPATCHED (11:37:04)</span>';
+          btnChamoli.classList.remove('bg-error', 'hover:bg-on-error-container');
+          btnChamoli.classList.add('bg-primary', 'hover:bg-primary-container');
+        }
+      });
+    }
+  </script>
+</div></main></body></html>

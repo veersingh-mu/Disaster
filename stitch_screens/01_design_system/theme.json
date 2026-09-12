@@ -1,0 +1,167 @@
+{
+  "colorMode": "LIGHT",
+  "font": "IBM_PLEX_SANS",
+  "customColor": "#1b4f72",
+  "headlineFont": "IBM_PLEX_SANS",
+  "bodyFont": "IBM_PLEX_SANS",
+  "labelFont": "IBM_PLEX_SANS",
+  "namedColors": {
+    "on_tertiary_container": "#a0bee0",
+    "inverse_primary": "#9dcbf4",
+    "on_primary": "#ffffff",
+    "error_container": "#ffdad6",
+    "surface_container_low": "#edf4ff",
+    "secondary_fixed": "#d1e4fe",
+    "on_error_container": "#93000a",
+    "secondary_container": "#cfe1fc",
+    "primary": "#003857",
+    "inverse_on_surface": "#e8f2ff",
+    "tertiary_fixed": "#cfe4ff",
+    "on_background": "#111d28",
+    "primary_fixed": "#cce5ff",
+    "surface_tint": "#326286",
+    "background": "#f7f9ff",
+    "secondary_fixed_dim": "#b6c8e2",
+    "on_primary_fixed": "#001e31",
+    "on_error": "#ffffff",
+    "on_secondary_container": "#52647a",
+    "surface_container": "#e3efff",
+    "tertiary_fixed_dim": "#abc9ec",
+    "on_primary_fixed_variant": "#154b6d",
+    "surface_container_high": "#dde9f9",
+    "surface_bright": "#f7f9ff",
+    "error": "#ba1a1a",
+    "tertiary": "#163653",
+    "primary_container": "#1b4f72",
+    "surface_dim": "#cfdbeb",
+    "surface_container_highest": "#d7e4f4",
+    "outline": "#72787f",
+    "on_secondary_fixed": "#091d30",
+    "surface": "#f7f9ff",
+    "primary_fixed_dim": "#9dcbf4",
+    "inverse_surface": "#26313e",
+    "on_surface": "#111d28",
+    "surface_container_lowest": "#ffffff",
+    "on_surface_variant": "#41474e",
+    "on_tertiary_fixed_variant": "#2b4966",
+    "on_secondary_fixed_variant": "#36485d",
+    "on_tertiary_fixed": "#001d34",
+    "tertiary_container": "#2f4d6b",
+    "outline_variant": "#c1c7cf",
+    "on_secondary": "#ffffff",
+    "secondary": "#4e6076",
+    "on_primary_container": "#92c0e9",
+    "on_tertiary": "#ffffff",
+    "surface_variant": "#d7e4f4"
+  },
+  "designMd": "---\nname: Hydrologic Survey & Inundation Instrument\ncolors:\n  surface: '#f7f9ff'\n  surface-dim: '#cfdbeb'\n  surface-bright: '#f7f9ff'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#edf4ff'\n  surface-container: '#e3efff'\n  surface-container-high: '#dde9f9'\n  surface-container-highest: '#d7e4f4'\n  on-surface: '#111d28'\n  on-surface-variant: '#41474e'\n  inverse-surface: '#26313e'\n  inverse-on-surface: '#e8f2ff'\n  outline: '#72787f'\n  outline-variant: '#c1c7cf'\n  surface-tint: '#326286'\n  primary: '#003857'\n  on-primary: '#ffffff'\n  primary-container: '#1b4f72'\n  on-primary-container: '#92c0e9'\n  inverse-primary: '#9dcbf4'\n  secondary: '#4e6076'\n  on-secondary: '#ffffff'\n  secondary-container: '#cfe1fc'\n  on-secondary-container: '#52647a'\n  tertiary: '#163653'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2f4d6b'\n  on-tertiary-container: '#a0bee0'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#cce5ff'\n  primary-fixed-dim: '#9dcbf4'\n  on-primary-fixed: '#001e31'\n  on-primary-fixed-variant: '#154b6d'\n  secondary-fixed: '#d1e4fe'\n  secondary-fixed-dim: '#b6c8e2'\n  on-secondary-fixed: '#091d30'\n  on-secondary-fixed-variant: '#36485d'\n  tertiary-fixed: '#cfe4ff'\n  tertiary-fixed-dim: '#abc9ec'\n  on-tertiary-fixed: '#001d34'\n  on-tertiary-fixed-variant: '#2b4966'\n  background: '#f7f9ff'\n  on-background: '#111d28'\n  surface-variant: '#d7e4f4'\ntypography:\n  headline-xl:\n    fontFamily: IBM Plex Sans\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: IBM Plex Sans\n    fontSize: 22px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: -0.005em\n  headline-md:\n    fontFamily: IBM Plex Sans\n    fontSize: 18px\n    fontWeight: '600'\n    lineHeight: 24px\n    letterSpacing: '0'\n  headline-sm:\n    fontFamily: IBM Plex Sans\n    fontSize: 15px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: '0'\n  body-lg:\n    fontFamily: IBM Plex Sans\n    fontSize: 15px\n    fontWeight: '400'\n    lineHeight: 22px\n    letterSpacing: '0'\n  body-md:\n    fontFamily: IBM Plex Sans\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: 18px\n    letterSpacing: 0.005em\n  body-sm:\n    fontFamily: IBM Plex Sans\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: 16px\n    letterSpacing: 0.01em\n  label-md:\n    fontFamily: IBM Plex Sans\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.04em\n  label-sm:\n    fontFamily: IBM Plex Sans\n    fontSize: 11px\n    fontWeight: '600'\n    lineHeight: 14px\n    letterSpacing: 0.06em\n  code-lg:\n    fontFamily: JetBrains Mono\n    fontSize: 16px\n    fontWeight: '500'\n    lineHeight: 22px\n    letterSpacing: -0.02em\n  code-md:\n    fontFamily: JetBrains Mono\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: 18px\n    letterSpacing: '0'\n  code-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 11px\n    fontWeight: '400'\n    lineHeight: 14px\n    letterSpacing: 0.01em\nspacing:\n  space-2xs: 2px\n  space-xs: 4px\n  space-sm: 8px\n  space-md: 12px\n  space-lg: 16px\n  space-xl: 24px\n  space-2xl: 32px\n  nav-height: 48px\n  panel-width-sm: 320px\n  panel-width-md: 420px\n  panel-width-lg: 560px\n  timeline-height: 72px\n---\n\n## Brand & Style\nThis design system governs a critical life-safety geospatial simulation and breach assessment instrument. The aesthetic is unapologetically disciplined, tactical, and rigorous\u2014rooted in physical cartographic tooling, hydro-meteorological command consoles, and field survey hardware.\n\nThe interface serves emergency managers, civil hydrologists, and disaster response teams who require immediate situational clarity under extreme pressure. Every pixel exists to communicate spatial veracity and quantitative precision; decorative visual effects, skeuomorphic illusions, and soft consumer abstractions are strictly prohibited. The system adopts an engineered, data-dense posture where visual hierarchy is dictated by typographic scale, technical line-weights, and strict geospatial color-coding.\n\n## Colors\n\nThe palette mirrors topographic field sheets, hydrographic depth sounding charts, and navigation displays. High-contrast legibility is maintained across all light conditions, prioritizing situational clarity over aesthetic decoration.\n\n### Core Palettes\n- **Ink (`#0F1B2B`)**: Primary text, high-order telemetry labels, active vector icons, and critical focus states.\n- **Deep Slate (`#1C2E42`)**: Persistent top navigation bar, technical HUD overlays, collapsed drawer headers, and dark utility chrome.\n- **Deep Water (`#1B4F72`)**: Primary interactive accent, selected active states, primary CTA triggers, and core flood extent indicators.\n- **Contour Gray (`#6B7785`)**: Hairline borders, divisional graticules, secondary metadata text, and inactive toggles.\n- **Mist (`#EDF1F4`)**: Instrument backdrop, peripheral dock backgrounds, and empty-state canvas fills.\n- **Surface White (`#FFFFFF`)**: Analysis cards, floating control panels, inspection popovers, and inspector sheets.\n\n### Hydrological Depth Ramp\nDynamic cartographic layers strictly employ the calibrated water depth scale:\n- **Shallow Inundation (0.1m - 0.5m)**: `#BFE3F0` (40% to 80% opacity on vector overlays)\n- **Moderate Depth (0.5m - 2.0m)**: `#1B4F72` (Primary fluid boundary)\n- **High Velocity / Deep Channel (> 2.0m)**: `#0B2E4A` (Maximum visual density)\n\n### Operational Hazard Semantics\nAlert colors must be applied exclusively to real-time risk readouts, simulation threshold warnings, and critical system states. They must never be repurposed for general marketing badges or aesthetic decoration:\n- **Severe Hazard / Breach Impending**: `#C0392B` (Hazard Red)\n- **Moderate Hazard / Velocity Advisory**: `#E8A33D` (Caution Amber)\n- **System Nominal / Model Calibrated**: `#3E8E5A` (Success Green)\n\n## Typography\n\nThe typographic system pairs the structural clarity of IBM Plex Sans with the computational exactitude of a precision monospaced face (JetBrains Mono). \n\n### Hierarchy and Pairing Rules\n- **Structural Typography (`IBM Plex Sans`)**: Powers titles, operational drawers, labels, input fields, and body text. Section titles and field headers above inputs should always be set in uppercase or tight semi-bold tracking to anchor spatial forms.\n- **Instrument Telemetry (`JetBrains Mono`)**: Powers all geographic coordinates (lat/long), simulation Timestep vectors ($T+00:00:00$), discharge volume rates ($m^3/s$), cross-section water surface elevations ($WSEL$), and spatial index identifiers. Monospaced elements must never wrap mid-string; tabular lining numbers (`font-variant-numeric: tabular-nums`) must be enforced on all dynamically refreshing numeric values.\n\n## Layout & Spacing\n\nThe layout is an instrument-grade, map-first viewport workspace designed to preserve uninterrupted situational visibility.\n\n### Layout Model\n1. **Persistent Global Bar (`48px` fixed height)**: Rendered in Deep Slate (`#1C2E42`). Hosts system status, dataset identifiers, coordinates tracking, active run status, and primary workspace switchers.\n2. **Primary Viewport (Dynamic Fluid Vector Plane)**: Maps and spatial telemetry canvas consume 100% of remaining width and height.\n3. **Collapsible Split Inspection Docks**: \n   - **Left Dock (`320px` to `420px`)**: Parameter inputs, dam characteristics, breach geometry variables, and hydrograph controls.\n   - **Right Dock (`420px` to `560px`)**: Simulation output analytics, cross-section elevation charts, downstream arrival matrices, and population impact summaries.\n4. **Temporal Scrubber / Playback Bar (`72px` fixed bottom)**: Anchored over the bottom edge of the map, housing high-resolution time stepping, play/pause controls, and peak inundation markers.\n\n### Responsive Behavior\n- **Desktop Viewport (> 1280px)**: Persistent two-pane split with simultaneous parameter inputs, center map view, and real-time telemetry drawer.\n- **Field Terminal / Tablet (768px - 1279px)**: Inspector drawers collapse into fixed-width sliding overlays (`panel-width-md`) triggered via top-nav icons. Spatial controls shift to compact vertical tool-strips docked to the map edge.\n- **Tactical Mobile (< 767px)**: Viewport displays map-only mode with a bottom sheet modal architecture. Telemetry collapses to tabular cards expandable by swiping up; interactive map tools shift to a thumb-accessible right-side floating HUD.\n\n## Elevation & Depth\n\nVisual hierarchy is communicated through high-contrast boundary definition, structural layering, and hairline borders rather than ambient depth or drop shadows. This preserves crisp readability against high-contrast satellite raster layers and multi-band synthetic aperture radar (SAR) feeds.\n\n### Depth Rules\n- **No Decorative Shadows**: Do not apply blurred ambient shadows, colored glows, or diffuse elevation shadows to panels, cards, or inputs.\n- **Hairline Graticule Borders**: All panels, cards, modals, and input fields use a crisp `1px` solid outline colored with Contour Gray (`#6B7785`) or Deep Slate (`#1C2E42` at 15% opacity).\n- **Surface Layering**:\n  - **Level 0 (Base)**: Dynamic WebGL Map Canvas / Raster Layers.\n  - **Level 1 (Dock Frame)**: Solid Mist (`#EDF1F4`) structural backgrounds with `1px` borders.\n  - **Level 2 (Active Panels & Inspection Cards)**: Solid Surface White (`#FFFFFF`) with `1px` Contour Gray border.\n  - **Level 3 (Floating HUD & Map Controls)**: Surface White (`#FFFFFF`) with a `1px` solid Contour Gray border and a zero-blur hard technical offset (`box-shadow: 0 2px 0 0 rgba(15, 27, 43, 0.08)`).\n  - **Level 4 (System Overlays / Breach Alerts)**: Deep Slate (`#1C2E42`) or Alert Red banner layers with absolute z-index priority.\n\n## Shapes\n\nThe design system adopts a **Sharp (`0`)** shape language. \n\nEvery UI element\u2014including buttons, panels, tooltips, alert banners, tabular rows, and inputs\u2014is constructed with razor-sharp `0px` border-radii. This industrial, zero-radius geometry reinforces the tool's identity as a scientific instrument, maximizing viewable data area and eliminating wasted canvas corners. \n\nExceptions: Perfectly circular indicators are reserved exclusively for spatial map pinpoints, pulse vectors, and radio select markers.\n\n## Components\n\n### 1. Buttons & Control Triggers\n- **Primary Action (Run Scenario, Commit Breach)**: Solid Deep Water (`#1B4F72`) background, Surface White (`#FFFFFF`) text, `0px` radius, `32px` standard height, uppercase `12px` IBM Plex Sans semi-bold tracking. Hover: `#0B2E4A`. Focus: `2px` solid `#0F1B2B` with `1px` white inner gap.\n- **Secondary Action (Inspect Profile, Export Shapefile)**: Transparent background, `1px` solid Contour Gray (`#6B7785`), Ink (`#0F1B2B`) text. Hover: Mist (`#EDF1F4`) fill.\n- **Hazard Action (Trigger Emergency Broadcast)**: Solid Hazard Red (`#C0392B`) background, white text. Active state: Flash inversion to Ink (`#0F1B2B`).\n\n### 2. Status Chips & Telemetry Badges\n- Built with a strict height of `20px`, padding `0 6px`, monospaced typography (`code-sm`).\n- **Nominal State**: Background `#EDF1F4`, text `#1C2E42`, border `1px` solid `#6B7785`.\n- **Warning State**: Background `#FFF8E7`, text `#A06800`, border `1px` solid `#E8A33D`.\n- **Critical Alert**: Background `#FDF2F2`, text `#C0392B`, border `1px` solid `#C0392B`, prepended with a blinking square signal indicator.\n\n### 3. Inspection Cards & Structural Panels\n- Surface White (`#FFFFFF`) background, bounded by a `1px` solid Contour Gray (`#6B7785`) border.\n- Header bars must feature a distinct `28px` sub-header block in Mist (`#EDF1F4`) with uppercase technical labels (`label-sm`) and explicit parameter units (`[m/s]`, `[m\u00b3]`, `[WGS84]`).\n\n### 4. Input Fields & Parameter Steppers\n- Input containers feature a rigid `32px` height, Surface White fill, and `1px` Contour Gray border.\n- Floating focus: border shifts immediately to Deep Water (`#1B4F72`) without ambient outer ring glow.\n- Numeric parameters (e.g., Lake Volume, Breach Width, Manning's Roughness $n$) must be rendered in JetBrains Mono (`code-md`) accompanied by a fixed right-side unit suffix lockup (`m\u00b3`, `m`, `s`).\n\n### 5. Checkboxes & Toggle Radios\n- Box size `14px x 14px`, `0px` border radius, `1px` solid Contour Gray.\n- Checked state: Solid Deep Slate fill with an inner white cross-hair or check mark. Radio buttons use a centered `6px` square dot instead of a circular fill.\n\n### 6. Specialized Domain Components\n- **Hydrograph Cross-Section Inspector**: An inline SVG coordinate display mapping elevation vs. cross-channel distance. Depth fills use the hydrologic ramp (`#BFE3F0` to `#1B4F72`) paired with hairline dashed reference rules for peak water marks.\n- **Temporal Timeline Scrubber**: A high-density chronological timeline bar situated along the bottom viewport edge. Milestones (e.g., \"Breach Initiation\", \"Peak Discharge\", \"Terminal Floodplain Inundation\") are plotted as sharp triangular flags directly above the track.\n- **Spatial Coordinate HUD**: A docked status strip displaying real-time cursor position in both decimal degrees and UTM coordinates alongside active camera zoom level and map scale.",
+  "colorVariant": "FIDELITY",
+  "overridePrimaryColor": "#1b4f72",
+  "overrideSecondaryColor": "#1c2e42",
+  "overrideTertiaryColor": "#0b2e4a",
+  "overrideNeutralColor": "#6b7785",
+  "spacingScale": 2,
+  "typography": {
+    "headline-lg": {
+      "fontFamily": "IBM Plex Sans",
+      "fontSize": "22px",
+      "fontWeight": "600",
+      "lineHeight": "28px",
+      "letterSpacing": "-0.005em"
+    },
+    "body-sm": {
+      "fontFamily": "IBM Plex Sans",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "lineHeight": "16px",
+      "letterSpacing": "0.01em"
+    },
+    "headline-xl": {
+      "fontFamily": "IBM Plex Sans",
+      "fontSize": "28px",
+      "fontWeight": "600",
+      "lineHeight": "36px",
+      "letterSpacing": "-0.01em"
+    },
+    "headline-md": {
+      "fontFamily": "IBM Plex Sans",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "lineHeight": "24px",
+      "letterSpacing": "0"
+    },
+    "code-lg": {
+      "fontFamily": "JetBrains Mono",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "lineHeight": "22px",
+      "letterSpacing": "-0.02em"
+    },
+    "label-sm": {
+      "fontFamily": "IBM Plex Sans",
+      "fontSize": "11px",
+      "fontWeight": "600",
+      "lineHeight": "14px",
+      "letterSpacing": "0.06em"
+    },
+    "code-md": {
+      "fontFamily": "JetBrains Mono",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "18px",
+      "letterSpacing": "0"
+    },
+    "label-md": {
+      "fontFamily": "IBM Plex Sans",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "lineHeight": "16px",
+      "letterSpacing": "0.04em"
+    },
+    "code-sm": {
+      "fontFamily": "JetBrains Mono",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "lineHeight": "14px",
+      "letterSpacing": "0.01em"
+    },
+    "body-lg": {
+      "fontFamily": "IBM Plex Sans",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "lineHeight": "22px",
+      "letterSpacing": "0"
+    },
+    "body-md": {
+      "fontFamily": "IBM Plex Sans",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "18px",
+      "letterSpacing": "0.005em"
+    },
+    "headline-sm": {
+      "fontFamily": "IBM Plex Sans",
+      "fontSize": "15px",
+      "fontWeight": "600",
+      "lineHeight": "20px",
+      "letterSpacing": "0"
+    }
+  },
+  "spacing": {
+    "space-lg": "16px",
+    "nav-height": "48px",
+    "panel-width-lg": "560px",
+    "space-xs": "4px",
+    "space-xl": "24px",
+    "space-sm": "8px",
+    "space-md": "12px",
+    "space-2xl": "32px",
+    "timeline-height": "72px",
+    "space-2xs": "2px",
+    "panel-width-md": "420px",
+    "panel-width-sm": "320px"
+  },
+  "headlineFontFamily": "IBM Plex Sans",
+  "bodyFontFamily": "IBM Plex Sans",
+  "labelFontFamily": "IBM Plex Sans"
+}

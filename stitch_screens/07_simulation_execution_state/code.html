@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#cce5ff", "primary": "#003857", "outline": "#72787f", "surface-container": "#e3efff", "on-tertiary": "#ffffff", "surface-tint": "#326286", "tertiary": "#163653", "on-error-container": "#93000a", "on-error": "#ffffff", "tertiary-fixed-dim": "#abc9ec", "on-primary-fixed": "#001e31", "surface-container-lowest": "#ffffff", "secondary-container": "#cfe1fc", "background": "#f7f9ff", "on-secondary-fixed-variant": "#36485d", "error": "#ba1a1a", "on-primary-container": "#92c0e9", "surface-variant": "#d7e4f4", "tertiary-fixed": "#cfe4ff", "primary-fixed-dim": "#9dcbf4", "inverse-primary": "#9dcbf4", "outline-variant": "#c1c7cf", "on-tertiary-fixed-variant": "#2b4966", "on-secondary-fixed": "#091d30", "primary-container": "#1b4f72", "surface-container-low": "#edf4ff", "secondary-fixed": "#d1e4fe", "surface": "#f7f9ff", "surface-container-highest": "#d7e4f4", "on-tertiary-container": "#a0bee0", "secondary": "#4e6076", "inverse-surface": "#26313e", "secondary-fixed-dim": "#b6c8e2", "on-primary": "#ffffff", "tertiary-container": "#2f4d6b", "on-tertiary-fixed": "#001d34", "surface-bright": "#f7f9ff", "surface-container-high": "#dde9f9", "on-background": "#111d28", "on-primary-fixed-variant": "#154b6d", "inverse-on-surface": "#e8f2ff", "surface-dim": "#cfdbeb", "on-surface": "#111d28", "on-secondary": "#ffffff", "on-secondary-container": "#52647a", "on-surface-variant": "#41474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "32px", "nav-height": "48px", "space-md": "12px", "panel-width-md": "420px", "space-lg": "16px", "space-xl": "24px", "panel-width-sm": "320px", "space-2xs": "2px", "space-sm": "8px", "timeline-height": "72px", "space-xs": "4px", "panel-width-lg": "560px" }, "fontFamily": { "code-sm": [ "JetBrains Mono" ], "body-md": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-md": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "body-sm": [ "IBM Plex Sans" ], "headline-sm": [ "IBM Plex Sans" ], "code-lg": [ "JetBrains Mono" ], "headline-xl": [ "IBM Plex Sans" ], "label-sm": [ "IBM Plex Sans" ], "code-md": [ "JetBrains Mono" ], "headline-lg": [ "IBM Plex Sans" ] }, "fontSize": { "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "600" } ], "code-lg": [ "16px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "code-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-tertiary text-on-tertiary h-nav-height"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-fixed">water_voc</span><span class="font-headline-sm text-headline-sm text-on-tertiary tracking-tight">FloodPath</span></div><span class="font-code-sm text-code-sm bg-tertiary-container text-on-tertiary-container px-space-xs py-space-2xs rounded">SIH 26161 - Inundation Model v1.2</span><nav class="hidden xl:flex items-center gap-space-xs ml-space-md" data-active-classes="bg-primary-container text-on-primary font-label-md"><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="dashboard" href="#">Dashboard</a><a aria-current="page" class="px-space-md py-space-xs rounded transition-colors bg-primary-container text-on-primary font-label-md" data-path="scenario-workbench" href="#">New Scenario</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="historical-cases" href="#">Historical Case Studies</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="model-settings" href="#">Settings</a></nav></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-tertiary-container px-space-sm py-space-2xs rounded"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-code-sm text-code-sm text-on-tertiary-container">DEM Grid: SRTM 30m Active</span></div><div class="flex items-center gap-space-sm pl-space-md"><div class="text-right hidden sm:block"><div class="font-label-sm text-label-sm text-on-tertiary">Anjali</div><div class="font-code-sm text-code-sm text-on-tertiary-container">DDMA Officer</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xy7v4veH8e3oTI877FEdQrvPJjbmZ7gtI0OOQuixD7pcVjY2CqZpRgXgdCJmynPlLonsniCwQMA8F9lV2VvF5Q6roeH_WXb3K_WlgejvSuZwelKM895EIkBLPm3k0QXjKBLG7rQhOR6WF9st7y2-Yh8OALVnWEqYhnhvnFWXXBhfe9ofboPbEOVptyYR65aZZRd4ykoJHYH3wr8VVSFkJK9QFIXS_qofJhW0PIiTPf9tXXUTSQTSRK7G50"/></div></div></div></header><aside class="fixed left-0 top-nav-height bottom-0 w-panel-width-sm bg-surface-container-low z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-sm px-space-xs">Operational Telemetry</div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-primary-container text-on-primary"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-base">dashboard</span><span>Overview &amp; Alerts</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm transition-colors bg-primary-container text-on-primary" data-path="scenario-workbench" href="#"><span class="material-symbols-outlined text-base">layers</span><span>Scenario Workbench</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="historical-cases" href="#"><span class="material-symbols-outlined text-base">history_edu</span><span>Historical Records</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="model-settings" href="#"><span class="material-symbols-outlined text-base">tune</span><span>DEM &amp; Engine Settings</span></a></nav></div><div class="p-space-md bg-surface-container"><div class="font-label-sm text-label-sm text-on-surface font-semibold mb-space-2xs">GIS Node Status</div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between"><span>CRS Projection</span><span>EPSG:4326 WGS84</span></div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between mt-space-2xs"><span>Hydraulic Mode</span><span>2D Shallow Water</span></div></div></aside><div class="pl-panel-width-sm"><main class="relative pt-nav-height bg-background min-h-screen w-full"><div class="flex flex-col w-full">
+<!-- Operational Sub-Header Strip -->
+<div class="w-full bg-surface-container-low px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="inline-flex items-center gap-space-xs px-space-xs py-space-2xs bg-surface-variant text-on-surface-variant rounded font-code-sm text-code-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+        PIPELINE ID: 2026-HYD-9941A
+      </span>
+<span class="font-code-sm text-code-sm text-secondary">Solver: 2D St. Venant Diffusive Hydrodynamic Vector Grid</span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm">
+<span class="text-secondary">Core Load: <strong class="text-on-surface font-code-sm">94.2%</strong> (16 Threads)</span>
+<span class="text-secondary">Memory Grid: <strong class="text-on-surface font-code-sm">1.82 GB / 4.00 GB</strong></span>
+<div class="flex items-center gap-space-2xs bg-surface-container px-space-sm py-space-2xs rounded">
+<span class="material-symbols-outlined text-primary text-base">satellite_alt</span>
+<span class="text-primary font-label-sm">SRTM-1 Arcsec High-Z</span>
+</div>
+</div>
+</div>
+<!-- Primary Execution Workstation Grid -->
+<div class="w-full p-space-md xl:p-space-lg flex flex-col lg:flex-row gap-space-lg items-start">
+<!-- Left Execution Control Dock -->
+<div class="w-full lg:w-panel-width-md shrink-0 flex flex-col gap-space-md">
+<!-- Primary Status Block -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm">
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-space-2xs">Active Hydro-Solver Runtime</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Executing Hydrologic Inundation Pipeline</h1>
+</div>
+<span class="material-symbols-outlined text-primary-container animate-spin text-xl">rotate_right</span>
+</div>
+<!-- Target Geometry Callout -->
+<div class="mt-space-sm p-space-sm bg-surface-container-low rounded flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-base">pin_drop</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rishi Ganga Upper Moraine Lake</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-secondary">
+<span>Coordinates: 30.4851°N, 79.7214°E</span>
+<span class="bg-surface-variant text-on-surface-variant px-space-xs rounded">EL. 4,320m ASL</span>
+</div>
+</div>
+<!-- Overall Elapsed Progress Meter -->
+<div class="mt-space-md">
+<div class="flex justify-between items-center mb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Cumulative Completion</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold" id="pct-badge">68.4%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded overflow-hidden">
+<div class="bg-primary-container h-full transition-all duration-300 ease-out" style="width: 68.4%;"></div>
+</div>
+</div>
+</div>
+<!-- Pipeline Steps Timeline Sequence -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">5-Stage Model Pipeline</span>
+<span class="font-code-sm text-code-sm text-secondary">Batch Iteration #14</span>
+</div>
+<div class="relative flex flex-col gap-space-sm pl-space-xs">
+<!-- Step 1: Completed -->
+<div class="flex items-start gap-space-sm relative">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div class="w-0.5 h-10 bg-secondary-fixed"></div>
+</div>
+<div class="flex-1 pt-space-2xs min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Step 1: SRTM 30m DEM Tile Conditioning</span>
+<span class="font-code-sm text-code-sm bg-secondary-container text-on-secondary-container px-space-xs py-space-2xs rounded shrink-0">1.2s</span>
+</div>
+<div class="font-body-sm text-body-sm text-secondary mt-space-2xs">Hydrological sinks filled (Wang &amp; Liu priority flood method). Void fills resolved.</div>
+</div>
+</div>
+<!-- Step 2: Completed -->
+<div class="flex items-start gap-space-sm relative">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div class="w-0.5 h-12 bg-secondary-fixed"></div>
+</div>
+<div class="flex-1 pt-space-2xs min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Step 2: Empirical Breach Parameter Estimation</span>
+<span class="font-code-sm text-code-sm bg-secondary-container text-on-secondary-container px-space-xs py-space-2xs rounded shrink-0">0.8s</span>
+</div>
+<div class="font-body-sm text-body-sm text-secondary mt-space-2xs">Froehlich Outflow Peak calculated: <strong class="text-on-surface font-code-sm">6,850 m³/s</strong>. Breach width: 44.2m.</div>
+</div>
+</div>
+<!-- Step 3: In Progress (Active) -->
+<div class="flex items-start gap-space-sm relative">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-sm">sync</span>
+</div>
+<div class="w-0.5 h-16 bg-surface-container"></div>
+</div>
+<div class="flex-1 pt-space-2xs min-w-0 bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Step 3: 2D Diffusive-Wave Routing Downstream</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold bg-surface-container-lowest px-space-xs rounded">In Progress (68%)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Cellular Automaton 30m Grid cell routing. Velocity vectors propagating downstream.</div>
+<!-- Micro Progress Bar -->
+<div class="w-full bg-surface-container-highest h-1.5 rounded mt-space-xs overflow-hidden">
+<div class="bg-primary h-full rounded transition-all duration-500" style="width: 68%;"></div>
+</div>
+<div class="flex justify-between items-center mt-space-xs font-code-sm text-code-sm text-secondary">
+<span>Elapsed: 1m 24s</span>
+<span>Courant C = 0.42 (Stable)</span>
+</div>
+</div>
+</div>
+<!-- Step 4: Pending -->
+<div class="flex items-start gap-space-sm relative opacity-60">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-xs">radio_button_unchecked</span>
+</div>
+<div class="w-0.5 h-10 bg-surface-container"></div>
+</div>
+<div class="flex-1 pt-space-2xs min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Step 4: Settlement &amp; Evacuation Window Intersection</span>
+<span class="font-code-sm text-code-sm text-secondary">Pending</span>
+</div>
+<div class="font-body-sm text-body-sm text-secondary mt-space-2xs">Spatial join with Tapovan, Raini, and Joshimath municipal assets.</div>
+</div>
+</div>
+<!-- Step 5: Pending -->
+<div class="flex items-start gap-space-sm relative opacity-60">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-xs">radio_button_unchecked</span>
+</div>
+</div>
+<div class="flex-1 pt-space-2xs min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Step 5: Generating Actionable Advisory Pack</span>
+<span class="font-code-sm text-code-sm text-secondary">Pending</span>
+</div>
+<div class="font-body-sm text-body-sm text-secondary mt-space-2xs">Compiling CAP XML dispatch feeds and GeoJSON flood footprint layers.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Graceful Failure / Fallback Preview Box -->
+<div class="bg-error-container text-on-error-container rounded-lg p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-xl shrink-0 mt-space-2xs">warning</span>
+<div class="flex-1 min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-error-container">Anomaly Guard: Fallback System Ready</div>
+<div class="font-body-sm text-body-sm text-on-error-container mt-space-2xs">
+              Network DEM Void Detected at Tile E079 (Gorge Shadows). Redundant hydro-mesh fallback to <strong class="font-semibold">ASTER GDEM v3</strong> is staged for instant 1-click swap if convergence degrades.
+            </div>
+<div class="mt-space-sm flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs bg-surface-container-lowest text-error font-label-sm text-label-sm uppercase rounded shadow-sm hover:bg-surface transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-sm">cached</span>
+                Switch to ASTER GDEM
+              </button>
+<span class="font-code-sm text-code-sm opacity-80">Auto-trigger at delta &gt; 12%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Actions & Regulatory Disclaimer -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-md">
+<button class="px-space-md py-space-xs bg-surface-container-high text-on-surface font-label-md text-label-md uppercase rounded hover:bg-error hover:text-on-error transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base">cancel</span>
+            Cancel Simulation
+          </button>
+<span class="font-code-sm text-code-sm text-secondary">Run Safe Kill Signal</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary pt-space-xs">
+<strong class="font-label-sm text-label-sm text-on-surface uppercase">Hydro-Modeling Notice:</strong> Simulation relies on open 30m DEM. Local gorge micro-topography and moraine dam structural non-uniformities may introduce ±15% variance in downstream flood peak arrival times.
+        </p>
+</div>
+</div>
+<!-- Right Live Simulation Viewport & Telemetry Canvas -->
+<div class="flex-1 w-full flex flex-col gap-space-md">
+<!-- Spatial Viewport Container -->
+<div class="relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm flex flex-col">
+<!-- Viewport HUD Overlay Bar -->
+<div class="absolute top-0 left-0 right-0 z-20 bg-surface/90 backdrop-blur px-space-md py-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-sm text-code-sm text-primary font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base">radar</span>
+              DYNAMIC ROUTING MONITOR: REACH 01-A
+            </span>
+<span class="font-code-sm text-code-sm bg-surface-container px-space-xs py-space-2xs rounded text-secondary">N30°29'06" E79°43'17"</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary font-code-sm text-code-sm">
+<span>Grid Step Δx: <strong>30.0m</strong></span>
+<span>•</span>
+<span>Time-Step Δt: <strong>0.5s</strong></span>
+</div>
+<div class="flex items-center gap-space-2xs bg-surface-container-low px-space-xs py-space-2xs rounded">
+<button class="p-space-2xs hover:bg-surface-variant text-on-surface-variant rounded" title="Recenter Viewport">
+<span class="material-symbols-outlined text-base">center_focus_strong</span>
+</button>
+<button class="p-space-2xs hover:bg-surface-variant text-on-surface-variant rounded" title="Toggle Contours">
+<span class="material-symbols-outlined text-base">grid_on</span>
+</button>
+<button class="p-space-2xs hover:bg-surface-variant text-on-surface-variant rounded" title="Layer Legend">
+<span class="material-symbols-outlined text-base">layers</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Simulated Map Visualizer Canvas -->
+<div class="relative w-full h-[520px] lg:h-[620px] overflow-hidden bg-surface-container-highest">
+<!-- Background Himalayan Geo-Topology Mock Layer -->
+<div class="absolute inset-0 opacity-80 mix-blend-multiply" data-alt="High-resolution aerial satellite orthophoto of the dramatic rugged Himalayan gorge along Rishi Ganga river valley with steep rocky slopes, snowy ridges, glacier moraine lakes, and deep mountain gorges under cold alpine daylight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBv_lDMrgtAg46U4cuB-h0QJHDA-l0ItxnlY2SUDbVHFmg-cwAoHOEWZUBBRWyaiNDCidHT3o5UJSuUmG36KLsBGfYwNlsfI4K3pz1FxU4oF2ZMz8QV-hJuTuA8oNdzeHA-WflvBC5tzQ3Ksryrx6QYPeoB4EE1Rptx91FDSaFGS6EpPv2jm9ava59g-2IRZWb64X4F6zjnYODBQvF4t4u6XJ44pZdScRjsfq1Kbycpj3V7qbRExz0R0w')">
+</div>
+<!-- Topographic Contour Line Overlay (Vector Simulation) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-35" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid-pattern" patternunits="userSpaceOnUse" width="40">
+<path class="text-surface-tint" d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-dasharray="2,2" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid-pattern)" height="100%" width="100%"></rect>
+<!-- Valley Contours -->
+<path class="text-primary-container" d="M-50,120 C180,140 320,190 480,260 C640,330 820,410 1100,480" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+<path class="text-primary-container" d="M-50,150 C190,170 340,220 500,290 C660,360 840,440 1100,510" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+<path class="text-primary-container" d="M-50,90 C170,110 300,160 460,230 C620,300 800,380 1100,450" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+<path class="text-secondary" d="M-50,200 C210,220 370,270 540,340 C700,410 880,500 1100,570" fill="none" stroke="currentColor" stroke-dasharray="4,4" stroke-width="0.75"></path>
+</svg>
+<!-- Dynamic Wavefront Propagation Simulation (Animated Water Vectors) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="wave-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#1B4F72" stop-opacity="0.95"></stop>
+<stop offset="45%" stop-color="#326286" stop-opacity="0.85"></stop>
+<stop offset="75%" stop-color="#92c0e9" stop-opacity="0.75"></stop>
+<stop offset="100%" stop-color="#cce5ff" stop-opacity="0.2"></stop>
+</lineargradient>
+<filter id="wave-glow">
+<fegaussianblur result="coloredBlur" stddeviation="3"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Main Dynamic Flooded Channel Polygon -->
+<path class="animate-pulse" d="M 60,110 Q 220,135 380,215 T 620,350 T 780,430 L 760,460 Q 600,380 370,250 T 40,150 Z" fill="url(#wave-gradient)"></path>
+<!-- Active Wave Propagation Crest Leading Edge -->
+<path d="M 740,410 Q 770,440 795,455 Q 765,475 730,480" fill="none" filter="url(#wave-glow)" stroke="#ffffff" stroke-width="3">
+<animate attributename="stroke-dashoffset" dur="2s" from="100" repeatcount="indefinite" to="0"></animate>
+</path>
+<!-- Secondary Surge Ripples -->
+<path d="M 700,385 Q 730,415 750,435" fill="none" stroke="#cce5ff" stroke-dasharray="6,4" stroke-width="2"></path>
+<path d="M 660,360 Q 690,390 710,410" fill="none" stroke="#92c0e9" stroke-dasharray="4,4" stroke-width="1.5"></path>
+<!-- Velocity Vector Field Arrows along flow axis -->
+<g class="text-on-primary">
+<circle cx="160" cy="135" fill="currentColor" r="3"></circle>
+<path d="M 160,135 L 200,150" stroke="currentColor" stroke-width="2"></path>
+<circle cx="320" cy="195" fill="currentColor" r="3"></circle>
+<path d="M 320,195 L 365,220" stroke="currentColor" stroke-width="2"></path>
+<circle cx="500" cy="290" fill="currentColor" r="3"></circle>
+<path d="M 500,290 L 550,325" stroke="currentColor" stroke-width="2.5"></path>
+<circle cx="680" cy="395" fill="#ffdad6" r="3"></circle>
+<path d="M 680,395 L 735,435" stroke="#ffdad6" stroke-width="3"></path>
+</g>
+</svg>
+<!-- Breached Source Pin Marker -->
+<div class="absolute top-24 left-10 z-10 flex flex-col items-center">
+<div class="px-space-xs py-space-2xs bg-primary text-on-primary font-code-sm text-code-sm rounded shadow-sm flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+              MORRAINE BREACH (T₀)
+            </div>
+<div class="w-0.5 h-6 bg-primary"></div>
+<div class="w-3 h-3 rounded-full bg-primary-container"></div>
+</div>
+<!-- Active Wavefront Floating HUD Badge -->
+<div class="absolute top-[410px] left-[620px] z-10 hidden md:flex flex-col gap-space-2xs bg-surface-container-lowest/95 backdrop-blur p-space-sm rounded shadow-md border-l-4 border-l-primary">
+<div class="flex items-center justify-between gap-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Active Wave Front (68%)</span>
+<span class="font-code-sm text-code-sm bg-primary-container text-on-primary px-space-xs rounded">v = 9.4 m/s</span>
+</div>
+<div class="font-code-sm text-code-sm text-secondary">Distance from Breach: 14.8 km</div>
+<div class="font-code-sm text-code-sm text-error font-semibold">Peak Inundation Depth: 11.2 m</div>
+</div>
+<!-- Downstream Settlement Threat Callout -->
+<div class="absolute bottom-6 right-8 z-10 bg-surface-container-lowest/95 backdrop-blur p-space-sm rounded shadow-md max-w-xs">
+<div class="flex items-center gap-space-xs text-error font-label-sm text-label-sm uppercase">
+<span class="material-symbols-outlined text-base">emergency_home</span>
+<span>Imminent Impact Zone</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-space-2xs">Raini Village Bridge</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-secondary mt-space-xs">
+<span>Estimated Arrival (ETA):</span>
+<strong class="text-error font-code-sm font-semibold">18m 40s</strong>
+</div>
+<div class="w-full bg-surface-container h-1 rounded mt-space-xs overflow-hidden">
+<div class="bg-error h-full" style="width: 72%;"></div>
+</div>
+</div>
+<!-- Map Coordinate Floating Footer Strip -->
+<div class="absolute bottom-2 left-2 z-10 bg-surface/80 backdrop-blur px-space-sm py-space-2xs rounded font-code-sm text-code-sm text-secondary flex items-center gap-space-md">
+<span>Grid Projection: UTM Zone 44N</span>
+<span>Cell Resolution: 30m²</span>
+<span>Z-Exaggeration: 1.5×</span>
+</div>
+</div>
+<!-- Telemetry Data Strip Under Viewport -->
+<div class="bg-surface-container-low p-space-md grid grid-cols-2 sm:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<div class="font-label-sm text-label-sm uppercase text-secondary">Peak Outflow Discharge</div>
+<div class="font-headline-md text-headline-md text-primary font-bold mt-space-2xs">6,850 <span class="font-body-sm text-body-sm font-normal text-secondary">m³/s</span></div>
+<div class="font-code-sm text-code-sm text-secondary mt-space-2xs">Froehlich 1995 Run Peak</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<div class="font-label-sm text-label-sm uppercase text-secondary">Max Velocity Front</div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold mt-space-2xs">12.8 <span class="font-body-sm text-body-sm font-normal text-secondary">m/s</span></div>
+<div class="font-code-sm text-code-sm text-secondary mt-space-2xs">Chézy-Manning Reach 02</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<div class="font-label-sm text-label-sm uppercase text-secondary">Inundated Area Extent</div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold mt-space-2xs">4.24 <span class="font-body-sm text-body-sm font-normal text-secondary">km²</span></div>
+<div class="font-code-sm text-code-sm text-secondary mt-space-2xs">Active Flood Footprint</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<div class="font-label-sm text-label-sm uppercase text-secondary">Solver Stability Index</div>
+<div class="font-headline-md text-headline-md text-primary-container font-bold mt-space-2xs">0.998 <span class="font-body-sm text-body-sm font-normal text-secondary">CFL</span></div>
+<div class="font-code-sm text-code-sm text-secondary mt-space-2xs">Zero Numerical Oscillation</div>
+</div>
+</div>
+</div>
+<!-- Real-Time Cross-Section Hydrologic Inset Profile -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<div class="font-label-sm text-label-sm text-secondary uppercase">Hydraulic Transect Analysis</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Gorge Cross-Section at Station 07+400 (Raini Gorge Node)</h2>
+</div>
+<span class="font-code-sm text-code-sm bg-surface-container text-on-surface px-space-xs py-space-2xs rounded">Live Stage Sensor</span>
+</div>
+<!-- Inline SVG Cross-Section Elevation Graphic -->
+<div class="w-full h-36 bg-surface-container-low rounded relative p-space-xs flex items-center justify-center">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 700 120" xmlns="http://www.w3.org/2000/svg">
+<!-- Channel Bed Geometry (Steep V-Gorge) -->
+<polygon class="fill-surface-variant" points="0,10 120,40 280,110 420,110 580,45 700,15 700,120 0,120"></polygon>
+<polyline class="text-secondary" fill="none" points="0,10 120,40 280,110 420,110 580,45 700,15" stroke="currentColor" stroke-width="2"></polyline>
+<!-- Active Flooded Stage Fill -->
+<polygon class="fill-primary opacity-80 animate-pulse" points="180,68 280,110 420,110 520,68"></polygon>
+<!-- High Water Level Mark (Dotted Rule) -->
+<line class="text-error" stroke="currentColor" stroke-dasharray="4,4" stroke-width="1.5" x1="140" x2="560" y1="52" y2="52"></line>
+<text class="fill-error font-code-sm text-[10px]" x="565" y="55">Peak Predicted HWL (12.4m)</text>
+<!-- Active Stage Level Line -->
+<line class="text-primary-fixed-dim" stroke="currentColor" stroke-width="2" x1="180" x2="520" y1="68" y2="68"></line>
+<text class="fill-primary font-code-sm text-[11px] font-bold" x="310" y="64">Current Depth: 8.6m</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-secondary font-code-sm text-code-sm mt-space-xs">
+<span>Left Bank Wall: 3,420m</span>
+<span>Center Thawleg Channel Invert: 3,388m</span>
+<span>Right Bank Wall: 3,415m</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initLivePipelineTicker() {
+    const pctBadge = document.getElementById('pct-badge');
+    if (!pctBadge) return;
+    
+    let currentPct = 68.4;
+    setInterval(() => {
+      if (currentPct < 74.0) {
+        currentPct += 0.1;
+        pctBadge.textContent = currentPct.toFixed(1) + '%';
+      }
+    }, 1800);
+  })();
+</script></main></div></body></html>

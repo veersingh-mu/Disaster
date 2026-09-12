@@ -1,0 +1,21 @@
+{
+  "scenario": {
+    "id": "255514c7-9e24-4b94-8356-26cc55fa5a71",
+    "name": "Confidential Government Dam",
+    "latitude": 30.4,
+    "longitude": 78.5,
+    "breach_type": "structural",
+    "dam_height_m": 50.0,
+    "dam_volume_m3": 10000000.0,
+    "simulation_radius_km": 25.0
+  },
+  "run": {
+    "id": "b5dfe795-8877-468f-b3f3-a7a4ddfb9b96",
+    "status": "succeeded",
+    "started_at": null,
+    "completed_at": null
+  },
+  "time_steps": [],
+  "affected_settlements": [],
+  "generated_at": "2026-09-12T14:19:47.777655+00:00"
+}

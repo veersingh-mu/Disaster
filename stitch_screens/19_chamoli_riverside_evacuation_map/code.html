@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#cce5ff", "primary": "#003857", "outline": "#72787f", "surface-container": "#e3efff", "on-tertiary": "#ffffff", "surface-tint": "#326286", "tertiary": "#163653", "on-error-container": "#93000a", "on-error": "#ffffff", "tertiary-fixed-dim": "#abc9ec", "on-primary-fixed": "#001e31", "surface-container-lowest": "#ffffff", "secondary-container": "#cfe1fc", "background": "#f7f9ff", "on-secondary-fixed-variant": "#36485d", "error": "#ba1a1a", "on-primary-container": "#92c0e9", "surface-variant": "#d7e4f4", "tertiary-fixed": "#cfe4ff", "primary-fixed-dim": "#9dcbf4", "inverse-primary": "#9dcbf4", "outline-variant": "#c1c7cf", "on-tertiary-fixed-variant": "#2b4966", "on-secondary-fixed": "#091d30", "primary-container": "#1b4f72", "surface-container-low": "#edf4ff", "secondary-fixed": "#d1e4fe", "surface": "#f7f9ff", "surface-container-highest": "#d7e4f4", "on-tertiary-container": "#a0bee0", "secondary": "#4e6076", "inverse-surface": "#26313e", "secondary-fixed-dim": "#b6c8e2", "on-primary": "#ffffff", "tertiary-container": "#2f4d6b", "on-tertiary-fixed": "#001d34", "surface-bright": "#f7f9ff", "surface-container-high": "#dde9f9", "on-background": "#111d28", "on-primary-fixed-variant": "#154b6d", "inverse-on-surface": "#e8f2ff", "surface-dim": "#cfdbeb", "on-surface": "#111d28", "on-secondary": "#ffffff", "on-secondary-container": "#52647a", "on-surface-variant": "#41474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "32px", "nav-height": "48px", "space-md": "12px", "panel-width-md": "420px", "space-lg": "16px", "space-xl": "24px", "panel-width-sm": "320px", "space-2xs": "2px", "space-sm": "8px", "timeline-height": "72px", "space-xs": "4px", "panel-width-lg": "560px" }, "fontFamily": { "code-sm": [ "JetBrains Mono" ], "body-md": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-md": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "body-sm": [ "IBM Plex Sans" ], "headline-sm": [ "IBM Plex Sans" ], "code-lg": [ "JetBrains Mono" ], "headline-xl": [ "IBM Plex Sans" ], "label-sm": [ "IBM Plex Sans" ], "code-md": [ "JetBrains Mono" ], "headline-lg": [ "IBM Plex Sans" ] }, "fontSize": { "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "600" } ], "code-lg": [ "16px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "code-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><main class="w-full bg-background min-h-screen flex items-center justify-center p-space-lg"><div class="flex flex-col w-full text-on-surface">
+<!-- TOP MISSION STATUS BANNER (Tactical Slate & Emergency Telemetry) -->
+<header class="w-full bg-tertiary text-on-tertiary flex flex-col shadow-md">
+<!-- Primary Alert Header -->
+<div class="flex flex-wrap items-center justify-between px-space-lg py-space-sm bg-primary border-b border-surface-container-highest/20 gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-error px-space-sm py-space-2xs rounded-none">
+<span class="inline-block w-2 h-2 bg-on-error animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-error font-bold">ALERT LEVEL 3</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-surface-container-lowest font-semibold tracking-tight">CIVIL EVACUATION &amp; HIGHWAY DIVERSION ACTIVE</span>
+<span class="text-outline-variant">|</span>
+<span class="font-code-sm text-code-sm text-surface-container-high">CORRIDOR RK 49.2 • CHAMOLI TOWNSHIP &amp; GHATS</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container/10 px-space-sm py-space-2xs">
+<span class="material-symbols-outlined text-code-md text-surface-container-lowest">shield_person</span>
+<span class="font-code-sm text-code-sm text-surface-container-lowest">INCIDENT CMD: DDMA CHAMOLI / EOC-JOSHIMATH (OFFICER: ANJALI C.)</span>
+</div>
+<div class="bg-surface-container/20 px-space-sm py-space-2xs">
+<span class="font-code-sm text-code-sm text-surface-container-lowest font-medium">EVENT: IN-UTK-GLOF-2024-009</span>
+</div>
+</div>
+</div>
+<!-- Real-time Instrument Telemetry Strip -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-space-2xs bg-tertiary px-space-lg py-space-xs text-on-tertiary">
+<!-- ETA Metric -->
+<div class="flex items-center gap-space-sm px-space-sm py-space-xs bg-tertiary-container/30">
+<span class="material-symbols-outlined text-primary-fixed-dim text-headline-md">timer</span>
+<div>
+<div class="font-label-sm text-label-sm uppercase text-surface-variant">SURGE CREST ETA</div>
+<div class="font-code-lg text-code-lg font-bold text-surface-bright flex items-baseline gap-space-2xs">
+<span class="text-error-container" id="countdown-timer">00:13:20</span>
+<span class="font-code-sm text-code-sm text-surface-variant">(11:57:40 IST)</span>
+</div>
+</div>
+</div>
+<!-- Projected Discharge -->
+<div class="flex items-center gap-space-sm px-space-sm py-space-xs bg-tertiary-container/30">
+<span class="material-symbols-outlined text-primary-fixed-dim text-headline-md">waves</span>
+<div>
+<div class="font-label-sm text-label-sm uppercase text-surface-variant">PEAK DISCHARGE (Q)</div>
+<div class="font-code-lg text-code-lg font-bold text-surface-bright">
+            3,450 <span class="font-code-sm text-code-sm text-surface-variant font-normal">m³/s</span>
+</div>
+</div>
+</div>
+<!-- Stage Height -->
+<div class="flex items-center gap-space-sm px-space-sm py-space-xs bg-tertiary-container/30">
+<span class="material-symbols-outlined text-primary-fixed-dim text-headline-md">vertical_align_top</span>
+<div>
+<div class="font-label-sm text-label-sm uppercase text-surface-variant">SURGE STAGE ELEV</div>
+<div class="font-code-lg text-code-lg font-bold text-surface-bright flex items-baseline gap-space-2xs">
+            962.40 <span class="font-code-sm text-code-sm text-surface-variant font-normal">m AMSL</span>
+<span class="font-code-sm text-code-sm text-error-container font-semibold">(+3.80m)</span>
+</div>
+</div>
+</div>
+<!-- Bridge Freeboard Clearance -->
+<div class="flex items-center gap-space-sm px-space-sm py-space-xs bg-tertiary-container/30">
+<span class="material-symbols-outlined text-primary-fixed-dim text-headline-md">straighten</span>
+<div>
+<div class="font-label-sm text-label-sm uppercase text-surface-variant">NH-07 BRIDGE FREEBOARD</div>
+<div class="font-code-lg text-code-lg font-bold text-surface-bright flex items-baseline gap-space-2xs">
+            +5.20 <span class="font-code-sm text-code-sm text-surface-variant font-normal">m</span>
+<span class="font-code-sm text-code-sm text-secondary-fixed font-semibold">[CRITICAL]</span>
+</div>
+</div>
+</div>
+<!-- Action Triggers -->
+<div class="xl:col-span-2 flex items-center justify-end gap-space-xs py-space-2xs">
+<button class="h-8 px-space-md bg-error hover:bg-error/90 text-on-error font-label-md text-label-md uppercase tracking-wider flex items-center gap-space-xs shadow-sm transition-colors" id="sirenBtn" onclick="toggleSiren(this)">
+<span class="material-symbols-outlined text-body-lg">volume_up</span>
+<span>SIREN BURST #4 (GHATS)</span>
+</button>
+<button class="h-8 px-space-md bg-primary-container hover:bg-primary-container/80 text-on-primary font-label-md text-label-md uppercase tracking-wider flex items-center gap-space-xs shadow-sm transition-colors" id="closureBtn" onclick="toggleEmbargo(this)">
+<span class="material-symbols-outlined text-body-lg">block</span>
+<span>ENFORCE NH-07 TOTAL SEAL</span>
+</button>
+<button class="h-8 px-space-sm bg-surface-container/20 hover:bg-surface-container/30 text-surface-bright font-label-md text-label-md flex items-center justify-center">
+<span class="material-symbols-outlined text-body-lg">picture_as_pdf</span>
+</button>
+</div>
+</div>
+</header>
+<!-- MAIN DOCK AREA (3-Pane Desktop Layout) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 w-full gap-space-sm p-space-sm bg-surface-container-low min-h-[calc(100vh-160px)]">
+<!-- LEFT PANEL: TRAFFIC & DIVERSION LOGISTICS (3 Cols) -->
+<aside class="xl:col-span-3 flex flex-col gap-space-sm">
+<!-- Traffic Corridor Matrix Card -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs border-b border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-body-lg">alt_route</span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase font-bold tracking-tight">CORRIDOR DIVERSION MATRIX</h2>
+</div>
+<span class="font-code-sm text-code-sm px-space-xs bg-surface-container text-on-surface-variant">SYS-LOCK: 11:43</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Upstream Status -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">UPSTREAM: NH-07 NORTH (JOSHIMATH)</span>
+<span class="font-code-sm text-code-sm bg-primary-fixed text-on-primary-fixed px-space-2xs font-bold">HOLD ACTIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Helang Loop &amp; Birahi staging: <strong class="font-code-sm">68 heavy vehicles</strong> secured in uphill rock bays. Zero descending flow.</p>
+</div>
+<!-- Downstream Status -->
+<div class="p-space-xs bg-surface-container-low">
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">DOWNSTREAM: NH-07 SOUTH (RISHIKESH)</span>
+<span class="font-code-sm text-code-sm bg-secondary-container text-on-secondary-container px-space-2xs font-bold">REROUTED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Traffic routed at Gauchar via Pokhari link. Chamoli southern valley gate completely isolated.</p>
+</div>
+<!-- Gopeshwar Hill Detour -->
+<div class="p-space-xs bg-primary/5">
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-primary font-semibold">HIGH BYPASS: SH-53 (GOPESHWAR LINK)</span>
+<span class="font-code-sm text-code-sm bg-primary text-on-primary px-space-2xs font-bold">EMERGENCY ONLY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Exclusive uphill conduit for SDRF, NDRF, and med-evac. Strict checkpoint clearance in force.</p>
+</div>
+</div>
+</div>
+<!-- Tactical Checkpoint Telemetry Card -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col flex-1">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs border-b border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-body-lg">traffic</span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase font-bold tracking-tight">ACTIVE ACCESS CONTROL GATES</h2>
+</div>
+<span class="font-code-sm text-code-sm bg-error/10 text-error px-space-2xs font-bold">3 GATES</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- CP-01 -->
+<div class="bg-surface-container-low p-space-xs">
+<div class="flex items-center justify-between mb-space-2xs">
+<div class="font-label-md text-label-md font-bold text-on-surface">CP-01 • KOTHIYALSAIN BYPASS</div>
+<span class="font-code-sm text-code-sm text-primary font-bold">DIVERT 100%</span>
+</div>
+<div class="grid grid-cols-2 gap-space-2xs font-code-sm text-code-sm mb-space-xs">
+<div class="bg-surface-container-lowest p-space-2xs">TRUCKS DIVERTED: <span class="font-bold text-primary">42</span></div>
+<div class="bg-surface-container-lowest p-space-2xs">BUSES REROUTED: <span class="font-bold text-primary">18</span></div>
+</div>
+<div class="font-body-sm text-body-sm text-secondary">Unit: Chamoli Traffic Detachment Beta (6 Officers)</div>
+</div>
+<!-- CP-02 -->
+<div class="bg-error-container/20 p-space-xs">
+<div class="flex items-center justify-between mb-space-2xs">
+<div class="font-label-md text-label-md font-bold text-error">CP-02 • MAIN SUSPENSION BRIDGE</div>
+<span class="font-code-sm text-code-sm bg-error text-on-error px-space-2xs font-bold">TOTAL SEAL</span>
+</div>
+<div class="grid grid-cols-2 gap-space-2xs font-code-sm text-code-sm mb-space-xs">
+<div class="bg-surface-container-lowest p-space-2xs">UNAUTHORIZED: <span class="font-bold text-primary">0</span></div>
+<div class="bg-surface-container-lowest p-space-2xs">SPIKE STRIPS: <span class="font-bold text-error">DEPLOYED</span></div>
+</div>
+<div class="font-body-sm text-body-sm text-secondary">Unit: ITBP 8th Battalion Heavy Barricade Unit</div>
+</div>
+<!-- CP-03 -->
+<div class="bg-surface-container-low p-space-xs">
+<div class="flex items-center justify-between mb-space-2xs">
+<div class="font-label-md text-label-md font-bold text-on-surface">CP-03 • NANDPRAYAG SOUTH PORTAL</div>
+<span class="font-code-sm text-code-sm bg-surface-container-highest text-on-surface-variant px-space-2xs font-bold">HOLD LOOP</span>
+</div>
+<div class="font-code-sm text-code-sm bg-surface-container-lowest p-space-2xs mb-space-xs">
+              HOLD BAY INVENTORY: 91 LIGHT CARS, 12 COACHES
+            </div>
+<div class="font-body-sm text-body-sm text-secondary">Unit: Nandprayag Thana Contingent</div>
+</div>
+<!-- Priority Convoy Status -->
+<div class="p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs mb-space-2xs text-primary font-bold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-headline-sm">local_shipping</span>
+              CRITICAL LIFE-SAFETY TRANSIT
+            </div>
+<div class="font-body-sm text-body-sm text-on-surface">
+              2x Liquid Medical O2 Tankers (KL-07-BB-4109, UK-07-GA-1120) cleared via Gopeshwar Upper Hill Road. Clear ETA District Hospital: 8 mins.
+            </div>
+</div>
+</div>
+</div>
+</aside>
+<!-- CENTER PANEL: FULL GIS CARTOGRAPHY & TACTICAL MAP CANVAS (6 Cols) -->
+<main class="xl:col-span-6 flex flex-col gap-space-xs bg-surface-container-lowest shadow-sm p-space-xs relative overflow-hidden">
+<!-- Spatial Viewport Tool Header -->
+<div class="flex items-center justify-between px-space-xs py-space-2xs bg-surface-container-low text-on-surface font-code-sm text-code-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-space-2xs text-primary font-semibold">
+<span class="material-symbols-outlined text-body-md">layers</span>
+            VECTOR TOPOLOGY: CONTOUR-5M
+          </span>
+<span class="text-outline-variant">|</span>
+<span>CRS: EPSG:32644 (UTM ZONE 44N)</span>
+<span class="text-outline-variant">|</span>
+<span class="text-secondary">CURSOR: 30°24'18.4"N 79°20'42.1"E</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="bg-surface-container px-space-2xs text-primary font-bold">ZOOM: 1:4,250</span>
+<button class="bg-surface-container-highest px-space-xs hover:bg-surface-variant">FLIR ON</button>
+</div>
+</div>
+<!-- Vector GIS Map Visual Display Canvas -->
+<div class="relative w-full h-[520px] bg-[#dbe7ea] overflow-hidden select-none">
+<!-- Cartographic Topo & Hydraulic Simulation Graphic (Embedded SVG Engine) -->
+<svg class="w-full h-full" preserveaspectratio="xMidYMid slice" viewbox="0 0 800 520" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Inundation Water Gradient -->
+<lineargradient id="riverGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#1B4F72" stop-opacity="0.95"></stop>
+<stop offset="50%" stop-color="#2874A6" stop-opacity="0.88"></stop>
+<stop offset="100%" stop-color="#3498DB" stop-opacity="0.92"></stop>
+</lineargradient>
+<!-- Hazard Inundation Striping Pattern -->
+<pattern height="12" id="hazardHatch" patterntransform="rotate(45 0 0)" patternunits="userSpaceOnUse" width="12">
+<line opacity="0.35" stroke="#BA1A1A" stroke-width="2.5" x1="0" x2="0" y1="0" y2="12"></line>
+</pattern>
+<!-- Topo Fill Gradient for Mountain Terraces -->
+<lineargradient id="topoElev" x1="0%" x2="100%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#D7E4F4" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#EDF4FF" stop-opacity="0.8"></stop>
+</lineargradient>
+</defs>
+<!-- Topographic Contour Elevation Polygons (Valley Terraces) -->
+<!-- 1050m Contour Ridge (Gopeshwar High Terraces) -->
+<path d="M 0,0 L 800,0 L 800,160 Q 640,140 480,110 Q 280,70 0,130 Z" fill="#b9d3c8" opacity="0.45"></path>
+<text fill="#2d4f40" font-family="JetBrains Mono" font-size="10" opacity="0.7" x="660" y="45">CONTOUR 1050m AMSL [HIGH RIDGE]</text>
+<!-- 1000m Contour Intermediate -->
+<path d="M 0,130 Q 280,70 480,110 Q 640,140 800,160 L 800,230 Q 560,200 380,190 Q 200,180 0,220 Z" fill="#cde1d8" opacity="0.35"></path>
+<text fill="#2d4f40" font-family="JetBrains Mono" font-size="9" opacity="0.7" x="590" y="185">CONTOUR 1000m AMSL</text>
+<!-- 975m Contour Safe Terrace Cutoff -->
+<path d="M 0,220 Q 200,180 380,190 Q 560,200 800,230 L 800,300 Q 550,285 360,280 Q 180,275 0,330 Z" fill="#dbe9e2" opacity="0.4"></path>
+<text fill="#2d4f40" font-family="JetBrains Mono" font-size="9" opacity="0.8" x="50" y="250">975m SAFE ELEVATION DATUM</text>
+<!-- 965m DANGER ZONE CONTOUR (Civil Hazard Inundation Footprint Limit) -->
+<path d="M 0,330 Q 180,275 360,280 Q 550,285 800,300 L 800,450 Q 570,430 360,420 Q 150,410 0,480 Z" fill="url(#hazardHatch)"></path>
+<!-- INUNDATED RIVERBED (Projected 3,450 m³/s Surge Wave Extent) -->
+<!-- Alaknanda River deep channel and surging flood footprint -->
+<path d="M 0,350 Q 180,300 360,305 Q 560,310 800,340 L 800,435 Q 560,405 350,395 Q 160,385 0,455 Z" fill="url(#riverGrad)"></path>
+<!-- High-Velocity River Thalweg Centerline -->
+<path d="M 0,385 Q 170,335 355,340 Q 560,348 800,380" fill="none" opacity="0.85" stroke="#6cd1ff" stroke-dasharray="6,4" stroke-width="3"></path>
+<!-- River Flow Direction Vectors -->
+<g fill="#cce5ff" opacity="0.85">
+<!-- Arrows pointing Downstream (Left to Right / West to East) -->
+<polygon points="120,360 135,356 120,352"></polygon>
+<polygon points="340,330 355,326 340,322"></polygon>
+<polygon points="560,338 575,334 560,330"></polygon>
+<polygon points="720,368 735,364 720,360"></polygon>
+</g>
+<text fill="#ffffff" font-family="IBM Plex Sans" font-size="11" font-weight="600" letter-spacing="1.5" x="210" y="360">ALAKNANDA RIVER (SURGING Q = 3,450 m³/s • 7.8 m/s)</text>
+<!-- NH-07 Badrinath National Highway (Vector Alignment along River Bank) -->
+<!-- Low lying segment under threat -->
+<path d="M 0,325 Q 180,270 350,275 Q 540,280 800,295" fill="none" stroke="#BA1A1A" stroke-dasharray="8,4" stroke-width="5"></path>
+<!-- Upper Bypass Safe Route to Gopeshwar -->
+<path d="M 120,305 Q 220,200 400,165 Q 600,130 800,120" fill="none" stroke="#003857" stroke-width="4.5"></path>
+<text fill="#003857" font-family="IBM Plex Sans" font-size="10" font-weight="700" x="440" y="150">SH-53 GOPESHWAR BYPASS (EMERGENCY ARTERY)</text>
+<!-- BRIDGE: Chamoli Main Suspension Bridge (Bailey Span) -->
+<line stroke="#111D28" stroke-width="6" x1="390" x2="370" y1="270" y2="415"></line>
+<line stroke="#BA1A1A" stroke-dasharray="4,2" stroke-width="3" x1="390" x2="370" y1="270" y2="415"></line>
+<rect fill="#111d28" height="16" rx="2" width="40" x="360" y="335"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="365" y="347">SEALED</text>
+<!-- Bridge Pier Water Level Mark -->
+<circle cx="380" cy="380" fill="#BA1A1A" r="4"></circle>
+<text fill="#111D28" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="390" y="383">PIER RK 49.2 (FB: +5.2m)</text>
+<!-- CHECKPOINT CP-01 (Kothiyalsain Bypass Junction) -->
+<g transform="translate(120, 305)">
+<circle cx="0" cy="0" fill="#003857" r="10"></circle>
+<polygon fill="#ffffff" points="-4,-4 4,-4 0,5"></polygon>
+<rect fill="#003857" height="18" opacity="0.9" width="140" x="-70" y="-30"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="-65" y="-17">CP-01: DIVERSION (MANDAL RD)</text>
+</g>
+<!-- CHECKPOINT CP-02 (Chamoli Bridgehead) -->
+<g transform="translate(415, 260)">
+<circle cx="0" cy="0" fill="#BA1A1A" r="11"></circle>
+<line stroke="#ffffff" stroke-width="2.5" x1="-5" x2="5" y1="-5" y2="5"></line>
+<line stroke="#ffffff" stroke-width="2.5" x1="5" x2="-5" y1="-5" y2="5"></line>
+<rect fill="#BA1A1A" height="18" width="145" x="15" y="-12"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="20" y="1">CP-02: TOTAL EMBARGO (ITBP)</text>
+</g>
+<!-- CHECKPOINT CP-03 (Nandprayag Approach) -->
+<g transform="translate(730, 290)">
+<circle cx="0" cy="0" fill="#4E6076" r="9"></circle>
+<rect fill="#4E6076" height="17" width="120" x="-115" y="-24"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="-110" y="-12">CP-03: TRAFFIC HOLD LOOP</text>
+</g>
+<!-- EVACUATION SECTOR C-1 (Riverside Ghats) -->
+<g transform="translate(240, 310)">
+<rect fill="#edf4ff" height="42" opacity="0.9" stroke="#003857" stroke-width="1.5" width="110" x="0" y="0"></rect>
+<text fill="#003857" font-family="IBM Plex Sans" font-size="10" font-weight="bold" x="6" y="14">SECTOR C-1: GHATS</text>
+<text fill="#41474E" font-family="JetBrains Mono" font-size="9" x="6" y="26">ELEV: 958m AMSL</text>
+<rect fill="#1B4F72" height="10" width="98" x="6" y="29"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="8" font-weight="bold" x="12" y="37">100% EVACUATED (380)</text>
+</g>
+<!-- EVACUATION SECTOR C-2 (Lower Bazaar) -->
+<g transform="translate(470, 275)">
+<rect fill="#fff8e7" height="46" opacity="0.95" stroke="#E8A33D" stroke-width="2" width="120" x="0" y="0"></rect>
+<text fill="#111d28" font-family="IBM Plex Sans" font-size="10" font-weight="bold" x="6" y="14">SECTOR C-2: BAZAAR</text>
+<text fill="#ba1a1a" font-family="JetBrains Mono" font-size="9" x="6" y="26">SWEEP ACTIVE (16 REMAIN)</text>
+<rect fill="#E8A33D" height="11" width="108" x="6" y="31"></rect>
+<text fill="#111d28" font-family="JetBrains Mono" font-size="8.5" font-weight="bold" x="10" y="40">96.4% CLEARED (425/441)</text>
+</g>
+<!-- SAFE MUSTER POINTS (High Grounds - Green Shield Badges) -->
+<!-- MP-1: Zilla Parishad Complex (1,020m AMSL) -->
+<g transform="translate(260, 95)">
+<polygon fill="#2d7d46" points="0,-12 12,-4 10,12 0,18 -10,12 -12,-4"></polygon>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="11" font-weight="bold" x="-4" y="5">✓</text>
+<rect fill="#ffffff" height="28" opacity="0.9" stroke="#2d7d46" stroke-width="1" width="150" x="18" y="-12"></rect>
+<text fill="#111D28" font-family="IBM Plex Sans" font-size="9.5" font-weight="bold" x="24" y="0">MP-1: ZILLA PARISHAD</text>
+<text fill="#2d7d46 font-semibold" font-family="JetBrains Mono" font-size="8.5" x="24" y="11">1,020m AMSL • 620 CAPACITY</text>
+</g>
+<!-- MP-2: Govt Inter College Ground (1,045m AMSL) -->
+<g transform="translate(560, 75)">
+<polygon fill="#2d7d46" points="0,-12 12,-4 10,12 0,18 -10,12 -12,-4"></polygon>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="11" font-weight="bold" x="-4" y="5">✓</text>
+<rect fill="#ffffff" height="28" opacity="0.9" stroke="#2d7d46" stroke-width="1" width="140" x="18" y="-12"></rect>
+<text fill="#111D28" font-family="IBM Plex Sans" font-size="9.5" font-weight="bold" x="24" y="0">MP-2: GIC HIGH GROUND</text>
+<text fill="#2d7d46" font-family="JetBrains Mono" font-size="8.5" x="24" y="11">1,045m AMSL • 1,200 CAP</text>
+</g>
+<!-- LIVE TACTICAL RESPONSE UNITS -->
+<!-- SDRF QRT-02 Unit Icon -->
+<g transform="translate(440, 310)">
+<circle cx="0" cy="0" fill="#003857" r="7" stroke="#ffffff" stroke-width="2"></circle>
+<rect fill="#003857" height="16" opacity="0.85" width="95" x="10" y="-8"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="8" font-weight="bold" x="14" y="3">SDRF QRT-02 (SWEEP)</text>
+</g>
+<!-- Drone "Netra-03" Surveillance Orbit -->
+<g transform="translate(360, 220)">
+<circle cx="0" cy="0" fill="none" opacity="0.7" r="28" stroke="#1b4f72" stroke-dasharray="3,3" stroke-width="1.2">
+<animatetransform attributename="transform" dur="10s" from="0" repeatcount="indefinite" to="360" type="rotate"></animatetransform>
+</circle>
+<circle cx="0" cy="0" fill="#BA1A1A" r="5"></circle>
+<rect fill="#111D28" height="15" opacity="0.9" width="110" x="-55" y="-22"></rect>
+<text fill="#cce5ff" font-family="JetBrains Mono" font-size="8" x="-50" y="-11">UAV NETRA-03 [FLIR: CLEAR]</text>
+</g>
+</svg>
+<!-- Dynamic Map Watermark & North Arrow Overlay -->
+<div class="absolute top-space-xs right-space-xs bg-surface-container-lowest/90 px-space-sm py-space-xs shadow-sm flex flex-col items-center">
+<div class="font-code-sm text-code-sm font-bold text-primary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-body-md">navigation</span>
+<span>N</span>
+</div>
+<div class="w-12 h-1 bg-outline mt-space-2xs"></div>
+<span class="font-code-sm text-[9px] text-secondary mt-space-2xs">200 m</span>
+</div>
+<!-- Float Map Legend -->
+<div class="absolute bottom-space-xs left-space-xs bg-surface-container-lowest/95 p-space-xs shadow-md max-w-xs font-code-sm text-[10px] flex flex-col gap-space-2xs">
+<div class="font-bold text-primary text-label-sm uppercase pb-space-2xs border-b border-outline-variant">CARTOGRAPHIC LAYERS</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-4 h-2 bg-[#1B4F72]"></div>
+<span>Surge Footprint (3,450 m³/s Peak Crest)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-4 h-2 bg-error/30 border border-error"></div>
+<span>Inundation Threat Zone (&lt;965m AMSL)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-4 h-1 bg-error border border-dashed border-error"></div>
+<span>NH-07 Sealed River Artery</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-4 h-1 bg-primary"></div>
+<span>SH-53 Gopeshwar Hill Detour (Operational)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-3 h-3 bg-[#2d7d46] text-on-primary flex items-center justify-center text-[8px]">✓</div>
+<span>Designated High-Ground Muster Point (&gt;1,000m)</span>
+</div>
+</div>
+</div>
+<!-- Real-Time Camera Feed Thumbnails (Chamoli Riverfront & Bridge) -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-2xs">
+<div class="relative bg-tertiary h-20 overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover opacity-75" data-alt="Technical infrared thermal security camera feed showing the swollen grey-brown turbulent Alaknanda River passing under a concrete pier in Chamoli Himalayas with timestamp and water height metrics in green digital monospaced font overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLHISXnKRJyGBOQ_Mw0uvQ036AkCSlB6LT7WETBfnV83YFlSpYjmo53vCSV2imtT-y20x082uHjbbj1I8kQeM0Dtl3THhHQVJkhUycz_I56gK3x8cKSPTh8XeOKlfcWHLyx4l4vEM2uQoycPDxZa1yDWdU1vfUs6ynuPz-Teo0y8pbP1xgkJ6IbD5phWD8b1zvfs91GFWQN4f8eHcRmmG_3LEjfoUK4FOh6DEIRyF5ti2RULu4gcBVlQ"/>
+<div class="absolute top-1 left-1 bg-primary/90 text-on-primary font-code-sm text-[9px] px-1 font-bold">CAM-01: CHAMOLI PIER RK 49.2</div>
+<div class="absolute bottom-1 right-1 bg-error text-on-error font-code-sm text-[8px] px-1 font-bold animate-pulse">STAGE: 962.40m</div>
+</div>
+<div class="relative bg-tertiary h-20 overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover opacity-75" data-alt="Tactical highway checkpoint surveillance view with steel barricades across an empty Himalayan mountain highway at Kothiyalsain, police emergency lights flashing, misty gorge backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2kybTEv9TsJ7vnZXdhwPtkvmfQV1dccDpp4Z7BEHsMqpd0d4oMj3t7JxjimMYNen6BwvRYbx0OtyzXFcz4OGX58ijjWyyqLJpKwlpQQZR3ac3pfjHJiJ6W4LEWK8YO-o6co6e6GX5FLK_5OUG7DsvEWanCHbZnHxfIXBzQ7YP2q4YKtMuen-UTYy8p62ZRPAbyzBw2xTJhx_EJasH2CxkmOcKObw1zFLFVTmhstdmF_f__BAo77CLwQ"/>
+<div class="absolute top-1 left-1 bg-primary/90 text-on-primary font-code-sm text-[9px] px-1 font-bold">CAM-02: CP-01 KOTHIYALSAIN</div>
+<div class="absolute bottom-1 right-1 bg-secondary-fixed text-on-secondary-fixed font-code-sm text-[8px] px-1 font-bold">BYPASS DIVERSIFIED</div>
+</div>
+<div class="relative bg-tertiary h-20 overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover opacity-75" data-alt="High altitude drone aerial telemetry view of Chamoli market bazaar streets completely deserted and cleared of vehicles, steep green mountain slopes in mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDasD3_ePEvLvJuP6BcrqCSWgiLqpJglj_YBZrZnSyZRTn_SEf1Wj1OkXawGxeTaIeOfljRsbXWFdHf1MQkGYECzhfGTNLSq58vUz9XFhJ1cM3tt_QjT9Q7hp6tTbA9OZ9ly-AiZWszyU9uBR8hlRkINM6G1ivGYjH-m7NMdkXFdOqt0_H0CUfGE-cfoDZac9blOsIcc57RXb1H4LBdezQ2v9VxjF4q6w1YFzw36wYavm0dWLElK16I_A"/>
+<div class="absolute top-1 left-1 bg-primary/90 text-on-primary font-code-sm text-[9px] px-1 font-bold">UAV: NETRA-03 FLIR FEED</div>
+<div class="absolute bottom-1 right-1 bg-surface-bright text-primary font-code-sm text-[8px] px-1 font-bold">SECTOR C-2 CLEAR 96.4%</div>
+</div>
+</div>
+</main>
+<!-- RIGHT PANEL: MUNICIPAL ROLL-CALL & ACOUSTIC TELEMETRY (3 Cols) -->
+<aside class="xl:col-span-3 flex flex-col gap-space-sm">
+<!-- Evacuation Census Counter Card -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs border-b border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-body-lg">group</span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase font-bold tracking-tight">CIVILIAN MUSTER TOTALS</h2>
+</div>
+<span class="font-code-sm text-code-sm bg-primary-fixed text-on-primary-fixed px-space-2xs font-bold">98.4% SAFE</span>
+</div>
+<!-- Evacuation Progress Bar & Metric -->
+<div class="flex flex-col gap-space-2xs mb-space-sm">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">1,015 <span class="font-code-md text-code-md text-secondary font-normal">/ 1,031</span></span>
+<span class="font-code-sm text-code-sm text-error font-bold">16 REMAIN IN SWEEP</span>
+</div>
+<!-- Segmented Progress Bar -->
+<div class="w-full h-3 bg-surface-container-high flex overflow-hidden">
+<div class="bg-primary h-full transition-all" style="width: 98.44%;"></div>
+<div class="bg-error h-full animate-pulse" style="width: 1.56%;"></div>
+</div>
+<div class="flex justify-between font-code-sm text-[10px] text-secondary">
+<span>SAFE ON HIGH GROUND (≥980m)</span>
+<span>ZONE CLEARANCE TARGET: 100%</span>
+</div>
+</div>
+<!-- Sector Breakdown Breakdown List -->
+<div class="flex flex-col gap-space-2xs text-body-sm font-body-sm">
+<div class="flex items-center justify-between p-space-2xs bg-surface-container-low">
+<span class="font-semibold text-on-surface">Sector C-1 (Ghats &amp; Riverbed)</span>
+<span class="font-code-sm text-code-sm font-bold text-primary">380 / 380 (100%)</span>
+</div>
+<div class="flex items-center justify-between p-space-2xs bg-error/10">
+<span class="font-semibold text-error">Sector C-2 (Lower Bazaar Shopkeepers)</span>
+<span class="font-code-sm text-code-sm font-bold text-error">425 / 441 (96.4%)</span>
+</div>
+<div class="flex items-center justify-between p-space-2xs bg-surface-container-low">
+<span class="font-semibold text-on-surface">Sector C-3 (Nandprayag Low Confluence)</span>
+<span class="font-code-sm text-code-sm font-bold text-primary">210 / 210 (100%)</span>
+</div>
+</div>
+</div>
+<!-- Siren & Acoustic Early Warning Grid -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs border-b border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-body-lg">campaign</span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase font-bold tracking-tight">ACOUSTIC &amp; CELL ALERTS</h2>
+</div>
+<span class="font-code-sm text-code-sm bg-surface-container px-space-2xs font-bold text-primary">CAP-V2.1</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Station 01 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<div>
+<div class="font-label-sm text-label-sm font-bold text-on-surface">SIREN S-01 • CLOCKTOWER</div>
+<div class="font-code-sm text-code-sm text-secondary">130 dB High Warble • 1.8km Radius</div>
+</div>
+<span class="font-code-sm text-code-sm px-space-2xs bg-error text-on-error font-bold animate-pulse">ACTIVE</span>
+</div>
+<!-- Station 02 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<div>
+<div class="font-label-sm text-label-sm font-bold text-on-surface">SIREN S-02 • NANDPRAYAG MAST</div>
+<div class="font-code-sm text-code-sm text-secondary">3-min Periodic Pulse • Confluence</div>
+</div>
+<span class="font-code-sm text-code-sm px-space-2xs bg-primary text-on-primary font-bold">CYCLIC</span>
+</div>
+<!-- Cell Broadcast CAP Readout -->
+<div class="p-space-xs bg-primary/5">
+<div class="flex items-center justify-between mb-space-2xs font-label-sm text-label-sm font-bold text-primary">
+<span>CELL BROADCAST (CAP TOWER PUSH)</span>
+<span class="font-code-sm font-bold">28,450 SENT</span>
+</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant flex justify-between">
+<span>DELIVERY ACKNOWLEDGMENT:</span>
+<span class="font-bold text-primary">99.1% (3 TOWER SECTORS)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chronological Action Log Feed -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col flex-1">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs border-b border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-body-lg">list_alt</span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase font-bold tracking-tight">TACTICAL SITREP LOG</h2>
+</div>
+<span class="font-code-sm text-code-sm text-secondary font-mono">LIVE FEED</span>
+</div>
+<div class="flex flex-col gap-space-xs font-code-sm text-code-sm overflow-y-auto max-h-[160px] pr-space-2xs">
+<div class="p-space-2xs bg-surface-container-low">
+<span class="text-primary font-bold">11:42:10</span> — DSP Chamoli confirms CP-02 Bailey Bridge barriers locked with steel spike strips.
+          </div>
+<div class="p-space-2xs bg-surface-container-low">
+<span class="text-primary font-bold">11:40:05</span> — SDRF QRT-02 Netra Drone completes thermal sweep: Zero livestock/dwellers on river sandbars.
+          </div>
+<div class="p-space-2xs bg-surface-container-low">
+<span class="text-primary font-bold">11:38:15</span> — Pipalkoti Barrage telemetry: Peak surge wave cleared gate #4, velocity logged at 7.8 m/s.
+          </div>
+<div class="p-space-2xs bg-surface-container-low">
+<span class="text-secondary font-bold">11:35:00</span> — Muster Point MP-1 confirms potable water and medical tent staffed by 14th ITBP unit.
+          </div>
+</div>
+</div>
+</aside>
+</div>
+<!-- BOTTOM CHRONOLOGIC RUNNER: HYDROLOGIC SURGE SCRUBBER (72px Persistent Base) -->
+<footer class="w-full bg-tertiary text-on-tertiary px-space-lg py-space-sm shadow-lg border-t border-surface-container-highest/20">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Playback Status & Stepper Indicators -->
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex items-center bg-primary px-space-sm py-space-2xs text-on-primary">
+<span class="material-symbols-outlined text-body-lg mr-space-2xs">stream</span>
+<span class="font-code-md text-code-md font-bold uppercase tracking-wide">CASCADE RUNNER</span>
+</div>
+<div class="font-code-sm text-code-sm text-surface-container-high">
+          CURRENT ELAPSED: <strong class="text-surface-bright font-bold">T+01:25:00</strong>
+</div>
+</div>
+<!-- Scrubber Timeline Milestones Track -->
+<div class="flex-1 w-full flex flex-col justify-center">
+<!-- Milestone Labels -->
+<div class="flex justify-between font-code-sm text-[11px] text-surface-variant mb-space-2xs">
+<span class="text-secondary-fixed">T+00:00 (Ronti Shear)</span>
+<span class="text-secondary-fixed">T+00:36 (Tapovan Hit)</span>
+<span class="text-secondary-fixed">T+01:18 (Pipalkoti Crest)</span>
+<span class="text-error-container font-bold flex items-center gap-space-2xs">
+<span class="inline-block w-2 h-2 bg-error animate-ping"></span>
+            T+01:25 (Chamoli RK 49.2 - ETA 13m)
+          </span>
+<span class="text-outline-variant">T+01:50 (Nandprayag)</span>
+<span class="text-outline-variant">T+02:10 (Karnaprayag)</span>
+</div>
+<!-- Visual Scrubber Rail -->
+<div class="w-full h-2 bg-surface-container-highest/20 rounded-none relative">
+<!-- Filled Past Progression -->
+<div class="h-full bg-secondary-fixed-dim" style="width: 58%;"></div>
+<!-- Wave Crest Cursor Indicator Flag -->
+<div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 flex flex-col items-center" style="left: 58%;">
+<div class="w-3 h-3 bg-error rotate-45 shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- Verification & Protocol Actions -->
+<div class="flex items-center gap-space-xs shrink-0">
+<div class="px-space-sm py-space-2xs bg-surface-container/20 font-code-sm text-code-sm text-surface-bright">
+          HYDRO-MODEL: HEC-RAS 2D (UNSTEADY)
+        </div>
+<button class="h-8 px-space-md bg-surface-bright text-primary font-label-md text-label-md uppercase font-bold hover:bg-surface-container-low transition-colors">
+          CONFIRM CORRIDOR AUDIT
+        </button>
+</div>
+</div>
+</footer>
+</div>
+<!-- Interactive Client-side Script for Tactical Controls -->
+<script>
+  // Countdown Timer Micro-Interaction
+  let remainingSeconds = 800; // 13 min 20 sec
+  const countdownEl = document.getElementById('countdown-timer');
+
+  setInterval(() => {
+    if (remainingSeconds > 0) {
+      remainingSeconds--;
+      const mins = Math.floor(remainingSeconds / 60);
+      const secs = remainingSeconds % 60;
+      if (countdownEl) {
+        countdownEl.textContent = `00:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+      }
+    }
+  }, 1000);
+
+  // Toggle Siren Audio Alert State
+  function toggleSiren(btn) {
+    if (btn.classList.contains('bg-error')) {
+      btn.classList.remove('bg-error');
+      btn.classList.add('bg-secondary');
+      btn.innerHTML = '<span class="material-symbols-outlined text-body-lg">volume_off</span><span>SIREN BURST MUTED</span>';
+    } else {
+      btn.classList.remove('bg-secondary');
+      btn.classList.add('bg-error');
+      btn.innerHTML = '<span class="material-symbols-outlined text-body-lg">volume_up</span><span>SIREN BURST #4 (GHATS)</span>';
+    }
+  }
+
+  // Toggle Total Embargo State
+  function toggleEmbargo(btn) {
+    if (btn.classList.contains('bg-primary-container')) {
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-error');
+      btn.innerHTML = '<span class="material-symbols-outlined text-body-lg">lock</span><span>NH-07 FULL LOCKDOWN CONFIRMED</span>';
+    } else {
+      btn.classList.remove('bg-error');
+      btn.classList.add('bg-primary-container');
+      btn.innerHTML = '<span class="material-symbols-outlined text-body-lg">block</span><span>ENFORCE NH-07 TOTAL SEAL</span>';
+    }
+  }
+</script></main></body></html>

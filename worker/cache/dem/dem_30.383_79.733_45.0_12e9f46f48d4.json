@@ -1,0 +1,13 @@
+{
+  "site_latitude": 30.3833,
+  "site_longitude": 79.7333,
+  "elevation_m": 3590.4,
+  "mean_slope_degrees": 24.5,
+  "valley_aspect_deg": 345.0,
+  "channel_slope_m_per_m": 0.045,
+  "radius_km": 45.0,
+  "source": "SRTM 30m / USGS HydroSHEDS",
+  "resolution_m": 30,
+  "elevation_min_m": 2172.9,
+  "elevation_max_m": 4790.4
+}

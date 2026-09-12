@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#cce5ff", "primary": "#003857", "outline": "#72787f", "surface-container": "#e3efff", "on-tertiary": "#ffffff", "surface-tint": "#326286", "tertiary": "#163653", "on-error-container": "#93000a", "on-error": "#ffffff", "tertiary-fixed-dim": "#abc9ec", "on-primary-fixed": "#001e31", "surface-container-lowest": "#ffffff", "secondary-container": "#cfe1fc", "background": "#f7f9ff", "on-secondary-fixed-variant": "#36485d", "error": "#ba1a1a", "on-primary-container": "#92c0e9", "surface-variant": "#d7e4f4", "tertiary-fixed": "#cfe4ff", "primary-fixed-dim": "#9dcbf4", "inverse-primary": "#9dcbf4", "outline-variant": "#c1c7cf", "on-tertiary-fixed-variant": "#2b4966", "on-secondary-fixed": "#091d30", "primary-container": "#1b4f72", "surface-container-low": "#edf4ff", "secondary-fixed": "#d1e4fe", "surface": "#f7f9ff", "surface-container-highest": "#d7e4f4", "on-tertiary-container": "#a0bee0", "secondary": "#4e6076", "inverse-surface": "#26313e", "secondary-fixed-dim": "#b6c8e2", "on-primary": "#ffffff", "tertiary-container": "#2f4d6b", "on-tertiary-fixed": "#001d34", "surface-bright": "#f7f9ff", "surface-container-high": "#dde9f9", "on-background": "#111d28", "on-primary-fixed-variant": "#154b6d", "inverse-on-surface": "#e8f2ff", "surface-dim": "#cfdbeb", "on-surface": "#111d28", "on-secondary": "#ffffff", "on-secondary-container": "#52647a", "on-surface-variant": "#41474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "32px", "nav-height": "48px", "space-md": "12px", "panel-width-md": "420px", "space-lg": "16px", "space-xl": "24px", "panel-width-sm": "320px", "space-2xs": "2px", "space-sm": "8px", "timeline-height": "72px", "space-xs": "4px", "panel-width-lg": "560px" }, "fontFamily": { "code-sm": [ "JetBrains Mono" ], "body-md": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-md": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "body-sm": [ "IBM Plex Sans" ], "headline-sm": [ "IBM Plex Sans" ], "code-lg": [ "JetBrains Mono" ], "headline-xl": [ "IBM Plex Sans" ], "label-sm": [ "IBM Plex Sans" ], "code-md": [ "JetBrains Mono" ], "headline-lg": [ "IBM Plex Sans" ] }, "fontSize": { "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "600" } ], "code-lg": [ "16px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "code-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><main class="w-full bg-background min-h-screen flex items-center justify-center p-space-lg"><div class="flex flex-col w-full">
+<!-- MISSION-CRITICAL OPERATIONAL INTERFACE: FLOODPATH // CORRIDOR TACTICAL GIS -->
+<div class="flex flex-col w-full bg-surface text-on-surface select-none pb-space-lg">
+<!-- 1. TOP GLOBAL STATUS BAR / MISSION HUD -->
+<header class="w-full bg-tertiary text-on-tertiary px-space-lg py-space-sm shadow-md flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-y-2">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-error px-space-sm py-0.5 text-on-error font-code-sm text-code-sm uppercase tracking-wider animate-pulse">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span>ALERT LEVEL 3: DOWNSTREAM SIREN CASCADE ACTIVE</span>
+</div>
+<span class="font-code-sm text-code-sm text-surface-variant/80 tracking-widest uppercase">
+            EVENT: <span class="text-on-tertiary font-code-md">IN-UTK-GLOF-2024-009</span>
+</span>
+<span class="text-surface-variant/40">|</span>
+<span class="font-code-sm text-code-sm text-surface-variant/80">
+            T+01:52:00 <span class="text-on-tertiary font-code-md">(12:11:00 IST)</span>
+</span>
+<span class="text-surface-variant/40">|</span>
+<div class="flex items-center gap-1.5 font-code-sm text-code-sm text-secondary-fixed">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span>SCADA VHF CH-07 CARRIER LOCK</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-space-md py-1 bg-surface-container text-on-surface font-label-sm text-label-sm uppercase hover:bg-surface-container-high transition" id="btn-recycle-sirens">
+<span class="material-symbols-outlined text-sm">volume_up</span>
+<span>MUTE / RE-CYCLE SIRENS</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1 bg-error text-on-error font-label-sm text-label-sm uppercase hover:bg-on-error-container transition" id="btn-sdrf">
+<span class="material-symbols-outlined text-sm">e911_emergency</span>
+<span>DISPATCH SDRF QRT</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1 bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase hover:bg-primary transition" id="btn-export-log">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+<span>EXPORT DISPATCH LOG</span>
+</button>
+</div>
+</div>
+<!-- Corridor & ETA Matrix Banner -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-xs pt-1 border-t border-secondary/30">
+<div class="bg-primary/50 p-space-sm flex flex-col justify-between">
+<div class="text-surface-variant/80 font-label-sm text-label-sm uppercase">Corridor Reach</div>
+<div class="font-headline-sm text-headline-sm text-surface-bright truncate">Langasu → Karnaprayag Sangam</div>
+<div class="font-code-sm text-code-sm text-secondary-fixed">RK 66.8 → RK 74.5 • Pindar Sector</div>
+</div>
+<div class="bg-surface-container-highest/20 p-space-sm flex flex-col justify-between">
+<div class="flex justify-between items-center">
+<span class="text-surface-variant/80 font-label-sm text-label-sm uppercase">Langasu Surge ETA</span>
+<span class="px-1.5 py-0.2 bg-error text-on-error font-code-sm text-code-sm animate-pulse">IMMINENT</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-code-lg text-code-lg text-surface-bright font-bold" id="eta-langasu">00:09:48</span>
+<span class="font-code-sm text-code-sm text-surface-variant/90">(12:21 IST)</span>
+</div>
+<div class="font-code-sm text-code-sm text-primary-fixed">Peak Q: 3,080 m³/s | Rise: +4.40m</div>
+</div>
+<div class="bg-surface-container-highest/20 p-space-sm flex flex-col justify-between">
+<div class="flex justify-between items-center">
+<span class="text-surface-variant/80 font-label-sm text-label-sm uppercase">Karnaprayag Surge ETA</span>
+<span class="px-1.5 py-0.2 bg-tertiary-container text-on-tertiary-container font-code-sm text-code-sm">PRE-CRITICAL</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-code-lg text-code-lg text-surface-bright font-bold" id="eta-karnaprayag">00:21:48</span>
+<span class="font-code-sm text-code-sm text-surface-variant/90">(12:33 IST)</span>
+</div>
+<div class="font-code-sm text-code-sm text-primary-fixed">Peak Q: 2,980 m³/s | Rise: +4.15m</div>
+</div>
+<div class="bg-surface-container-highest/20 p-space-sm flex flex-col justify-between">
+<div class="text-surface-variant/80 font-label-sm text-label-sm uppercase">Hydrologic Confluence</div>
+<div class="font-headline-sm text-headline-sm text-surface-bright">Pindar Backwater Wedge</div>
+<div class="font-code-sm text-code-sm text-secondary-fixed">Wave Height Inversion @ RK 74.4</div>
+</div>
+<div class="bg-primary/70 p-space-sm flex flex-col justify-between">
+<div class="flex justify-between items-center">
+<span class="text-surface-variant/80 font-label-sm text-label-sm uppercase">Acoustic Emitter Ring</span>
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-ping"></span>
+</div>
+<div class="font-code-lg text-code-lg text-surface-bright font-bold">6/6 TRANSMITTING</div>
+<div class="font-code-sm text-code-sm text-secondary-fixed">135 dB Continuous Multi-Tone</div>
+</div>
+</div>
+</header>
+<!-- WORKSPACE: 3-PANE DISCIPLINED CARTOGRAPHIC CONSOLE -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md p-space-md">
+<!-- LEFT PANEL: SIREN NETWORK TELEMETRY & HARDWARE MATRIX (col-span-3) -->
+<section class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Panel Header -->
+<div class="bg-surface-container-high p-space-sm shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">campaign</span>
+<h2 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Acoustic Transmitter Matrix</h2>
+</div>
+<span class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-1.5 py-0.5">VHF CH-07</span>
+</div>
+<!-- Coverage Stat Cards -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-low p-space-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Valley Saturation</span>
+<span class="font-code-lg text-code-lg text-primary font-bold">99.4%</span>
+<span class="font-code-sm text-code-sm text-secondary">Acoustic Decibel Field</span>
+</div>
+<div class="bg-surface-container-low p-space-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CAP Push Handshake</span>
+<span class="font-code-lg text-code-lg text-primary font-bold">98.7%</span>
+<span class="font-code-sm text-code-sm text-secondary">31,420 Cell Nodes</span>
+</div>
+</div>
+<!-- Siren Status List -->
+<div class="flex flex-col gap-space-xs">
+<!-- S-04: Langasu Riverfront -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm transition hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-error animate-ping"></span>
+<span class="font-label-md text-label-md uppercase text-on-surface">S-04 Langasu Riverfront</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-error bg-error px-1.5 py-0.5 uppercase">WARBLE ACTIVE</span>
+</div>
+<div class="mt-1 font-code-sm text-code-sm text-secondary flex justify-between">
+<span>RK 66.8 • Valley Floor Mast</span>
+<span class="text-primary font-bold">134.8 dB (99.8%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 mt-1.5">
+<div class="bg-error h-1.5 w-full"></div>
+</div>
+<div class="mt-1.5 flex justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Audible Radius: 2.2 km</span>
+<span>DC Float: 98% Solar</span>
+</div>
+</div>
+<!-- S-05: Karnaprayag Main Sangam -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm transition hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-error animate-ping"></span>
+<span class="font-label-md text-label-md uppercase text-on-surface">S-05 Karnaprayag Sangam</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-error bg-error px-1.5 py-0.5 uppercase">CYCLE 2/3</span>
+</div>
+<div class="mt-1 font-code-sm text-code-sm text-secondary flex justify-between">
+<span>RK 74.2 • Ghats &amp; Uma Devi Mast</span>
+<span class="text-primary font-bold">135.2 dB (100%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 mt-1.5">
+<div class="bg-error h-1.5 w-[96%]"></div>
+</div>
+<div class="mt-1.5 flex justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Audible Radius: 3.5 km</span>
+<span>DC Float: 95% Utility</span>
+</div>
+</div>
+<!-- S-06: Karnaprayag Upper Bazaar -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm transition hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-error"></span>
+<span class="font-label-md text-label-md uppercase text-on-surface">S-06 Upper Bazaar Hill</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-error bg-error px-1.5 py-0.5 uppercase">WARBLE ACTIVE</span>
+</div>
+<div class="mt-1 font-code-sm text-code-sm text-secondary flex justify-between">
+<span>RK 74.5 • Bus Terminal Ridge</span>
+<span class="text-primary font-bold">132.0 dB (97.7%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 mt-1.5">
+<div class="bg-error h-1.5 w-[94%]"></div>
+</div>
+<div class="mt-1.5 flex justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Audible Radius: 2.8 km</span>
+<span>DC Float: 100% Float</span>
+</div>
+</div>
+<!-- S-07: Pindar Confluence South -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm transition hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-error animate-ping"></span>
+<span class="font-label-md text-label-md uppercase text-on-surface">S-07 Pindar South Mast</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-error bg-error px-1.5 py-0.5 uppercase">WARBLE ACTIVE</span>
+</div>
+<div class="mt-1 font-code-sm text-code-sm text-secondary flex justify-between">
+<span>RK 74.9 • Backwater Zone Warning</span>
+<span class="text-primary font-bold">133.5 dB (98.8%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 mt-1.5">
+<div class="bg-error h-1.5 w-[95%]"></div>
+</div>
+<div class="mt-1.5 flex justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Audible Radius: 2.5 km</span>
+<span>DC Float: 92% Battery</span>
+</div>
+</div>
+<!-- S-09: Kaleshwar Highway Cordon -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm transition hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-error"></span>
+<span class="font-label-md text-label-md uppercase text-on-surface">S-09 Kaleshwar Cordon</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-error bg-error px-1.5 py-0.5 uppercase">WARBLE ACTIVE</span>
+</div>
+<div class="mt-1 font-code-sm text-code-sm text-secondary flex justify-between">
+<span>RK 71.4 • NH-07 Highway Corridor</span>
+<span class="text-primary font-bold">131.0 dB (97.0%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 mt-1.5">
+<div class="bg-error h-1.5 w-[92%]"></div>
+</div>
+<div class="mt-1.5 flex justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Audible Radius: 2.1 km</span>
+<span>DC Float: 99% Float</span>
+</div>
+</div>
+<!-- S-08: Gauchar Approach Relay -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm opacity-90 transition hover:opacity-100">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-secondary"></span>
+<span class="font-label-md text-label-md uppercase text-on-surface">S-08 Gauchar Approach Relay</span>
+</div>
+<span class="font-code-sm text-code-sm bg-surface-container text-on-surface-variant px-1.5 py-0.5 uppercase">STANDBY / PRE-ARMED</span>
+</div>
+<div class="mt-1 font-code-sm text-code-sm text-secondary flex justify-between">
+<span>RK 79.0 • Airstrip Reach Ingress</span>
+<span class="text-secondary font-bold">ETA 38m</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 mt-1.5">
+<div class="bg-secondary h-1.5 w-[30%]"></div>
+</div>
+<div class="mt-1.5 flex justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Audible Radius: 3.0 km</span>
+<span>DC Float: 100% Float</span>
+</div>
+</div>
+</div>
+<!-- CAP Cell Broadcast Module -->
+<div class="bg-surface-container p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">CAP XML Geofence Broadcast</span>
+<span class="font-code-sm text-code-sm text-primary">LIVE INGESTION</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest font-code-sm text-code-sm text-on-surface-variant leading-tight overflow-x-hidden">
+<p class="text-error font-bold">&lt;cap:alert&gt; • &lt;event&gt;ALAKNANDA GLOF SURGE&lt;/event&gt;</p>
+<p>&lt;area&gt;LANGASU_KARNAPRAYAG_PINDAR_CORRIDOR&lt;/area&gt;</p>
+<p>&lt;severity&gt;Extreme&lt;/severity&gt; • &lt;urgency&gt;Immediate&lt;/urgency&gt;</p>
+<p class="mt-1 text-on-surface italic font-body-sm">
+              "Alaknanda Nadi me achanak baadh ki sambhavna. Sabhi log turant unchai wale surakshit sthan par jayein."
+            </p>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-secondary pt-1">
+<span>BSNL / Jio / Airtel Transceivers</span>
+<span class="text-primary font-bold">31,420 Push Recv</span>
+</div>
+</div>
+</section>
+<!-- 2. CENTER AREA: HYDRO-SPATIAL MAP & ADVANCED TELEMETRY (col-span-6) -->
+<section class="lg:col-span-6 flex flex-col gap-space-md">
+<!-- MAP CANVAS CONTAINER -->
+<div class="relative w-full bg-surface-container-highest shadow-md overflow-hidden flex flex-col">
+<!-- Map Header / Layer Badges -->
+<div class="absolute top-2 left-2 right-2 z-20 flex flex-wrap items-center justify-between pointer-events-none gap-2">
+<div class="flex items-center gap-1.5 bg-tertiary/90 backdrop-blur-sm text-on-tertiary px-space-sm py-1 pointer-events-auto">
+<span class="material-symbols-outlined text-sm text-error animate-pulse">radar</span>
+<span class="font-label-sm text-label-sm uppercase">GIS Vector Deck: RK 60.0 → RK 78.0</span>
+<span class="font-code-sm text-code-sm text-surface-variant">WGS84 / UTM 44N</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface px-space-sm py-1 pointer-events-auto shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-code-sm text-code-sm font-bold">UAV NETRA-05: FLIR THERMAL SWEEP ACTIVE</span>
+</div>
+</div>
+<!-- Synthetic Spatial Canvas (Alaknanda & Pindar Topography) -->
+<div class="relative w-full h-[480px] bg-tertiary overflow-hidden">
+<!-- Simulated Satellite / Terrain Raster Layer -->
+<div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-40" data-location="Karnaprayag, Uttarakhand, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDx7zNYPdjSAsfZRj4Tdr7pBbMPUA4BfZ1tB1Ay6Si-se8wmpriXTW27dCHC13_ZRkwBOq3kaV46ZdOJ16ExnRaB6P2W8lnWZZpAbT11WAbJHjT01shMW65hS8WfN4E_9a4naT_wGX6vqpOJwaKxPPKWqZ4pdhtD5AC3JvwppLtOmVqG0_K5lDGMI-wly2OQldXtKGhemC8HdGrKFRXy-zkykIuONLLm9JAyMSFMuptn3hmysZacWr8Pw')"></div>
+<!-- River Vector & Inundation Buffer Overlay (SVG) -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 800 500">
+<defs>
+<!-- River Water Gradient -->
+<lineargradient id="surgeGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#1B4F72" stop-opacity="0.9"></stop>
+<stop offset="65%" stop-color="#326286" stop-opacity="0.85"></stop>
+<stop offset="100%" stop-color="#003857" stop-opacity="0.95"></stop>
+</lineargradient>
+<!-- Inundation Red Warning Zone -->
+<lineargradient id="inundationGlow" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#ba1a1a" stop-opacity="0.45"></stop>
+<stop offset="100%" stop-color="#ba1a1a" stop-opacity="0.1"></stop>
+</lineargradient>
+<!-- Siren Radial Wave Filters -->
+<radialgradient cx="50%" cy="50%" id="sirenAcousticWave" r="50%">
+<stop offset="0%" stop-color="#ffdad6" stop-opacity="0.8"></stop>
+<stop offset="40%" stop-color="#ba1a1a" stop-opacity="0.4"></stop>
+<stop offset="80%" stop-color="#e8a33d" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#e8a33d" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+<!-- Elevation Contour Lines (Background Terrain) -->
+<g fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1">
+<path d="M-50,80 Q200,60 400,120 T850,110"></path>
+<path d="M-50,160 Q250,140 450,210 T850,200"></path>
+<path d="M-50,240 Q300,220 500,290 T850,280"></path>
+<path d="M-50,320 Q350,300 550,370 T850,360"></path>
+<path d="M-50,400 Q400,380 600,450 T850,440"></path>
+</g>
+<!-- Inundation Swath Buffer (Red Risk Zone) -->
+<path d="M 80,0 Q 180,110 270,180 T 460,310 L 490,325 L 800,380 L 800,430 L 460,370 T 220,230 L 50,0 Z" fill="url(#inundationGlow)"></path>
+<!-- Alaknanda Main Channel Path -->
+<!-- Starts Nandprayag Top Left (80, 0), bends through Langasu (270, 180), to Karnaprayag (480, 320) & exits Gauchar (380, 500) -->
+<path d="M 70,-10 C 130,60 190,120 270,180 C 350,240 430,280 480,320 C 440,380 410,430 380,510" fill="none" stroke="#66a8d9" stroke-linecap="round" stroke-width="24"></path>
+<path d="M 70,-10 C 130,60 190,120 270,180 C 350,240 430,280 480,320 C 440,380 410,430 380,510" fill="none" stroke="url(#surgeGradient)" stroke-linecap="round" stroke-width="18"></path>
+<!-- Pindar River Confluence Tributary (from East/Right side into Karnaprayag 480, 320) -->
+<path d="M 810,230 C 700,260 590,290 480,320" fill="none" stroke="#52647a" stroke-linecap="round" stroke-width="14"></path>
+<path d="M 810,230 C 700,260 590,290 480,320" fill="none" stroke="#92c0e9" stroke-linecap="round" stroke-width="8"></path>
+<!-- Surge Wave Front Crest (Advancing between Nandprayag and Langasu, around RK 63) -->
+<!-- Surging Water Polygon (T+01:52:00) -->
+<path d="M 70,-10 C 130,60 180,105 210,135" fill="none" stroke="#ba1a1a" stroke-linecap="butt" stroke-opacity="0.8" stroke-width="22"></path>
+<!-- Surge Front Leading Edge Pulse Indicator -->
+<g transform="translate(210, 135)">
+<circle class="animate-ping" cx="0" cy="0" fill="#ba1a1a" fill-opacity="0.4" r="14"></circle>
+<circle cx="0" cy="0" fill="#ba1a1a" r="7"></circle>
+<path d="M 0,-18 L 8,-6 L -8,-6 Z" fill="#ba1a1a"></path>
+</g>
+<!-- Siren 04 Decibel Radiation Waves (Langasu RK 66.8 -> 270, 180) -->
+<g transform="translate(270, 180)">
+<circle cx="0" cy="0" fill="none" opacity="0.85" r="95" stroke="#ba1a1a" stroke-dasharray="3,3" stroke-width="1"></circle>
+<circle cx="0" cy="0" fill="none" opacity="0.9" r="65" stroke="#ba1a1a" stroke-dasharray="4,2" stroke-width="1.5"></circle>
+<circle cx="0" cy="0" fill="none" opacity="0.95" r="35" stroke="#ba1a1a" stroke-width="2"></circle>
+<circle cx="0" cy="0" fill="#ba1a1a" r="6"></circle>
+</g>
+<!-- Siren 05 Decibel Radiation Waves (Karnaprayag Main Sangam RK 74.2 -> 480, 320) -->
+<g transform="translate(480, 320)">
+<circle cx="0" cy="0" fill="none" opacity="0.75" r="120" stroke="#ba1a1a" stroke-dasharray="4,4" stroke-width="1"></circle>
+<circle cx="0" cy="0" fill="none" opacity="0.9" r="80" stroke="#ba1a1a" stroke-dasharray="4,2" stroke-width="1.5"></circle>
+<circle cx="0" cy="0" fill="none" opacity="0.95" r="40" stroke="#ba1a1a" stroke-width="2"></circle>
+<circle cx="0" cy="0" fill="#ba1a1a" r="7"></circle>
+</g>
+<!-- Siren 07 (Pindar South RK 74.9 -> 570, 305) -->
+<g transform="translate(570, 305)">
+<circle cx="0" cy="0" fill="none" opacity="0.7" r="70" stroke="#e8a33d" stroke-dasharray="3,3" stroke-width="1"></circle>
+<circle cx="0" cy="0" fill="#ba1a1a" r="5"></circle>
+</g>
+<!-- Bridge Checkpoints -->
+<!-- CP-04: Langasu Bailey Bridge -->
+<g transform="translate(275, 172)">
+<rect fill="#111d28" height="8" stroke="#ba1a1a" stroke-width="1.5" width="28" x="-14" y="-4"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="9" font-weight="bold" text-anchor="middle" x="0" y="15">CP-04 [SEALED]</text>
+</g>
+<!-- CP-05: Karnaprayag Suspension Bridge -->
+<g transform="translate(470, 308)">
+<rect fill="#111d28" height="8" stroke="#ba1a1a" stroke-width="1.5" width="32" x="-16" y="-4"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="9" font-weight="bold" text-anchor="middle" x="0" y="-8">CP-05 [SEALED]</text>
+</g>
+<!-- CP-06: Pindar Sangam Bridge -->
+<g transform="translate(520, 316)">
+<rect fill="#111d28" height="8" stroke="#ba1a1a" stroke-width="1.5" width="24" x="-12" y="-4"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="10" y="16">CP-06 [BARRICADED]</text>
+</g>
+<!-- Evacuation Vector Arrows (Uphill to safe nodes) -->
+<g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+<!-- Langasu to GIC High Ground -->
+<path d="M 285,160 L 330,120" stroke-dasharray="3,3"></path>
+<polygon fill="#ffffff" points="332,118 322,122 328,128"></polygon>
+<!-- Karnaprayag to SDH Hospital / Upper ITI -->
+<path d="M 490,300 L 530,240" stroke-dasharray="3,3"></path>
+<polygon fill="#ffffff" points="532,238 522,243 528,249"></polygon>
+<path d="M 450,330 L 400,310" stroke-dasharray="3,3"></path>
+<polygon fill="#ffffff" points="398,309 408,305 406,315"></polygon>
+</g>
+<!-- Safe Muster Zone Annotations -->
+<g fill="#edf4ff" font-family="IBM Plex Sans" font-size="10" font-weight="bold">
+<rect fill="#1b4f72" height="18" rx="2" width="95" x="330" y="105"></rect>
+<text fill="#ffffff" x="335" y="118">GIC LANGASU (+48m)</text>
+<rect fill="#1b4f72" height="18" rx="2" width="105" x="525" y="222"></rect>
+<text fill="#ffffff" x="530" y="235">SDH HOSPITAL (+62m)</text>
+<rect fill="#1b4f72" height="18" rx="2" width="75" x="350" y="295"></rect>
+<text fill="#ffffff" x="355" y="308">ITI GROUNDS</text>
+</g>
+<!-- River Corridor Text Markers -->
+<text fill="#9dcbf4" font-family="JetBrains Mono" font-size="10" letter-spacing="1" x="75" y="30">NANDPRAYAG RK 59.5 • CREST PASSED</text>
+<text fill="#ffdad6" font-family="JetBrains Mono" font-size="10" font-weight="bold" x="210" y="125">WAVE FRONT (Q=3,080 m³/s)</text>
+<text fill="#cfe4ff" font-family="JetBrains Mono" font-size="10" x="640" y="250">PINDAR RIVER (NORMAL Q=210 m³/s)</text>
+<text fill="#ffdad6" font-family="JetBrains Mono" font-size="11" font-weight="bold" x="490" y="340">KARNAPRAYAG SANGAM (RK 74.5)</text>
+</svg>
+<!-- Bottom Floating HUD Over Map -->
+<div class="absolute bottom-2 left-2 right-2 flex flex-wrap items-center justify-between gap-2 pointer-events-none">
+<div class="flex items-center gap-space-xs bg-surface/90 backdrop-blur-sm p-1 px-2 font-code-sm text-code-sm text-on-surface pointer-events-auto shadow">
+<span class="font-bold text-primary">DECIBEL ENVELOPE:</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-error inline-block"></span> 135 dB High</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-surface-tint inline-block"></span> 110 dB Moderate</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-outline inline-block"></span> 85 dB Threshold</span>
+</div>
+<div class="flex items-center gap-2 bg-surface/90 backdrop-blur-sm p-1 px-2 font-code-sm text-code-sm text-on-surface pointer-events-auto shadow">
+<span>DRONE POSITION: 30°15'32"N 79°13'02"E</span>
+<span class="text-primary font-bold">ALT 1,120m AMSL</span>
+</div>
+</div>
+</div>
+<!-- River Longitudinal Cross-Section Chart -->
+<div class="bg-surface-container-low p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">show_chart</span>
+                Corridor Elevation Profile &amp; Hydraulic Clearance Datum (RK 60 → RK 76)
+              </span>
+<span class="font-code-sm text-code-sm text-secondary">DATUM: WGS84 EGM96 • VERTICAL EXAGGERATION: 12X</span>
+</div>
+<!-- Profile SVG Cross Section -->
+<div class="w-full h-32 bg-surface-container-lowest relative overflow-hidden">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 700 120">
+<!-- Grid rules -->
+<line stroke="#c1c7cf" stroke-dasharray="2,2" stroke-width="0.5" x1="0" x2="700" y1="20" y2="20"></line>
+<line stroke="#c1c7cf" stroke-dasharray="2,2" stroke-width="0.5" x1="0" x2="700" y1="50" y2="50"></line>
+<line stroke="#c1c7cf" stroke-dasharray="2,2" stroke-width="0.5" x1="0" x2="700" y1="80" y2="80"></line>
+<!-- Bed profile (solid polygon) -->
+<polygon fill="#d7e4f4" points="0,95 180,98 340,102 520,107 700,112 700,120 0,120"></polygon>
+<path d="M0,95 L180,98 L340,102 L520,107 L700,112" fill="none" stroke="#4e6076" stroke-width="1.5"></path>
+<!-- Normal Water Level -->
+<path d="M0,86 L180,88 L340,91 L520,95 L700,100" fill="none" stroke="#92c0e9" stroke-dasharray="3,3" stroke-width="1.5"></path>
+<!-- Advancing Surge Profile (High wave at Langasu, tapering downstream) -->
+<!-- Peak wave front at x=220 (Langasu ingress) -->
+<path d="M0,58 C 70,55 140,50 210,48 C 240,48 260,78 350,88 L 520,95 L 700,100" fill="none" stroke="#ba1a1a" stroke-width="2.5"></path>
+<polygon fill="#ba1a1a" fill-opacity="0.15" points="0,58 70,55 140,50 210,48 240,48 260,78 350,88 520,95 700,100 700,112 0,95"></polygon>
+<!-- Projected Crest envelope at Karnaprayag (future wave) -->
+<path d="M350,88 C 420,56 480,53 540,54 L 620,62 L 700,70" fill="none" stroke="#e8a33d" stroke-dasharray="2,2" stroke-width="1.5"></path>
+<!-- Bridge Deck Cross Section at Karnaprayag (x=520) -->
+<line stroke="#111d28" stroke-width="3" x1="510" x2="550" y1="28" y2="28"></line>
+<line stroke="#111d28" stroke-dasharray="2,2" stroke-width="1.5" x1="530" x2="530" y1="28" y2="107"></line>
+<circle cx="530" cy="28" fill="#111d28" r="3"></circle>
+<!-- Annotations -->
+<text fill="#111d28" font-family="JetBrains Mono" font-size="9" x="10" y="16">820m</text>
+<text fill="#111d28" font-family="JetBrains Mono" font-size="9" x="10" y="46">805m</text>
+<text fill="#111d28" font-family="JetBrains Mono" font-size="9" x="10" y="76">790m</text>
+<!-- Labels on graph -->
+<text fill="#ba1a1a" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="140" y="42">SURGE PEAK: 3,080 m³/s (+4.4m)</text>
+<text fill="#111d28" font-family="JetBrains Mono" font-size="9" x="160" y="112">Langasu (RK 66.8)</text>
+<text fill="#111d28" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="470" y="22">Karnaprayag Arch Bridge Deck (792.0m)</text>
+<text fill="#1b4f72" font-family="JetBrains Mono" font-size="8.5" x="470" y="45">Projected Water Stage: 785.2m (Freeboard: +6.8m SAFE)</text>
+<text fill="#111d28" font-family="JetBrains Mono" font-size="9" x="500" y="115">Karnaprayag Sangam (RK 74.5)</text>
+</svg>
+</div>
+<div class="flex flex-wrap items-center justify-between text-code-sm font-code-sm text-secondary pt-1">
+<span>RIVERBED GRADIENT: 1:115 • MANNING ROUGHNESS (n): 0.042 (COBBLE/BOULDER)</span>
+<span class="text-error font-bold">WAVE ATTENUATION RATE: -0.013 m³/s/m THROUGH CONFLUENCE CHOKE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. RIGHT PANEL: CIVILIAN MUSTER, EVACUATION & CASCADE TRACKER (col-span-3) -->
+<section class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Panel Header -->
+<div class="bg-surface-container-high p-space-sm shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">how_to_reg</span>
+<h2 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Muster &amp; Evacuation Progress</h2>
+</div>
+<span class="font-code-sm text-code-sm bg-primary text-on-primary px-1.5 py-0.5 font-bold">99.0% SECURED</span>
+</div>
+<!-- Evacuation Progress Metric Summary -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col gap-1">
+<div class="flex justify-between items-baseline">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">2,142 <span class="text-body-md text-secondary font-normal">/ 2,165</span></span>
+<span class="font-code-sm text-code-sm text-error font-bold">23 PERSONS EN ROUTE</span>
+</div>
+<div class="w-full bg-surface-container h-2">
+<div class="bg-primary h-2 w-[99%]"></div>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-secondary mt-0.5">
+<span>Verified Clear of Red Zone</span>
+<span>Refuge Elevation &gt;795m</span>
+</div>
+</div>
+<!-- Sector Breakdown Cards -->
+<div class="flex flex-col gap-space-xs">
+<!-- Langasu Ward 1 & 2 -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Langasu Wards 1 &amp; 2 (Riverfront)</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">100% SAFE</span>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-secondary mt-1">
+<span>340 / 340 Evacuated</span>
+<span class="text-on-surface">Refuge: GIC Langasu</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 mt-1">
+<div class="bg-primary h-1 w-full"></div>
+</div>
+</div>
+<!-- Karnaprayag Sangam Ghats & Temples -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Sangam Ghats &amp; Uma Devi Temple</span>
+<span class="font-code-sm text-code-sm text-error font-bold animate-pulse">98.5% (8 ACTIVE)</span>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-secondary mt-1">
+<span>512 / 520 Cleared</span>
+<span class="text-error">SDRF Escorting 8 pilgrims</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 mt-1">
+<div class="bg-error h-1 w-[98.5%]"></div>
+</div>
+</div>
+<!-- Lower Main Market -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Lower Bazaar (Submerged Risk &lt;788m)</span>
+<span class="font-code-sm text-code-sm text-error font-bold">98.3% (15 ACTIVE)</span>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-secondary mt-1">
+<span>880 / 895 Cleared</span>
+<span class="text-on-surface">Refuge: Nagar Palika</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 mt-1">
+<div class="bg-error h-1 w-[98.3%]"></div>
+</div>
+</div>
+<!-- Pindar Confluence Riverside Hamlets -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Pindar Confluence Hamlets</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">100% CLEAR</span>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-secondary mt-1">
+<span>410 / 410 Cleared</span>
+<span class="text-on-surface">Refuge: ITI Ground</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 mt-1">
+<div class="bg-primary h-1 w-full"></div>
+</div>
+</div>
+</div>
+<!-- DOWNSTREAM SURGE CASCADE TRACKER -->
+<div class="bg-surface-container-low p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">water_drop</span>
+              Downstream Surge Wave Cascade Tracker
+            </span>
+<span class="font-code-sm text-code-sm text-secondary">HYDRO-ROUTING</span>
+</div>
+<div class="flex flex-col text-code-sm font-code-sm divide-y divide-surface-variant/40">
+<div class="py-1 flex justify-between items-center">
+<span class="text-secondary">Pipalkoti (RK 36.8)</span>
+<span class="text-primary font-bold">RECEDED (-3.4m)</span>
+</div>
+<div class="py-1 flex justify-between items-center">
+<span class="text-secondary">Chamoli (RK 49.2)</span>
+<span class="text-primary font-bold">RECEDING (-1.8m)</span>
+</div>
+<div class="py-1 flex justify-between items-center">
+<span class="text-secondary">Nandprayag (RK 59.5)</span>
+<span class="text-on-surface font-bold">CREST PASSING (-0.4m)</span>
+</div>
+<div class="py-1 flex justify-between items-center bg-error/10 px-1 font-bold">
+<span class="text-error flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+                Langasu (RK 66.8)
+              </span>
+<span class="text-error">INCOMING (ETA 9m)</span>
+</div>
+<div class="py-1 flex justify-between items-center bg-surface-container-highest/60 px-1 font-bold">
+<span class="text-primary">Karnaprayag (RK 74.5)</span>
+<span class="text-primary">ETA 21m • Q=2,980 m³/s</span>
+</div>
+<div class="py-1 flex justify-between items-center">
+<span class="text-secondary">Gauchar Airstrip (RK 84.0)</span>
+<span class="text-secondary">ETA 45m • PRE-ALERT</span>
+</div>
+<div class="py-1 flex justify-between items-center">
+<span class="text-secondary">Rudraprayag Sangam (RK 107.0)</span>
+<span class="text-secondary">ETA 1h 03m • PRE-ALERT</span>
+</div>
+</div>
+</div>
+<!-- TACTICAL ACTION COMMAND BUTTONS -->
+<div class="flex flex-col gap-space-xs mt-auto">
+<button class="w-full py-2 px-space-sm bg-primary text-on-primary font-label-md text-label-md uppercase flex items-center justify-center gap-2 hover:bg-tertiary transition" id="btn-megaphone">
+<span class="material-symbols-outlined text-base">record_voice_over</span>
+<span>BROADCAST POLICE MEGAPHONE TEAMS</span>
+</button>
+<button class="w-full py-2 px-space-sm bg-error text-on-error font-label-md text-label-md uppercase flex items-center justify-center gap-2 hover:bg-on-error-container transition" id="btn-lockdown">
+<span class="material-symbols-outlined text-base">lock</span>
+<span>ENFORCE RIVERBANK RED ZONE LOCKDOWN</span>
+</button>
+<button class="w-full py-1.5 px-space-sm bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase flex items-center justify-center gap-2 hover:bg-surface-variant transition" id="btn-alert-rudraprayag">
+<span class="material-symbols-outlined text-base">forward_to_inbox</span>
+<span>TRANSMIT EARLY ALERT TO RUDRAPRAYAG EOC</span>
+</button>
+</div>
+</section>
+</div>
+<!-- TACTICAL EVENT FOOTER / TELEMETRY AUDIT STRIP -->
+<footer class="w-full bg-surface-container-low px-space-lg py-1.5 flex flex-wrap items-center justify-between text-code-sm font-code-sm text-secondary">
+<div class="flex items-center gap-space-md">
+<span>SENSOR ACCREDITATION: CWC / THDC TELEMETRY HYDROMETRY</span>
+<span class="text-outline-variant">|</span>
+<span>SIREN PROTOCOL: CAP v1.2 / ITU-T X.1303 STANDARD</span>
+<span class="text-outline-variant">|</span>
+<span>LAST PING: 12:11:04 IST [ACK 0.12s]</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-on-surface font-bold">STATE DISASTER EMERGENCY OPERATIONS CENTER (SDEOC DEHRADUN) MIRROR SYNCHRONIZED</span>
+</div>
+</footer>
+</div>
+<!-- INTERACTIVE MICRO-LOGIC FOR OPERATIONAL INTERACTION -->
+<script>
+    (function() {
+      // Dynamic live countdown for Langasu and Karnaprayag ETAs
+      let langasuSeconds = 9 * 60 + 48;
+      let karnaprayagSeconds = 21 * 60 + 48;
+
+      const langasuEl = document.getElementById('eta-langasu');
+      const karnaprayagEl = document.getElementById('eta-karnaprayag');
+
+      function formatTime(totalSec) {
+        if (totalSec <= 0) return "00:00:00 - IMPACT";
+        const h = Math.floor(totalSec / 3600);
+        const m = Math.floor((totalSec % 3600) / 60);
+        const s = totalSec % 60;
+        return [h, m, s].map(v => v < 10 ? "0" + v : v).join(":");
+      }
+
+      setInterval(() => {
+        if (langasuSeconds > 0) langasuSeconds--;
+        if (karnaprayagSeconds > 0) karnaprayagSeconds--;
+
+        if (langasuEl) langasuEl.textContent = formatTime(langasuSeconds);
+        if (karnaprayagEl) karnaprayagEl.textContent = formatTime(karnaprayagSeconds);
+      }, 1000);
+
+      // Button interaction feedback
+      const btnRecycle = document.getElementById('btn-recycle-sirens');
+      if (btnRecycle) {
+        btnRecycle.addEventListener('click', () => {
+          const orig = btnRecycle.innerHTML;
+          btnRecycle.innerHTML = '<span class="material-symbols-outlined text-sm animate-spin">refresh</span><span>SIRENS RE-CYCLING (135dB)...</span>';
+          setTimeout(() => {
+            btnRecycle.innerHTML = orig;
+            alert('Acoustic Siren Loop re-initialized across 6 field transceivers at 135 dB continuous warble.');
+          }, 1200);
+        });
+      }
+
+      const btnSdrf = document.getElementById('btn-sdrf');
+      if (btnSdrf) {
+        btnSdrf.addEventListener('click', () => {
+          alert('SDRF Quick Response Teams dispatched to Karnaprayag Sangam Ghats (Target: 8 pilgrims escort).');
+        });
+      }
+
+      const btnExport = document.getElementById('btn-export-log');
+      if (btnExport) {
+        btnExport.addEventListener('click', () => {
+          alert('Generating PDF incident log: FLOODPATH_CASCADE_SIREN_DISPATCH_RK66_RK74.pdf');
+        });
+      }
+
+      const btnLockdown = document.getElementById('btn-lockdown');
+      if (btnLockdown) {
+        btnLockdown.addEventListener('click', () => {
+          alert('Complete riverbank Red Zone lockdown confirmed. ITBP & District Police barricades engaged.');
+        });
+      }
+
+      const btnMegaphone = document.getElementById('btn-megaphone');
+      if (btnMegaphone) {
+        btnMegaphone.addEventListener('click', () => {
+          alert('Police megaphone teams instructed: Immediate evacuation tone loop activated in Langasu and Lower Bazaar.');
+        });
+      }
+
+      const btnRudraprayag = document.getElementById('btn-alert-rudraprayag');
+      if (btnRudraprayag) {
+        btnRudraprayag.addEventListener('click', () => {
+          alert('Pre-alert packet transmitted to Rudraprayag District EOC (Surge ETA 1h 03m).');
+        });
+      }
+    })();
+  </script>
+</div></main></body></html>

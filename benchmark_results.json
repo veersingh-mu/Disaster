@@ -1,0 +1,9 @@
+{
+  "breach_calc_ms": 0.0029,
+  "dem_first_fetch_ms": 0.643,
+  "dem_cached_fetch_ms": 0.373,
+  "dem_cache_speedup": 1.7,
+  "full_2d_solve_ms": 0.77,
+  "surrogate_solve_ms": 0.69,
+  "ai_speedup_ratio": 1.1
+}

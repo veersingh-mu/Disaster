@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#cce5ff", "primary": "#003857", "outline": "#72787f", "surface-container": "#e3efff", "on-tertiary": "#ffffff", "surface-tint": "#326286", "tertiary": "#163653", "on-error-container": "#93000a", "on-error": "#ffffff", "tertiary-fixed-dim": "#abc9ec", "on-primary-fixed": "#001e31", "surface-container-lowest": "#ffffff", "secondary-container": "#cfe1fc", "background": "#f7f9ff", "on-secondary-fixed-variant": "#36485d", "error": "#ba1a1a", "on-primary-container": "#92c0e9", "surface-variant": "#d7e4f4", "tertiary-fixed": "#cfe4ff", "primary-fixed-dim": "#9dcbf4", "inverse-primary": "#9dcbf4", "outline-variant": "#c1c7cf", "on-tertiary-fixed-variant": "#2b4966", "on-secondary-fixed": "#091d30", "primary-container": "#1b4f72", "surface-container-low": "#edf4ff", "secondary-fixed": "#d1e4fe", "surface": "#f7f9ff", "surface-container-highest": "#d7e4f4", "on-tertiary-container": "#a0bee0", "secondary": "#4e6076", "inverse-surface": "#26313e", "secondary-fixed-dim": "#b6c8e2", "on-primary": "#ffffff", "tertiary-container": "#2f4d6b", "on-tertiary-fixed": "#001d34", "surface-bright": "#f7f9ff", "surface-container-high": "#dde9f9", "on-background": "#111d28", "on-primary-fixed-variant": "#154b6d", "inverse-on-surface": "#e8f2ff", "surface-dim": "#cfdbeb", "on-surface": "#111d28", "on-secondary": "#ffffff", "on-secondary-container": "#52647a", "on-surface-variant": "#41474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "32px", "nav-height": "48px", "space-md": "12px", "panel-width-md": "420px", "space-lg": "16px", "space-xl": "24px", "panel-width-sm": "320px", "space-2xs": "2px", "space-sm": "8px", "timeline-height": "72px", "space-xs": "4px", "panel-width-lg": "560px" }, "fontFamily": { "code-sm": [ "JetBrains Mono" ], "body-md": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-md": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "body-sm": [ "IBM Plex Sans" ], "headline-sm": [ "IBM Plex Sans" ], "code-lg": [ "JetBrains Mono" ], "headline-xl": [ "IBM Plex Sans" ], "label-sm": [ "IBM Plex Sans" ], "code-md": [ "JetBrains Mono" ], "headline-lg": [ "IBM Plex Sans" ] }, "fontSize": { "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "600" } ], "code-lg": [ "16px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "code-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><main class="w-full bg-background min-h-screen flex items-center justify-center p-space-lg"><div class="flex flex-col w-full font-body-md text-on-surface bg-background select-none">
+<!-- ================= TOP ALERT & SCADA COMMAND BAR ================= -->
+<header class="w-full bg-surface-container-lowest shadow-md flex flex-col">
+<!-- Critical Banner -->
+<div class="w-full bg-error px-space-md py-1.5 flex flex-wrap items-center justify-between text-on-error">
+<div class="flex items-center space-x-2">
+<span class="inline-block w-2.5 h-2.5 bg-on-error animate-ping"></span>
+<span class="material-symbols-outlined text-[16px]">crisis_alert</span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-wider">Early Warning Dispatch Acknowledged — Rudraprayag EOC on Standby Lockdown</span>
+</div>
+<div class="flex items-center space-x-4 font-code-sm text-code-sm">
+<span>EVENT ID: <strong class="underline decoration-on-error">IN-UTK-GLOF-2024-009</strong></span>
+<span>ELAPSED: <strong class="bg-on-error/20 px-1.5 py-0.5 rounded">T+02:15:00 (12:34:00 IST)</strong></span>
+<span class="hidden md:inline-flex items-center space-x-1">
+<span class="material-symbols-outlined text-[14px]">cell_tower</span>
+<span>NIC/SDRF SATCOM LINK-02 [AES-256 SECURED]</span>
+</span>
+</div>
+</div>
+<!-- Sub-SCADA Telemetry Ribbon -->
+<div class="px-space-md py-2 bg-surface-container-low flex flex-wrap items-center justify-between gap-3 shadow-inner">
+<div class="flex flex-wrap items-center gap-2 text-on-surface">
+<!-- Badge 1: Surge ETA -->
+<div class="bg-surface-container-lowest px-2.5 py-1 rounded shadow-sm flex items-center space-x-2">
+<div class="w-2 h-2 rounded-full bg-error animate-pulse"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sangam Surge ETA</span>
+<span class="font-code-lg text-code-lg text-error font-semibold">00:40:00 <span class="font-code-sm text-code-sm text-on-surface">(13:14 IST)</span></span>
+</div>
+</div>
+<!-- Badge 2: Peak Q -->
+<div class="bg-surface-container-lowest px-2.5 py-1 rounded shadow-sm flex items-center space-x-2">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Projected Peak Q</span>
+<span class="font-code-lg text-code-lg text-primary font-semibold">2,410 <span class="font-code-sm text-code-sm text-on-surface">m³/s <span class="text-secondary font-normal">(-64.8% Atten)</span></span></span>
+</div>
+</div>
+<!-- Badge 3: Stage Rise -->
+<div class="bg-surface-container-lowest px-2.5 py-1 rounded shadow-sm flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[18px]">show_chart</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">River Stage Rise</span>
+<span class="font-code-lg text-code-lg text-on-surface font-semibold">+3.60 m <span class="font-code-sm text-code-sm text-secondary font-normal">(613.60m AMSL)</span></span>
+</div>
+</div>
+<!-- Badge 4: Mandakini Baseline -->
+<div class="bg-surface-container-lowest px-2.5 py-1 rounded shadow-sm flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">water</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mandakini Base Q</span>
+<span class="font-code-md text-code-md text-on-surface">240 m³/s <span class="text-secondary font-code-sm">(Nominal)</span></span>
+</div>
+</div>
+<!-- Badge 5: Bridge Freeboard -->
+<div class="bg-surface-container-lowest px-2.5 py-1 rounded shadow-sm flex items-center space-x-2">
+<span class="material-symbols-outlined text-[#3E8E5A] text-[18px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Susp. Bridge Freeboard</span>
+<span class="font-code-md text-code-md text-[#3E8E5A] font-semibold">+6.40 m <span class="text-on-surface-variant font-code-sm">[CLEAR]</span></span>
+</div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center space-x-2">
+<button class="bg-error hover:opacity-90 text-on-error px-3 py-1.5 rounded shadow-sm flex items-center space-x-1.5 font-label-md text-label-md uppercase tracking-wider transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px]">notification_important</span>
+<span>Red Zone Evac Order</span>
+</button>
+<button class="bg-primary-container hover:bg-primary text-on-primary px-3 py-1.5 rounded shadow-sm flex items-center space-x-1.5 font-label-md text-label-md uppercase tracking-wider transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px]">volume_up</span>
+<span>Siren Grid</span>
+</button>
+<button class="bg-surface-container-highest hover:bg-surface-variant text-on-surface px-2.5 py-1.5 rounded shadow-sm flex items-center space-x-1 font-label-md text-label-md uppercase tracking-wider transition-colors">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span class="hidden sm:inline">Dossier</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ================= MAIN WORKSPACE SPLIT ================= -->
+<div class="w-full grid grid-cols-1 xl:grid-cols-12 gap-space-md p-space-md items-start">
+<!-- ================= LEFT COLUMN: HYDROLOGY & TELEMETRY (4 Cols) ================= -->
+<div class="xl:col-span-4 flex flex-col space-y-space-md">
+<!-- Hydrograph & Attenuation Card -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-2 mb-2">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary-container">water_ec</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wide">Fluvial Attenuation Curve (RK 107.0)</h2>
+</div>
+<span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded bg-surface-container text-secondary font-medium">1D-2D HEC-RAS v6.3</span>
+</div>
+<!-- Inline SVG Hydrograph -->
+<div class="relative w-full bg-surface-container-low rounded p-2 overflow-hidden shadow-inner">
+<div class="flex justify-between items-center text-[10px] text-on-surface-variant font-code-sm mb-1 px-1">
+<span>Q DISCHARGE (m³/s)</span>
+<span class="text-error font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-error rounded-full animate-ping"></span>
+              CREST PEAK: 2,410 m³/s @ T+02:55 (13:14 IST)
+            </span>
+</div>
+<svg class="w-full h-44 select-none" viewbox="0 0 460 210">
+<defs>
+<lineargradient id="hydroFloodGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#1B4F72" stop-opacity="0.55"></stop>
+<stop offset="100%" stop-color="#92c0e9" stop-opacity="0.05"></stop>
+</lineargradient>
+<lineargradient id="backwaterGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#E8A33D" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#E8A33D" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Coordinate Grid Lines -->
+<line stroke="#c1c7cf" stroke-dasharray="2 2" stroke-width="0.75" x1="45" x2="440" y1="20" y2="20"></line>
+<line stroke="#c1c7cf" stroke-dasharray="2 2" stroke-width="0.75" x1="45" x2="440" y1="60" y2="60"></line>
+<line stroke="#c1c7cf" stroke-dasharray="2 2" stroke-width="0.75" x1="45" x2="440" y1="100" y2="100"></line>
+<line stroke="#c1c7cf" stroke-dasharray="2 2" stroke-width="0.75" x1="45" x2="440" y1="140" y2="140"></line>
+<line stroke="#72787f" stroke-width="1" x1="45" x2="440" y1="175" y2="175"></line>
+<!-- Y-Axis Labels -->
+<text class="text-[9px] fill-current text-on-surface-variant font-code-sm" text-anchor="end" x="40" y="24">2,500</text>
+<text class="text-[9px] fill-current text-on-surface-variant font-code-sm" text-anchor="end" x="40" y="64">2,000</text>
+<text class="text-[9px] fill-current text-on-surface-variant font-code-sm" text-anchor="end" x="40" y="104">1,500</text>
+<text class="text-[9px] fill-current text-on-surface-variant font-code-sm" text-anchor="end" x="40" y="144">800</text>
+<text class="text-[9px] fill-current text-on-surface-variant font-code-sm" text-anchor="end" x="40" y="178">0</text>
+<!-- Baseline Inflow Level -->
+<line stroke="#4e6076" stroke-dasharray="4 2" stroke-width="1" x1="45" x2="440" y1="162" y2="162"></line>
+<text class="text-[9px] fill-current text-secondary font-code-sm" x="50" y="158">Mandakini Base (240 m³/s)</text>
+<!-- Backwater Wedge Inundation Polygon -->
+<path d="M 180,175 Q 240,165 290,135 Q 330,150 370,175 Z" fill="url(#backwaterGrad)"></path>
+<path d="M 180,175 Q 240,165 290,135 Q 330,150 370,175" fill="none" stroke="#E8A33D" stroke-dasharray="3 2" stroke-width="1.5"></path>
+<!-- Surge Hydrograph Curve Filled -->
+<path d="M 45,170 C 110,169 160,165 200,140 C 235,115 265,30 285,25 C 305,22 335,70 365,115 C 400,160 420,168 440,170 L 440,175 L 45,175 Z" fill="url(#hydroFloodGrad)"></path>
+<!-- Surge Line -->
+<path d="M 45,170 C 110,169 160,165 200,140 C 235,115 265,30 285,25 C 305,22 335,70 365,115 C 400,160 420,168 440,170" fill="none" stroke="#1B4F72" stroke-width="2.5"></path>
+<!-- Current Time Cursor (T+02:15 = ~215px) -->
+<line stroke="#BA1A1A" stroke-width="1.75" x1="220" x2="220" y1="15" y2="175"></line>
+<circle cx="220" cy="120" fill="#BA1A1A" r="4.5"></circle>
+<rect fill="#BA1A1A" height="15" rx="2" width="80" x="180" y="5"></rect>
+<text class="text-[9px] font-bold font-code-sm" fill="#ffffff" text-anchor="middle" x="220" y="16">NOW: T+02:15</text>
+<!-- Peak Marker -->
+<line stroke="#1B4F72" stroke-dasharray="2 2" stroke-width="1" x1="285" x2="285" y1="25" y2="175"></line>
+<polygon fill="#1B4F72" points="285,23 280,15 290,15"></polygon>
+<text class="text-[9px] fill-current text-primary font-bold font-code-sm" text-anchor="middle" x="285" y="12">PEAK 2,410 m³/s</text>
+<!-- X-Axis Labels -->
+<text class="text-[9px] fill-current text-on-surface-variant font-code-sm" text-anchor="middle" x="45" y="192">T+00</text>
+<text class="text-[9px] fill-current text-on-surface-variant font-code-sm" text-anchor="middle" x="135" y="192">T+01h</text>
+<text class="text-[9px] fill-current text-error font-bold font-code-sm" text-anchor="middle" x="220" y="192">T+02:15</text>
+<text class="text-[9px] fill-current text-primary font-bold font-code-sm" text-anchor="middle" x="285" y="192">T+02:55 (PEAK)</text>
+<text class="text-[9px] fill-current text-on-surface-variant font-code-sm" text-anchor="middle" x="360" y="192">T+03:30</text>
+<text class="text-[9px] fill-current text-on-surface-variant font-code-sm" text-anchor="middle" x="430" y="192">T+04h</text>
+</svg>
+<!-- Legend strip -->
+<div class="flex items-center justify-between text-[11px] pt-1 text-on-surface-variant font-body-sm px-1">
+<span class="flex items-center gap-1"><span class="w-3 h-1 bg-primary inline-block"></span> Alaknanda Surge Discharge</span>
+<span class="flex items-center gap-1"><span class="w-3 h-1 bg-[#E8A33D] inline-block"></span> Mandakini Backwater Infiltration</span>
+</div>
+</div>
+<!-- Hydrology Quantitative Telemetry Matrix -->
+<div class="grid grid-cols-2 gap-2 mt-3 font-code-sm text-code-sm">
+<div class="bg-surface-container-low p-2 rounded flex flex-col justify-between">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">Peak Attenuation</span>
+<span class="font-bold text-on-surface text-body-md">-64.8% <span class="font-normal text-secondary text-code-sm">(Source: 6,850)</span></span>
+</div>
+<div class="bg-surface-container-low p-2 rounded flex flex-col justify-between">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">Wave Front Celerity</span>
+<span class="font-bold text-on-surface text-body-md">6.2 m/s <span class="font-normal text-secondary text-code-sm">(22.3 km/h)</span></span>
+</div>
+<div class="bg-surface-container-low p-2 rounded flex flex-col justify-between">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">Manning's Roughness (n)</span>
+<span class="font-bold text-on-surface text-body-md">0.038 <span class="font-normal text-secondary text-code-sm">(Gravel/Cobble)</span></span>
+</div>
+<div class="bg-surface-container-low p-2 rounded flex flex-col justify-between">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">Total Inundation Vol</span>
+<span class="font-bold text-primary text-body-md">14.8M m³ <span class="font-normal text-secondary text-code-sm">(GLOF mass)</span></span>
+</div>
+</div>
+</div>
+<!-- Early Warning Dispatch & Operations Log -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary">broadcast_on_personal</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wide">EOC Incident Control &amp; Dispatch</h2>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-[#3E8E5A]/15 text-[#3E8E5A] uppercase">Active Command</span>
+</div>
+<div class="bg-surface-container-low rounded p-2.5 flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Incident Commander</span>
+<span class="font-code-sm text-code-sm px-1.5 bg-[#3E8E5A] text-on-primary rounded font-semibold">ACKNOWLEDGED 12:33:15 IST</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Smt. Preeti Bhatt, IAS</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">District Magistrate / Chairman, DDMA Rudraprayag District</div>
+</div>
+<!-- Deployment Units Status -->
+<div class="space-y-2 text-body-sm font-body-sm">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-[#3E8E5A]"></span>
+<div>
+<div class="font-semibold text-on-surface">ITBP 12th Battalion (Gauchar)</div>
+<div class="text-[11px] text-on-surface-variant">2 QRF Platoons deployed to Sangam &amp; Ghats</div>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-secondary font-medium">ON STATION</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<div>
+<div class="font-semibold text-on-surface">SDRF Rudraprayag Post</div>
+<div class="text-[11px] text-on-surface-variant">Deep-diver boat unit staging at Upper Belni</div>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-error font-medium">RESCUE DRILL</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<div>
+<div class="font-semibold text-on-surface">NDMA / SDMA Dehradun Mirror</div>
+<div class="text-[11px] text-on-surface-variant">Geofenced Common Alerting Protocol (CAP) Push</div>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-primary font-medium">42,800 QUEUED</span>
+</div>
+</div>
+<!-- Automated Broadcast Feed -->
+<div class="rounded bg-surface-container p-2 text-code-sm font-code-sm text-on-surface-variant">
+<div class="flex items-center justify-between text-[10px] text-secondary font-bold uppercase mb-1">
+<span>Cellular CAP Push Log</span>
+<span>Target: Rudraprayag, Tilwara, Belni</span>
+</div>
+<p class="text-on-surface font-body-sm italic">"URGENT DDMA ALERT: Alaknanda surge arriving 13:14 IST. Water rising +3.6m. Immediate evacuation of riverside ghats, Belni bazaar &amp; Sangam temple ordered."</p>
+</div>
+</div>
+</div>
+<!-- ================= CENTER COLUMN: GIS TACTICAL DECK & RIVER CROSS-SECTION (5 Cols) ================= -->
+<div class="xl:col-span-5 flex flex-col space-y-space-md">
+<!-- Map & Vector Inundation Viewport -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-2 mb-2">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary">layers</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wide">Hydro-Spatial Confluence Vector Deck (RK 107.0)</h2>
+</div>
+<div class="flex items-center space-x-1 font-code-sm text-code-sm text-on-surface-variant">
+<span>30°17'08"N</span>
+<span>|</span>
+<span>78°58'50"E</span>
+</div>
+</div>
+<!-- Tactical Vector Graphic Map Container -->
+<div class="relative w-full h-80 rounded bg-surface-container-high overflow-hidden shadow-inner flex items-center justify-center">
+<!-- Synthetic Aperture Radar & Vector SVG Deck -->
+<svg class="w-full h-full" viewbox="0 0 500 320">
+<!-- Contour Topography Elevation Bands -->
+<!-- Safe Ground (Green) -->
+<path d="M 0,0 L 500,0 L 500,320 L 0,320 Z" fill="#edf4ff"></path>
+<!-- Intermediate Hill terrain -->
+<path d="M 0,30 Q 150,60 220,120 T 320,190 T 500,200 L 500,320 L 0,320 Z" fill="#e3efff"></path>
+<!-- Amber Hazard Buffer Zone (614m - 618m AMSL) -->
+<path d="M 0,70 Q 140,90 200,140 Q 250,180 320,220 T 500,230 L 500,300 Q 300,280 230,220 T 0,160 Z" fill="#FFF2D6"></path>
+<!-- Red Flood Hazard Inundation Zone (<614m AMSL Peak Surge) -->
+<path d="M 0,90 Q 130,110 180,160 Q 220,200 280,240 T 500,255 L 500,285 Q 280,270 210,210 Q 150,170 0,135 Z" fill="#FDF2F2"></path>
+<!-- River Vectors -->
+<!-- Inbound Alaknanda River (from Top Right / Gauchar) -->
+<path d="M 490,270 C 380,260 270,220 220,180 C 180,150 110,120 0,110" fill="none" stroke="#92c0e9" stroke-linecap="round" stroke-width="26"></path>
+<path d="M 490,270 C 380,260 270,220 220,180 C 180,150 110,120 0,110" fill="none" stroke="#1B4F72" stroke-linecap="round" stroke-width="14"></path>
+<!-- Surge Direction Arrows -->
+<marker id="surgeArrow" markerheight="6" markerwidth="6" orient="auto" refx="4" refy="3">
+<polygon fill="#BA1A1A" points="0 0, 6 3, 0 6"></polygon>
+</marker>
+<path d="M 480,270 C 380,260 275,220 235,185" fill="none" marker-end="url(#surgeArrow)" stroke="#BA1A1A" stroke-dasharray="8 4" stroke-width="3"></path>
+<!-- Inflow Mandakini River (from North / Kedarnath Valley into Confluence) -->
+<path d="M 230,0 C 225,50 220,110 220,180" fill="none" stroke="#92c0e9" stroke-linecap="round" stroke-width="18"></path>
+<path d="M 230,0 C 225,50 220,110 220,180" fill="none" stroke="#326286" stroke-linecap="round" stroke-width="10"></path>
+<!-- Confluence Sangam Point marker -->
+<circle class="animate-ping" cx="220" cy="180" fill="#BA1A1A" fill-opacity="0.15" r="16"></circle>
+<circle cx="220" cy="180" fill="#BA1A1A" r="7"></circle>
+<circle cx="220" cy="180" fill="#FFFFFF" r="2.5"></circle>
+<!-- Highways (NH-07 Badrinath & NH-107 Kedarnath) -->
+<!-- NH-07 Highway Line -->
+<path d="M 0,80 C 120,95 210,140 280,190 C 350,230 430,240 500,242" fill="none" stroke="#72787f" stroke-width="3.5"></path>
+<path d="M 0,80 C 120,95 210,140 280,190 C 350,230 430,240 500,242" fill="none" stroke="#ffffff" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<!-- NH-107 Highway Line heading up Mandakini -->
+<path d="M 250,0 C 245,60 240,120 280,190" fill="none" stroke="#72787f" stroke-width="3.5"></path>
+<path d="M 250,0 C 245,60 240,120 280,190" fill="none" stroke="#ffffff" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<!-- Tactical Checkpoints & Landmarks -->
+<!-- CP-07 Sangam Suspension Bridge -->
+<g transform="translate(195, 172)">
+<rect fill="#BA1A1A" height="14" rx="2" width="18"></rect>
+<text class="text-[8px] font-bold font-code-sm" fill="#ffffff" text-anchor="middle" x="9" y="10.5">CP7</text>
+</g>
+<!-- CP-08 Belni Bridge -->
+<g transform="translate(315, 205)">
+<rect fill="#E8A33D" height="14" rx="2" width="18"></rect>
+<text class="text-[8px] font-bold font-code-sm" fill="#000000" text-anchor="middle" x="9" y="10.5">CP8</text>
+</g>
+<!-- CP-09 Koteshwar Road Gate -->
+<g transform="translate(120, 75)">
+<rect fill="#3E8E5A" height="14" rx="2" width="18"></rect>
+<text class="text-[8px] font-bold font-code-sm" fill="#ffffff" text-anchor="middle" x="9" y="10.5">CP9</text>
+</g>
+<!-- UAV Netra-06 FLIR Recon Icon -->
+<g transform="translate(290, 80)">
+<circle cx="16" cy="16" fill="#1B4F72" fill-opacity="0.1" r="14"></circle>
+<circle cx="16" cy="16" fill="#003857" r="4"></circle>
+<line stroke="#003857" stroke-width="1.5" x1="8" x2="24" y1="16" y2="16"></line>
+<line stroke="#003857" stroke-width="1.5" x1="16" x2="16" y1="8" y2="24"></line>
+<rect fill="#163653" height="24" rx="3" width="105" x="26" y="8"></rect>
+<text class="text-[8px] font-bold font-code-sm" fill="#cce5ff" x="31" y="18">UAV NETRA-06 [FLIR]</text>
+<text class="text-[8px] font-code-sm" fill="#9dcbf4" x="31" y="27">ALT 340m AGL | OPTIC LOCK</text>
+</g>
+<!-- Labels on Map -->
+<text class="text-[10px] font-bold fill-current text-primary font-body-sm" x="210" y="25">MANDAKINI RIVER (Inflow)</text>
+<text class="text-[10px] font-bold fill-current text-error font-body-sm" x="360" y="295">ALAKNANDA SURGE VECTOR &gt;&gt;</text>
+<text class="text-[10px] font-bold fill-current text-primary font-body-sm" x="40" y="100">&lt;&lt; TO SRINAGAR HYDRO DAM</text>
+<text class="text-[9px] font-bold fill-current text-error font-code-sm" x="180" y="208">RUDRAPRAYAG SANGAM (610m)</text>
+</svg>
+<!-- Floating Map HUD Overlays -->
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm p-2 rounded shadow-sm text-body-sm border-0">
+<div class="font-label-sm text-label-sm uppercase font-semibold text-on-surface">GIS Inundation Overlay</div>
+<div class="flex items-center space-x-3 mt-1 text-[10px] font-code-sm">
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-error/30 inline-block rounded-xs"></span> &lt;614m Red Hazard</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-[#E8A33D]/40 inline-block rounded-xs"></span> 614-618m Buffer</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-[#3E8E5A]/30 inline-block rounded-xs"></span> ≥620m Safe</span>
+</div>
+</div>
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded shadow-sm text-right font-code-sm text-[11px] text-on-surface">
+<div>CAM: SANGAM NADIR-01</div>
+<div class="text-secondary">SCALE: 1:7,500 | WGS84 UTM 44N</div>
+</div>
+</div>
+<!-- Checkpoints Control Status Matrix -->
+<div class="grid grid-cols-3 gap-2 mt-3 text-body-sm">
+<div class="bg-surface-container-low p-2 rounded flex flex-col justify-between">
+<div class="flex items-center space-x-1 text-error font-bold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>CP-07: SANGAM BRIDGE</span>
+</div>
+<div class="font-code-sm text-code-sm text-on-surface mt-1 font-semibold">SEALED / NO ENTRY</div>
+<div class="text-[10px] text-on-surface-variant">ITBP Guards on Pylons</div>
+</div>
+<div class="bg-surface-container-low p-2 rounded flex flex-col justify-between">
+<div class="flex items-center space-x-1 text-[#E8A33D] font-bold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>CP-08: BELNI BRIDGE</span>
+</div>
+<div class="font-code-sm text-code-sm text-on-surface mt-1 font-semibold">RESTRICTED 1-WAY</div>
+<div class="text-[10px] text-on-surface-variant">Outbound Evac Traffic Only</div>
+</div>
+<div class="bg-surface-container-low p-2 rounded flex flex-col justify-between">
+<div class="flex items-center space-x-1 text-[#3E8E5A] font-bold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>CP-09: KOTESHWAR GATE</span>
+</div>
+<div class="font-code-sm text-code-sm text-on-surface mt-1 font-semibold">EVAC CORRIDOR OPEN</div>
+<div class="text-[10px] text-on-surface-variant">Clear uphill to Circuit House</div>
+</div>
+</div>
+</div>
+<!-- Confluence Cross-Section Elevation Inset -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-1.5 mb-1.5">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary">altitude</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wide">Sangam Cross-Section Profile [XS-107.02]</h3>
+</div>
+<span class="font-code-sm text-code-sm text-secondary">Looking Downstream (SW)</span>
+</div>
+<div class="w-full bg-surface-container-low rounded p-2 shadow-inner">
+<svg class="w-full h-32" viewbox="0 0 450 130">
+<!-- Ground Bed Cross Profile -->
+<path d="M 10,20 L 50,45 L 90,65 L 120,95 L 160,110 L 260,110 L 310,95 L 360,60 L 410,35 L 440,20 L 440,125 L 10,125 Z" fill="#cfdbeb"></path>
+<path d="M 10,20 L 50,45 L 90,65 L 120,95 L 160,110 L 260,110 L 310,95 L 360,60 L 410,35 L 440,20" fill="none" stroke="#72787f" stroke-width="2"></path>
+<!-- Normal Water Elevation (610.0m AMSL) -->
+<path d="M 145,100 L 285,100 L 270,110 L 155,110 Z" fill="#92c0e9" fill-opacity="0.8"></path>
+<line stroke="#003857" stroke-dasharray="3 2" stroke-width="1.2" x1="145" x2="285" y1="100" y2="100"></line>
+<text class="text-[8px] fill-current text-primary font-code-sm" text-anchor="middle" x="215" y="105">Normal Base: 610.00m</text>
+<!-- Projected Peak Surge Elevation (613.60m AMSL) -->
+<path d="M 105,74 L 335,74 L 285,100 L 145,100 Z" fill="#BA1A1A" fill-opacity="0.3"></path>
+<line stroke="#BA1A1A" stroke-dasharray="4 2" stroke-width="2" x1="105" x2="335" y1="74" y2="74"></line>
+<text class="text-[9px] font-bold fill-current text-error font-code-sm" text-anchor="middle" x="215" y="70">Δ +3.60m PEAK SURGE LEVEL (613.60m AMSL)</text>
+<!-- Infrastructure Reference Markers -->
+<!-- Ghats Stairs -->
+<rect fill="#72787f" height="12" width="12" x="90" y="60"></rect>
+<text class="text-[8px] font-code-sm fill-current text-on-surface" text-anchor="end" x="88" y="55">Rudraprayag Ghats (612.5m) [SUBMERGED]</text>
+<!-- Chamunda Devi Temple Plinth -->
+<polygon fill="#E8A33D" points="45,45 55,30 65,45"></polygon>
+<text class="text-[8px] font-bold font-code-sm fill-current text-on-surface" text-anchor="middle" x="55" y="26">Chamunda Devi (616.2m) [SAFE +2.6m]</text>
+<!-- NH-07 Bridge Pier Deck -->
+<rect fill="#4e6076" height="45" width="8" x="360" y="15"></rect>
+<rect fill="#1C2E42" height="6" width="50" x="340" y="12"></rect>
+<text class="text-[8px] font-bold font-code-sm fill-current text-on-surface" text-anchor="middle" x="365" y="9">Bridge Deck: 620.0m [CLEAR +6.4m]</text>
+</svg>
+</div>
+</div>
+</div>
+<!-- ================= RIGHT COLUMN: CIVIL DEFENSE & CASCADE TRACKER (3 Cols) ================= -->
+<div class="xl:col-span-3 flex flex-col space-y-space-md">
+<!-- Civil Defense Muster Roll-Call -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-2 mb-2">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary">groups</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wide">Muster Roll-Call &amp; Evacuation</h2>
+</div>
+<span class="font-code-sm text-code-sm font-bold text-[#3E8E5A]">91.0% SECURED</span>
+</div>
+<!-- Metric Summary Card -->
+<div class="bg-surface-container-low p-2.5 rounded flex items-center justify-between mb-3">
+<div>
+<div class="font-label-sm text-label-sm uppercase text-secondary">At-Risk Riverside Cohort</div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface">3,110 <span class="font-headline-sm text-headline-sm text-secondary font-normal">/ 3,420</span></div>
+</div>
+<div class="text-right">
+<div class="font-code-sm text-code-sm text-error font-bold">310 IN TRANSIT</div>
+<div class="text-[10px] text-on-surface-variant font-code-sm">5 Riverside Sectors</div>
+</div>
+</div>
+<!-- Sectors Breakdown -->
+<div class="space-y-2.5 text-body-sm font-body-sm">
+<!-- Sector 1 -->
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span class="font-semibold text-on-surface">1. Sangam Temple &amp; Ghats</span>
+<span class="font-code-sm text-code-sm font-bold text-[#3E8E5A]">410 / 410 (100%)</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#3E8E5A] h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="text-[10px] text-secondary">Sanctuary sealed, priests relocated to Upper Town</span>
+</div>
+<!-- Sector 2 -->
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span class="font-semibold text-on-surface">2. Lower Belni Bazaar</span>
+<span class="font-code-sm text-code-sm font-bold text-[#E8A33D]">1,120 / 1,250 (89.6%)</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#E8A33D] h-full rounded-full" style="width: 89.6%"></div>
+</div>
+<span class="text-[10px] text-secondary">SDRF clearing 130 remaining shop owners</span>
+</div>
+<!-- Sector 3 -->
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span class="font-semibold text-on-surface">3. Koteshwar Riverside Hamlets</span>
+<span class="font-code-sm text-code-sm font-bold text-[#3E8E5A]">680 / 710 (95.8%)</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#3E8E5A] h-full rounded-full" style="width: 95.8%"></div>
+</div>
+<span class="text-[10px] text-secondary">30 residents moving to Circuit House camp</span>
+</div>
+<!-- Sector 4 -->
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span class="font-semibold text-on-surface">4. Gulabrai Riverfront</span>
+<span class="font-code-sm text-code-sm font-bold text-error">540 / 650 (83.1%)</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 83.1%"></div>
+</div>
+<span class="text-[10px] text-secondary">Police loudspeaker vehicle active</span>
+</div>
+<!-- Sector 5 -->
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span class="font-semibold text-on-surface">5. PWD Guest House Low Colony</span>
+<span class="font-code-sm text-code-sm font-bold text-[#3E8E5A]">360 / 400 (90.0%)</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#3E8E5A] h-full rounded-full" style="width: 90.0%"></div>
+</div>
+<span class="text-[10px] text-secondary">Final shuttle departing to Sports Ground</span>
+</div>
+</div>
+</div>
+<!-- Downstream Cascade Tracker (Alaknanda Chain) -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col space-y-2">
+<div class="flex items-center justify-between pb-1.5 mb-1">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary">route</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wide">Downstream Cascade Chain</h2>
+</div>
+<span class="font-code-sm text-code-sm text-secondary">7 STATIONS</span>
+</div>
+<div class="space-y-2 font-code-sm text-code-sm">
+<!-- Station 1 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between opacity-75">
+<div>
+<div class="font-bold text-on-surface">Nandprayag (RK 59.5)</div>
+<div class="text-[10px] text-secondary">Receded (-1.8m) | Q=1,180 m³/s</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary text-[10px] font-bold">RECEDED</span>
+</div>
+<!-- Station 2 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between opacity-80">
+<div>
+<div class="font-bold text-on-surface">Langasu (RK 66.8)</div>
+<div class="text-[10px] text-secondary">Receding (-0.9m) | Q=1,920 m³/s</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary text-[10px] font-bold">RECEDING</span>
+</div>
+<!-- Station 3 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-bold text-on-surface">Karnaprayag (RK 74.5)</div>
+<div class="text-[10px] text-secondary">Crest Peak Passing | Q=2,980 m³/s</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error text-on-error text-[10px] font-bold animate-pulse">CREST NOW</span>
+</div>
+<!-- Station 4 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-bold text-on-surface">Gauchar Airstrip (RK 84.0)</div>
+<div class="text-[10px] text-secondary">Surge Passing | Q=2,720 m³/s</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error/20 text-error text-[10px] font-bold">SURGING</span>
+</div>
+<!-- Station 5 (Current Focus) -->
+<div class="p-2 rounded bg-surface-container-high shadow-sm flex items-center justify-between">
+<div>
+<div class="font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">my_location</span>
+<span>Rudraprayag Sangam (RK 107.0)</span>
+</div>
+<div class="text-[10px] text-error font-semibold">ETA 40m (13:14 IST) | Q=2,410 m³/s</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error text-on-error text-[10px] font-bold">INCOMING</span>
+</div>
+<!-- Station 6 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-bold text-on-surface">Srinagar Dam / HET Res (RK 140.0)</div>
+<div class="text-[10px] text-secondary">ETA 1h 45m | Drawdown in Progress</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-[#E8A33D]/20 text-[#A06800] text-[10px] font-bold">PRE-ALERT</span>
+</div>
+<!-- Station 7 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-bold text-on-surface">Devprayag Sangam (RK 175.0)</div>
+<div class="text-[10px] text-secondary">ETA 3h 10m | Bhagirathi confluence</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary text-[10px] font-bold">STANDBY</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= TEMPORAL PLAYBACK SCRUBBER BAR ================= -->
+<footer class="w-full bg-surface-container-lowest p-space-md shadow-lg flex flex-col md:flex-row items-center justify-between gap-3 font-code-sm text-code-sm">
+<div class="flex items-center space-x-3 w-full md:w-auto">
+<button class="w-8 h-8 rounded bg-primary-container text-on-primary flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container text-on-surface flex items-center justify-center hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">pause</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Simulation Playback</span>
+<span class="font-bold text-on-surface">STEP: +10s <span class="text-secondary font-normal">(1.0x Realtime)</span></span>
+</div>
+</div>
+<!-- Interactive Track Timeline -->
+<div class="flex-1 w-full flex flex-col space-y-1 max-w-3xl">
+<div class="relative w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<!-- Progress Fill -->
+<div class="bg-primary h-full rounded-full" style="width: 56.2%"></div>
+<!-- Crest Peak Marker Pin -->
+<div class="absolute top-0 bottom-0 w-1 bg-error" style="left: 72.9%" title="Peak Surge Arrival (T+02:55)"></div>
+</div>
+<div class="flex justify-between text-[10px] text-secondary font-code-sm">
+<span>T+00:00 (10:19 GLOF Trigger)</span>
+<span>T+01:00 (Joshimath)</span>
+<span class="font-bold text-error">NOW: T+02:15 (12:34 IST)</span>
+<span class="font-bold text-primary">PEAK: T+02:55 (13:14 IST)</span>
+<span>T+04:00 (Srinagar Tailrace)</span>
+</div>
+</div>
+<!-- Final System Health Lockup -->
+<div class="hidden lg:flex items-center space-x-3 text-right">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Telemetry Feeds</span>
+<span class="font-bold text-[#3E8E5A] flex items-center justify-end gap-1">
+<span class="w-2 h-2 rounded-full bg-[#3E8E5A]"></span>
+          14 GAGES ONLINE
+        </span>
+</div>
+</div>
+</footer>
+</div></main></body></html>

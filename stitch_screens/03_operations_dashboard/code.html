@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#cce5ff", "primary": "#003857", "outline": "#72787f", "surface-container": "#e3efff", "on-tertiary": "#ffffff", "surface-tint": "#326286", "tertiary": "#163653", "on-error-container": "#93000a", "on-error": "#ffffff", "tertiary-fixed-dim": "#abc9ec", "on-primary-fixed": "#001e31", "surface-container-lowest": "#ffffff", "secondary-container": "#cfe1fc", "background": "#f7f9ff", "on-secondary-fixed-variant": "#36485d", "error": "#ba1a1a", "on-primary-container": "#92c0e9", "surface-variant": "#d7e4f4", "tertiary-fixed": "#cfe4ff", "primary-fixed-dim": "#9dcbf4", "inverse-primary": "#9dcbf4", "outline-variant": "#c1c7cf", "on-tertiary-fixed-variant": "#2b4966", "on-secondary-fixed": "#091d30", "primary-container": "#1b4f72", "surface-container-low": "#edf4ff", "secondary-fixed": "#d1e4fe", "surface": "#f7f9ff", "surface-container-highest": "#d7e4f4", "on-tertiary-container": "#a0bee0", "secondary": "#4e6076", "inverse-surface": "#26313e", "secondary-fixed-dim": "#b6c8e2", "on-primary": "#ffffff", "tertiary-container": "#2f4d6b", "on-tertiary-fixed": "#001d34", "surface-bright": "#f7f9ff", "surface-container-high": "#dde9f9", "on-background": "#111d28", "on-primary-fixed-variant": "#154b6d", "inverse-on-surface": "#e8f2ff", "surface-dim": "#cfdbeb", "on-surface": "#111d28", "on-secondary": "#ffffff", "on-secondary-container": "#52647a", "on-surface-variant": "#41474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "32px", "nav-height": "48px", "space-md": "12px", "panel-width-md": "420px", "space-lg": "16px", "space-xl": "24px", "panel-width-sm": "320px", "space-2xs": "2px", "space-sm": "8px", "timeline-height": "72px", "space-xs": "4px", "panel-width-lg": "560px" }, "fontFamily": { "code-sm": [ "JetBrains Mono" ], "body-md": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-md": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "body-sm": [ "IBM Plex Sans" ], "headline-sm": [ "IBM Plex Sans" ], "code-lg": [ "JetBrains Mono" ], "headline-xl": [ "IBM Plex Sans" ], "label-sm": [ "IBM Plex Sans" ], "code-md": [ "JetBrains Mono" ], "headline-lg": [ "IBM Plex Sans" ] }, "fontSize": { "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "600" } ], "code-lg": [ "16px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "code-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-tertiary text-on-tertiary h-nav-height"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-fixed">water_voc</span><span class="font-headline-sm text-headline-sm text-on-tertiary tracking-tight">FloodPath</span></div><span class="font-code-sm text-code-sm bg-tertiary-container text-on-tertiary-container px-space-xs py-space-2xs rounded">SIH 26161 - Inundation Model v1.2</span><nav class="hidden xl:flex items-center gap-space-xs ml-space-md" data-active-classes="bg-primary-container text-on-primary font-label-md"><a aria-current="page" class="px-space-md py-space-xs rounded transition-colors bg-primary-container text-on-primary font-label-md" data-path="dashboard" href="#">Dashboard</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="scenario-workbench" href="#">New Scenario</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="historical-cases" href="#">Historical Case Studies</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="model-settings" href="#">Settings</a></nav></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-tertiary-container px-space-sm py-space-2xs rounded"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-code-sm text-code-sm text-on-tertiary-container">DEM Grid: SRTM 30m Active</span></div><div class="flex items-center gap-space-sm pl-space-md"><div class="text-right hidden sm:block"><div class="font-label-sm text-label-sm text-on-tertiary">Anjali</div><div class="font-code-sm text-code-sm text-on-tertiary-container">DDMA Officer</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xy7v4veH8e3oTI877FEdQrvPJjbmZ7gtI0OOQuixD7pcVjY2CqZpRgXgdCJmynPlLonsniCwQMA8F9lV2VvF5Q6roeH_WXb3K_WlgejvSuZwelKM895EIkBLPm3k0QXjKBLG7rQhOR6WF9st7y2-Yh8OALVnWEqYhnhvnFWXXBhfe9ofboPbEOVptyYR65aZZRd4ykoJHYH3wr8VVSFkJK9QFIXS_qofJhW0PIiTPf9tXXUTSQTSRK7G50"/></div></div></div></header><aside class="fixed left-0 top-nav-height bottom-0 w-panel-width-sm bg-surface-container-low z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-sm px-space-xs">Operational Telemetry</div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-primary-container text-on-primary"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm transition-colors bg-primary-container text-on-primary" data-path="dashboard" href="#"><span class="material-symbols-outlined text-base">dashboard</span><span>Overview &amp; Alerts</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="scenario-workbench" href="#"><span class="material-symbols-outlined text-base">layers</span><span>Scenario Workbench</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="historical-cases" href="#"><span class="material-symbols-outlined text-base">history_edu</span><span>Historical Records</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="model-settings" href="#"><span class="material-symbols-outlined text-base">tune</span><span>DEM &amp; Engine Settings</span></a></nav></div><div class="p-space-md bg-surface-container"><div class="font-label-sm text-label-sm text-on-surface font-semibold mb-space-2xs">GIS Node Status</div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between"><span>CRS Projection</span><span>EPSG:4326 WGS84</span></div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between mt-space-2xs"><span>Hydraulic Mode</span><span>2D Shallow Water</span></div></div></aside><div class="pl-panel-width-sm"><main class="relative pt-nav-height bg-background min-h-screen w-full"><div class="flex flex-col w-full">
+<div class="p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+<!-- Top Command Strip -->
+<div class="bg-surface-container-lowest p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-2xs min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-primary"></span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight truncate">Operational Inundation Scenarios</h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Chamoli &amp; Alaknanda Basin Jurisdiction — DDMA Operations</p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="bg-surface-container-lowest text-on-surface px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-low transition-colors flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">history</span>
+<span>Load Historical Replay</span>
+</button>
+<button class="bg-primary-container text-on-primary px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider hover:bg-primary transition-colors flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span>Start New Scenario</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Strip (No vanity gauges, pure engineering figures) -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Scenarios Executed</span>
+<span class="material-symbols-outlined text-secondary text-base">account_tree</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-code-lg text-headline-xl text-on-surface">14</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">[Runs in Log]</span>
+</div>
+<div class="font-code-sm text-code-sm text-secondary mt-space-2xs">Full hydrodynamic convergence</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Mean Compute Latency</span>
+<span class="material-symbols-outlined text-secondary text-base">timer</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-code-lg text-headline-xl text-on-surface">3.2</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">[min / 10k cells]</span>
+</div>
+<div class="font-code-sm text-code-sm text-secondary mt-space-2xs">2D Shallow-Water Saint-Venant Core</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Validated Watershed Area</span>
+<span class="material-symbols-outlined text-secondary text-base">terrain</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-code-lg text-headline-xl text-on-surface">4,820</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">km²</span>
+</div>
+<div class="font-code-sm text-code-sm text-secondary mt-space-2xs">SRTM 30m paired with CartoDEM v3</div>
+</div>
+</div>
+<!-- Alert / Empty State Notice Banner -->
+<div class="bg-surface-container-low p-space-md flex items-start sm:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl shrink-0">check_circle</span>
+<div class="font-body-md text-body-md text-on-surface">
+<span class="font-label-md text-label-md text-on-surface">Notice:</span>
+          No unreviewed warnings in current queue — Run a predictive simulation for newly mapped moraine dams.
+        </div>
+</div>
+<button class="shrink-0 font-code-sm text-code-sm text-primary hover:underline uppercase tracking-wider" type="button">
+        Dismiss Notice
+      </button>
+</div>
+<!-- List of Operational Runs -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between px-space-xs">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active &amp; Historical Scenario Queue</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant">Showing 3 of 14 records</div>
+</div>
+<!-- Item 1: South Lhonak -->
+<div class="bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="bg-surface-container-low px-space-md py-space-xs flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">CASE-ID: SIK-2023-LHONAK-01</span>
+<span class="font-code-sm text-code-sm bg-surface-container text-on-surface px-space-xs py-space-2xs">GLOF Type: Moraine Breach</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-sm text-code-sm text-on-surface-variant">UTC 2026-03-28 09:15</span>
+<span class="bg-error-container text-on-error-container px-space-xs py-space-2xs font-code-sm text-code-sm flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 bg-error"></span>
+              CRITICAL FLOODPRINT
+            </span>
+</div>
+</div>
+<div class="p-space-md lg:p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">South Lhonak Glacial Lake Outburst (Sikkim 2023 Replay)</h2>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex flex-wrap items-center gap-x-space-md gap-y-space-2xs mt-space-2xs">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm">my_location</span>
+<span class="font-code-sm text-code-sm text-on-surface">Lat: 27.912°N, Long: 88.204°E</span>
+</span>
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm">straighten</span>
+<span class="font-code-sm text-code-sm text-on-surface">Breach Depth: 24.5 m</span>
+</span>
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm">water_ph</span>
+<span class="font-code-sm text-code-sm text-on-surface">Peak Q: 5,420 m³/s</span>
+</span>
+</div>
+</div>
+<div class="flex items-center flex-wrap gap-space-md shrink-0">
+<div class="bg-surface-container px-space-md py-space-xs text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Settlement Exposure</div>
+<div class="font-code-lg text-code-lg text-error font-semibold">4 Villages at Risk</div>
+</div>
+<a class="bg-primary-container text-on-primary px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider hover:bg-primary transition-colors flex items-center gap-space-xs" href="#">
+<span>View Results Map</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="px-space-md py-space-xs bg-surface-container-lowest flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<div>Hydrodynamic Wave Peak: T+01:42:00 at Chungthang Hydro Electric Dam Level</div>
+<div class="flex items-center gap-space-sm">
+<button class="text-secondary hover:text-on-surface" type="button">GeoJSON Export</button>
+<span>/</span>
+<button class="text-secondary hover:text-on-surface" type="button">HEC-RAS Log</button>
+</div>
+</div>
+</div>
+<!-- Item 2: Tehri Dam -->
+<div class="bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="bg-surface-container-low px-space-md py-space-xs flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">CASE-ID: UTT-2026-TEHRI-04</span>
+<span class="font-code-sm text-code-sm bg-surface-container text-on-surface px-space-xs py-space-2xs">Cascade Hazard: Landslide Dam</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-sm text-code-sm text-on-surface-variant">UTC 2026-03-27 16:40</span>
+<span class="bg-surface-container text-secondary px-space-xs py-space-2xs font-code-sm text-code-sm">
+              COMPLETED
+            </span>
+</div>
+</div>
+<div class="p-space-md lg:p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Tehri Dam Upstream Landslide Lake Breach Scenario</h2>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex flex-wrap items-center gap-x-space-md gap-y-space-2xs mt-space-2xs">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm">my_location</span>
+<span class="font-code-sm text-code-sm text-on-surface">Lat: 30.378°N, Long: 78.480°E</span>
+</span>
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm">straighten</span>
+<span class="font-code-sm text-code-sm text-on-surface">Breach Depth: 18.0 m</span>
+</span>
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm">water_ph</span>
+<span class="font-code-sm text-code-sm text-on-surface">Peak Q: 3,180 m³/s</span>
+</span>
+</div>
+</div>
+<div class="flex items-center flex-wrap gap-space-md shrink-0">
+<div class="bg-surface-container px-space-md py-space-xs text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Settlement Exposure</div>
+<div class="font-code-lg text-code-lg text-on-surface font-semibold">3 Villages at Risk</div>
+</div>
+<a class="bg-surface-container text-on-surface px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider hover:bg-surface-variant transition-colors flex items-center gap-space-xs" href="#">
+<span>Inspect Profile</span>
+<span class="material-symbols-outlined text-sm">query_stats</span>
+</a>
+</div>
+</div>
+<div class="px-space-md py-space-xs bg-surface-container-lowest flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<div>Hydrograph Profile: Subcritical flood wave dispersion in Bhagirathi gorge</div>
+<div class="flex items-center gap-space-sm">
+<button class="text-secondary hover:text-on-surface" type="button">Export KMZ</button>
+<span>/</span>
+<button class="text-secondary hover:text-on-surface" type="button">Water Surface Profile</button>
+</div>
+</div>
+</div>
+<!-- Item 3: Tapovan Barrage -->
+<div class="bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="bg-surface-container-low px-space-md py-space-xs flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">CASE-ID: UTT-2026-TAPOVAN-09</span>
+<span class="font-code-sm text-code-sm bg-surface-container text-on-surface px-space-xs py-space-2xs">Structural Overtopping</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-sm text-code-sm text-on-surface-variant">UTC 2026-03-25 11:20</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-space-xs py-space-2xs font-code-sm text-code-sm">
+              ARCHIVE VALIDATED
+            </span>
+</div>
+</div>
+<div class="p-space-md lg:p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Tapovan Barrage Flash Inundation Run</h2>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex flex-wrap items-center gap-x-space-md gap-y-space-2xs mt-space-2xs">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm">my_location</span>
+<span class="font-code-sm text-code-sm text-on-surface">Lat: 30.505°N, Long: 79.589°E</span>
+</span>
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm">speed</span>
+<span class="font-code-sm text-code-sm text-on-surface">Velocity: 8.4 m/s (Canyon constriction)</span>
+</span>
+</div>
+</div>
+<div class="flex items-center flex-wrap gap-space-md shrink-0">
+<div class="bg-surface-container px-space-md py-space-xs text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Benchmark Match</div>
+<div class="font-code-lg text-code-lg text-primary font-semibold">97.4% Elevation Delta</div>
+</div>
+<a class="bg-surface-container text-on-surface px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider hover:bg-surface-variant transition-colors flex items-center gap-space-xs" href="#">
+<span>Replay Analytics</span>
+<span class="material-symbols-outlined text-sm">replay</span>
+</a>
+</div>
+</div>
+<div class="px-space-md py-space-xs bg-surface-container-lowest flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<div>Boundary Condition: Dynamic inflow from Dhauliganga confluence junction</div>
+<div class="flex items-center gap-space-sm">
+<button class="text-secondary hover:text-on-surface" type="button">Field Survey Data</button>
+<span>/</span>
+<button class="text-secondary hover:text-on-surface" type="button">Cross-Section DXF</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5d Featured Historical Validation Benchmark -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-xs">
+        Empirical Ground-Truth Calibration &amp; Verification (Section 5d Benchmark)
+      </div>
+<div class="bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-stretch">
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Sentinel-1 SAR Satellite Reference Model</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Rishi Ganga 2021 GLOF &amp; Rock-Ice Avalanche</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Post-event hydrodynamic calibration across the Nanda Devi basin. The dynamic solver was constrained against high-resolution Sentinel-1 synthetic aperture radar and Cartosat-3 elevation differences to measure spatial extent fidelity under high-sediment hyperconcentrated flow regimes.
+            </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm bg-surface-container-low p-space-md">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Spatial Overlap</div>
+<div class="font-code-lg text-code-lg text-primary font-bold">92.0%</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Volume Inflow</div>
+<div class="font-code-lg text-code-lg text-on-surface font-semibold">27.0M m³</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Runup Error</div>
+<div class="font-code-lg text-code-lg text-on-surface font-semibold">±1.4 m</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Solver Mode</div>
+<div class="font-code-lg text-code-lg text-on-surface font-semibold">2D Non-Newtonian</div>
+</div>
+</div>
+</div>
+<!-- Technical Cross-Section Chart Representation -->
+<div class="w-full md:w-80 bg-surface-container-low p-space-md flex flex-col justify-between shrink-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Spatial Footprint Match</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">IOU: 0.92</span>
+</div>
+<!-- Inline Technical SVG Hydrograph/Footprint -->
+<div class="py-space-md flex items-center justify-center">
+<svg class="w-full h-32 text-primary" fill="none" viewbox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid hairline lines -->
+<line stroke="currentColor" stroke-opacity="0.1" stroke-width="1" x1="0" x2="240" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-opacity="0.1" stroke-width="1" x1="0" x2="240" y1="50" y2="50"></line>
+<line stroke="currentColor" stroke-opacity="0.1" stroke-width="1" x1="0" x2="240" y1="80" y2="80"></line>
+<line stroke="currentColor" stroke-opacity="0.1" stroke-width="1" x1="60" x2="60" y1="0" y2="100"></line>
+<line stroke="currentColor" stroke-opacity="0.1" stroke-width="1" x1="120" x2="120" y1="0" y2="100"></line>
+<line stroke="currentColor" stroke-opacity="0.1" stroke-width="1" x1="180" x2="180" y1="0" y2="100"></line>
+<!-- Ground truth trace (dashed) -->
+<path d="M10 85 C 40 85, 60 40, 90 25 C 130 10, 160 60, 230 75" fill="none" stroke="#4e6076" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<!-- Simulation Inundation envelope (filled) -->
+<path d="M10 88 C 42 86, 62 42, 92 28 C 132 12, 158 58, 230 72 L 230 100 L 10 100 Z" fill="#1b4f72" fill-opacity="0.15"></path>
+<path d="M10 88 C 42 86, 62 42, 92 28 C 132 12, 158 58, 230 72" fill="none" stroke="#1b4f72" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-0.5 bg-secondary inline-block"></span>
+<span>Satellite Extent</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-1 bg-primary-container inline-block"></span>
+<span>Simulated Wave</span>
+</div>
+</div>
+<button class="mt-space-md w-full bg-surface-container-lowest text-on-surface py-space-xs font-label-md text-label-md uppercase tracking-wider hover:bg-surface-variant transition-colors shadow-sm text-center" type="button">
+            Load Full Benchmark Dossier
+          </button>
+</div>
+</div>
+</div>
+<!-- System Metadata Footer -->
+<div class="mt-space-md pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span>Solver Cluster: Node-Garhwal-02</span>
+<span>•</span>
+<span>Mesh Resolution: Adaptive 5m-30m Quadtree</span>
+</div>
+<div>Telemetry Synchronized: 2026-03-29 04:30:12 IST</div>
+</div>
+</div>
+</div></main></div></body></html>

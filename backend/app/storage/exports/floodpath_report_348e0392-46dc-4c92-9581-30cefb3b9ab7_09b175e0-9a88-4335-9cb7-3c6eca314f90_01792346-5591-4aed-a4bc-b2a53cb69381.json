@@ -1,0 +1,21 @@
+{
+  "scenario": {
+    "id": "348e0392-46dc-4c92-9581-30cefb3b9ab7",
+    "name": "Exportable Scenario",
+    "latitude": 30.3833,
+    "longitude": 79.7333,
+    "breach_type": "structural",
+    "dam_height_m": 50.0,
+    "dam_volume_m3": 15000000.0,
+    "simulation_radius_km": 25.0
+  },
+  "run": {
+    "id": "09b175e0-9a88-4335-9cb7-3c6eca314f90",
+    "status": "succeeded",
+    "started_at": null,
+    "completed_at": null
+  },
+  "time_steps": [],
+  "affected_settlements": [],
+  "generated_at": "2026-09-12T11:13:01.409110+00:00"
+}

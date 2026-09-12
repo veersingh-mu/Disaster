@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#cce5ff", "primary": "#003857", "outline": "#72787f", "surface-container": "#e3efff", "on-tertiary": "#ffffff", "surface-tint": "#326286", "tertiary": "#163653", "on-error-container": "#93000a", "on-error": "#ffffff", "tertiary-fixed-dim": "#abc9ec", "on-primary-fixed": "#001e31", "surface-container-lowest": "#ffffff", "secondary-container": "#cfe1fc", "background": "#f7f9ff", "on-secondary-fixed-variant": "#36485d", "error": "#ba1a1a", "on-primary-container": "#92c0e9", "surface-variant": "#d7e4f4", "tertiary-fixed": "#cfe4ff", "primary-fixed-dim": "#9dcbf4", "inverse-primary": "#9dcbf4", "outline-variant": "#c1c7cf", "on-tertiary-fixed-variant": "#2b4966", "on-secondary-fixed": "#091d30", "primary-container": "#1b4f72", "surface-container-low": "#edf4ff", "secondary-fixed": "#d1e4fe", "surface": "#f7f9ff", "surface-container-highest": "#d7e4f4", "on-tertiary-container": "#a0bee0", "secondary": "#4e6076", "inverse-surface": "#26313e", "secondary-fixed-dim": "#b6c8e2", "on-primary": "#ffffff", "tertiary-container": "#2f4d6b", "on-tertiary-fixed": "#001d34", "surface-bright": "#f7f9ff", "surface-container-high": "#dde9f9", "on-background": "#111d28", "on-primary-fixed-variant": "#154b6d", "inverse-on-surface": "#e8f2ff", "surface-dim": "#cfdbeb", "on-surface": "#111d28", "on-secondary": "#ffffff", "on-secondary-container": "#52647a", "on-surface-variant": "#41474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "32px", "nav-height": "48px", "space-md": "12px", "panel-width-md": "420px", "space-lg": "16px", "space-xl": "24px", "panel-width-sm": "320px", "space-2xs": "2px", "space-sm": "8px", "timeline-height": "72px", "space-xs": "4px", "panel-width-lg": "560px" }, "fontFamily": { "code-sm": [ "JetBrains Mono" ], "body-md": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-md": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "body-sm": [ "IBM Plex Sans" ], "headline-sm": [ "IBM Plex Sans" ], "code-lg": [ "JetBrains Mono" ], "headline-xl": [ "IBM Plex Sans" ], "label-sm": [ "IBM Plex Sans" ], "code-md": [ "JetBrains Mono" ], "headline-lg": [ "IBM Plex Sans" ] }, "fontSize": { "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "600" } ], "code-lg": [ "16px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "code-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-tertiary text-on-tertiary h-nav-height"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-fixed">water_voc</span><span class="font-headline-sm text-headline-sm text-on-tertiary tracking-tight">FloodPath</span></div><span class="font-code-sm text-code-sm bg-tertiary-container text-on-tertiary-container px-space-xs py-space-2xs rounded">SIH 26161 - Inundation Model v1.2</span><nav class="hidden xl:flex items-center gap-space-xs ml-space-md" data-active-classes="bg-primary-container text-on-primary font-label-md"><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="dashboard" href="#">Dashboard</a><a aria-current="page" class="px-space-md py-space-xs rounded transition-colors bg-primary-container text-on-primary font-label-md" data-path="scenario-workbench" href="#">New Scenario</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="historical-cases" href="#">Historical Case Studies</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="model-settings" href="#">Settings</a></nav></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-tertiary-container px-space-sm py-space-2xs rounded"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-code-sm text-code-sm text-on-tertiary-container">DEM Grid: SRTM 30m Active</span></div><div class="flex items-center gap-space-sm pl-space-md"><div class="text-right hidden sm:block"><div class="font-label-sm text-label-sm text-on-tertiary">Anjali</div><div class="font-code-sm text-code-sm text-on-tertiary-container">DDMA Officer</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xy7v4veH8e3oTI877FEdQrvPJjbmZ7gtI0OOQuixD7pcVjY2CqZpRgXgdCJmynPlLonsniCwQMA8F9lV2VvF5Q6roeH_WXb3K_WlgejvSuZwelKM895EIkBLPm3k0QXjKBLG7rQhOR6WF9st7y2-Yh8OALVnWEqYhnhvnFWXXBhfe9ofboPbEOVptyYR65aZZRd4ykoJHYH3wr8VVSFkJK9QFIXS_qofJhW0PIiTPf9tXXUTSQTSRK7G50"/></div></div></div></header><aside class="fixed left-0 top-nav-height bottom-0 w-panel-width-sm bg-surface-container-low z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-sm px-space-xs">Operational Telemetry</div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-primary-container text-on-primary"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-base">dashboard</span><span>Overview &amp; Alerts</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm transition-colors bg-primary-container text-on-primary" data-path="scenario-workbench" href="#"><span class="material-symbols-outlined text-base">layers</span><span>Scenario Workbench</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="historical-cases" href="#"><span class="material-symbols-outlined text-base">history_edu</span><span>Historical Records</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="model-settings" href="#"><span class="material-symbols-outlined text-base">tune</span><span>DEM &amp; Engine Settings</span></a></nav></div><div class="p-space-md bg-surface-container"><div class="font-label-sm text-label-sm text-on-surface font-semibold mb-space-2xs">GIS Node Status</div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between"><span>CRS Projection</span><span>EPSG:4326 WGS84</span></div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between mt-space-2xs"><span>Hydraulic Mode</span><span>2D Shallow Water</span></div></div></aside><div class="pl-panel-width-sm"><main class="relative pt-nav-height bg-background min-h-screen w-full"><div class="flex flex-col w-full">
+<div class="relative w-full h-[calc(100vh-theme(spacing.nav-height))] flex overflow-hidden">
+<!-- Left Configuration Panel (~460px) -->
+<aside class="w-[460px] flex-shrink-0 bg-surface-container-lowest h-full overflow-y-auto flex flex-col justify-between shadow-xl z-20">
+<div class="p-space-lg space-y-space-md">
+<!-- Breadcrumb Bar -->
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span class="hover:text-primary cursor-pointer">Dashboard</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="hover:text-primary cursor-pointer">Site Selection</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="font-label-sm text-label-sm text-primary">Scenario Config</span>
+</div>
+<!-- Section Header -->
+<div class="bg-surface-container-low p-space-md rounded">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Protocol Configuration</span>
+<span class="font-code-sm text-code-sm bg-primary text-on-primary px-space-xs py-space-2xs rounded">STAGE 1 &amp; 2</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Hazard Site &amp; Hydraulic Parameters</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Empirical Dam-Break / Glacial Lake Outburst Inundation Synthesis</p>
+</div>
+<!-- Selected Site Card -->
+<div class="bg-surface-container rounded p-space-md space-y-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="font-label-md text-label-md text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">flag_circle</span>
+                Rishi Ganga Upper Moraine Lake
+              </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Chamoli District, Uttarakhand, India</div>
+</div>
+<div class="flex items-center gap-space-2xs bg-error text-on-error px-space-xs py-space-2xs rounded font-code-sm text-code-sm whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest animate-ping"></span>
+              High Hazard Moraine
+            </div>
+</div>
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-lowest p-space-sm rounded">
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">LAT</span>
+<span class="font-code-sm text-code-sm text-on-surface font-medium">30.4851° N</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">LONG</span>
+<span class="font-code-sm text-code-sm text-on-surface font-medium">79.7214° E</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">SURF ELEV</span>
+<span class="font-code-sm text-code-sm text-primary font-medium">3,740 m MSL</span>
+</div>
+</div>
+</div>
+<!-- Formulation Form Inputs -->
+<form class="space-y-space-md" id="scenario-form" onsubmit="event.preventDefault();">
+<!-- Field 1: Breach Type -->
+<div class="space-y-space-2xs">
+<label class="block font-label-sm text-label-sm text-on-surface uppercase">
+              1. Breach Initiation Type
+            </label>
+<div class="relative">
+<select class="w-full h-8 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-space-sm appearance-none rounded focus:bg-surface-container-low transition-colors" id="breachType">
+<option selected="">Glacial Lake Outburst / Moraine Breach (GLOF)</option>
+<option>Structural Concrete Dam Failure</option>
+<option>Earthen Dam Overtopping</option>
+<option>Landslide Dam Failure</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-sm top-1/2 -translate-y-1/2 text-sm text-on-surface-variant pointer-events-none">unfold_more</span>
+</div>
+</div>
+<!-- Field 2: Lake / Dam Height (H_d) -->
+<div class="space-y-space-2xs">
+<div class="flex justify-between items-baseline">
+<label class="font-label-sm text-label-sm text-on-surface uppercase">
+                2. Lake / Dam Height (<span class="font-code-sm">H_d</span>)
+              </label>
+<span class="font-code-sm text-code-sm text-on-surface-variant">[m]</span>
+</div>
+<div class="relative">
+<input class="w-full h-8 bg-surface-container-lowest text-on-surface font-code-md text-code-md px-space-sm rounded focus:bg-surface-container-low transition-colors pr-12" id="damHeight" type="text" value="36.0"/>
+<span class="absolute right-space-sm top-1/2 -translate-y-1/2 font-code-sm text-code-sm text-outline">m</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Estimated from SRTM 30m terrain profile — adjust if measured in-situ.</p>
+</div>
+<!-- Field 3: Impounded Water Volume (V) -->
+<div class="space-y-space-2xs">
+<div class="flex justify-between items-baseline">
+<label class="font-label-sm text-label-sm text-on-surface uppercase">
+                3. Impounded Water Volume (<span class="font-code-sm">V</span>)
+              </label>
+<span class="font-code-sm text-code-sm text-on-surface-variant">[m³]</span>
+</div>
+<div class="relative">
+<input class="w-full h-8 bg-surface-container-lowest text-on-surface font-code-md text-code-md px-space-sm rounded focus:bg-surface-container-low transition-colors pr-24" id="lakeVolume" type="text" value="4.20"/>
+<span class="absolute right-space-sm top-1/2 -translate-y-1/2 font-code-sm text-code-sm text-outline">× 10⁶ m³</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calculated via empirical area-depth bathymetric curve fit.</p>
+</div>
+<!-- Dual Field: Breach Width & Failure Duration -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-space-2xs">
+<div class="flex justify-between items-baseline">
+<label class="font-label-sm text-label-sm text-on-surface uppercase">
+                  4. Breach Width (<span class="font-code-sm">B_avg</span>)
+                </label>
+</div>
+<div class="relative">
+<input class="w-full h-8 bg-surface-container-lowest text-on-surface font-code-md text-code-md px-space-sm rounded focus:bg-surface-container-low transition-colors pr-10" id="breachWidth" type="text" value="42.0"/>
+<span class="absolute right-space-sm top-1/2 -translate-y-1/2 font-code-sm text-code-sm text-outline">m</span>
+</div>
+<span class="block font-code-sm text-code-sm text-on-surface-variant">Froehlich: 38–48m</span>
+</div>
+<div class="space-y-space-2xs">
+<div class="flex justify-between items-baseline">
+<label class="font-label-sm text-label-sm text-on-surface uppercase">
+                  5. Failure Duration (<span class="font-code-sm">t_f</span>)
+                </label>
+</div>
+<div class="relative">
+<input class="w-full h-8 bg-surface-container-lowest text-on-surface font-code-md text-code-md px-space-sm rounded focus:bg-surface-container-low transition-colors pr-10" id="failDuration" type="text" value="0.45"/>
+<span class="absolute right-space-sm top-1/2 -translate-y-1/2 font-code-sm text-code-sm text-outline">hrs</span>
+</div>
+<span class="block font-code-sm text-code-sm text-on-surface-variant">MacDonald-L.M.</span>
+</div>
+</div>
+<!-- Field 6: Reach Length -->
+<div class="space-y-space-2xs">
+<div class="flex justify-between items-baseline">
+<label class="font-label-sm text-label-sm text-on-surface uppercase">
+                6. Downstream Reach Tracking
+              </label>
+<span class="font-code-sm text-code-sm text-on-surface-variant">[Reach Span]</span>
+</div>
+<div class="relative">
+<input class="w-full h-8 bg-surface-container-lowest text-on-surface font-code-md text-code-md px-space-sm rounded focus:bg-surface-container-low transition-colors pr-12" id="downstreamReach" type="text" value="45.0"/>
+<span class="absolute right-space-sm top-1/2 -translate-y-1/2 font-code-sm text-code-sm text-outline">km</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zone covers Dhauliganga confluence through Tapovan HEP to Joshimath.</p>
+</div>
+<!-- Validation Notice Callout -->
+<div class="bg-surface-container-high p-space-sm rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-surface-tint text-base shrink-0 mt-0.5">verified</span>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface font-semibold">Hydraulic Envelope Valid</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+                Empirical inputs within hydraulic bounds (Froehlich 2008 eq. valid). Estimated compute run time: <span class="font-code-sm text-code-sm font-semibold text-primary">2.8 min</span>.
+              </div>
+</div>
+</div>
+</form>
+</div>
+<!-- Action Panel Buttons Footer -->
+<div class="p-space-lg bg-surface-container-low space-y-space-xs mt-space-sm">
+<button class="w-full h-8 bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-sm transition-colors rounded" id="runBtn">
+<span class="material-symbols-outlined text-base">play_arrow</span>
+          Run Inundation Simulation
+        </button>
+<button class="w-full h-8 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-sm transition-colors rounded" id="resetBtn">
+<span class="material-symbols-outlined text-base">restart_alt</span>
+          Reset to DEM Defaults
+        </button>
+</div>
+</aside>
+<!-- Main Map Viewport (Flexible Space) -->
+<main class="flex-1 h-full relative overflow-hidden bg-surface-dim">
+<!-- Topographic Map Canvas with Simulated Cartography -->
+<div class="w-full h-full relative bg-cover bg-center" data-location="Rishi Ganga Valley, Uttarakhand, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7uxgoxHck7kalecZ4k9KtVnLJP2fmrZRv4Z3SWhIE6XotVRmfp_5sC1vqimLrWN1MJnBAumbgcUA0rQ2d8mHamopfyC7GO0qL2qS8snOJuWYds8gw0e1w4Zno1IGgZHhVnpW4EItsQfIiEL-Tjr1mFz_FN-7gaexwPe6Nq7CP8C7Z9oalLLMcWfbj-lF1gwFwvWRmiMa97EIJZdngZgvHjgh1Cd34_vZm1HlsTXfRgwMlNHslT69Uwg');">
+<!-- Synthetic Visual Cartographic Overlay: Hypsometric & Contour Lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40 mix-blend-overlay" preserveaspectratio="none" viewbox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="valleyRamp" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#003857" stop-opacity="0.9"></stop>
+<stop offset="50%" stop-color="#326286" stop-opacity="0.6"></stop>
+<stop offset="100%" stop-color="#d7e4f4" stop-opacity="0.2"></stop>
+</lineargradient>
+<filter id="glow">
+<fegaussianblur result="coloredBlur" stddeviation="3"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Topographic Contour Graticule simulation -->
+<path d="M -50,150 Q 200,80 400,210 T 800,180 T 1100,260" fill="none" opacity="0.45" stroke="#ffffff" stroke-width="0.8"></path>
+<path d="M -50,220 Q 240,160 450,280 T 820,240 T 1100,320" fill="none" opacity="0.35" stroke="#ffffff" stroke-width="0.8"></path>
+<path d="M -50,300 Q 280,240 500,360 T 850,310 T 1100,400" fill="none" opacity="0.4" stroke="#ffffff" stroke-width="0.8"></path>
+<path d="M -50,420 Q 310,320 540,430 T 880,390 T 1100,500" fill="none" opacity="0.6" stroke="#ffffff" stroke-width="1.2"></path>
+<path d="M -50,540 Q 340,420 580,520 T 920,490 T 1100,620" fill="none" opacity="0.35" stroke="#ffffff" stroke-width="0.8"></path>
+<path d="M -50,660 Q 370,510 630,620 T 960,590 T 1100,740" fill="none" opacity="0.3" stroke="#ffffff" stroke-width="0.8"></path>
+<!-- River Network Channel Vector (Rishi Ganga into Dhauliganga) -->
+<path d="M 680,180 Q 610,260 520,340 T 380,480 T 260,620 T 110,770" fill="none" id="riverChannel" opacity="0.85" stroke="#1b4f72" stroke-linecap="round" stroke-width="8"></path>
+<path d="M 680,180 Q 610,260 520,340 T 380,480 T 260,620 T 110,770" fill="none" stroke="#9dcbf4" stroke-linecap="round" stroke-width="3"></path>
+<!-- Tributary Raunthi stream joining -->
+<path d="M 780,290 Q 670,320 520,340" fill="none" opacity="0.75" stroke="#326286" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<!-- Dynamic Breach Epicenter Reticle (Absolute Positioned on Upper Rishi Moraine) -->
+<div class="absolute top-[180px] left-[680px] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-auto cursor-pointer group">
+<!-- Multi-ring Sonar Radar Ping -->
+<span class="absolute -inset-6 rounded-full bg-error opacity-25 animate-ping"></span>
+<span class="absolute -inset-3 rounded-full bg-error-container opacity-60"></span>
+<!-- Precision Crosshair Reticle -->
+<div class="relative w-8 h-8 flex items-center justify-center bg-primary text-on-primary rounded-full shadow-lg border-2 border-surface-container-lowest transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-sm animate-pulse">crisis_alert</span>
+</div>
+<!-- Breach Origin Tag HUD Pin -->
+<div class="absolute left-10 top-0 bg-inverse-surface text-inverse-on-surface p-space-xs rounded shadow-md flex flex-col pointer-events-none whitespace-nowrap">
+<span class="font-label-sm text-label-sm flex items-center gap-space-2xs text-secondary-fixed">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+              BREACH EPICENTER (GLOF-01)
+            </span>
+<span class="font-code-sm text-code-sm">Elev: 3,740m | Head: 36m</span>
+</div>
+</div>
+<!-- Downstream River Waypoints (Rini Confluence & Tapovan HEP) -->
+<div class="absolute top-[480px] left-[380px] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+<div class="w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="absolute left-5 -top-2 bg-surface-container-lowest/90 px-space-xs py-space-2xs rounded shadow-sm">
+<div class="font-label-sm text-label-sm text-primary">Rini Village Confluence</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant">+14.2 km · Est. T+38m</div>
+</div>
+</div>
+<div class="absolute top-[620px] left-[260px] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+<div class="w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="absolute left-5 -top-2 bg-surface-container-lowest/90 px-space-xs py-space-2xs rounded shadow-sm">
+<div class="font-label-sm text-label-sm text-primary">Tapovan Vishnugad Barrage</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant">+28.5 km · Est. T+1h 14m</div>
+</div>
+</div>
+<!-- Floating Search & Coordinate Bar (Top-Left Map Overlay) -->
+<div class="absolute top-space-md left-space-md z-30 flex flex-col gap-space-xs w-[420px]">
+<div class="bg-surface-container-lowest rounded shadow-lg p-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base pl-space-xs">search</span>
+<input class="w-full h-8 bg-transparent text-on-surface font-body-sm text-body-sm outline-none px-space-xs" id="mapSearchInput" placeholder="Search place or coordinate (e.g. Rini, Tapovan, Lat/Long)" type="text"/>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface p-1 rounded transition-colors" title="Locate Coordinates">
+<span class="material-symbols-outlined text-sm">my_location</span>
+</button>
+</div>
+<!-- Quick Preset Buttons Strip -->
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase font-code-sm text-code-sm px-1">Zones:</span>
+<button class="px-space-sm py-space-2xs bg-primary text-on-primary rounded font-label-sm text-label-sm shadow-sm hover:bg-primary-container transition-colors">
+              Rishi Ganga
+            </button>
+<button class="px-space-sm py-space-2xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded font-label-sm text-label-sm shadow-sm transition-colors">
+              Tehri Catchment
+            </button>
+<button class="px-space-sm py-space-2xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded font-label-sm text-label-sm shadow-sm transition-colors">
+              Chungthang
+            </button>
+</div>
+</div>
+<!-- Floating Map Tool Strip (Top-Right) -->
+<div class="absolute top-space-md right-space-md z-30 flex flex-col gap-space-2xs bg-surface-container-lowest p-space-2xs rounded shadow-lg">
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container rounded text-on-surface transition-colors" title="Zoom In">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container rounded text-on-surface transition-colors" title="Zoom Out">
+<span class="material-symbols-outlined text-base">remove</span>
+</button>
+<div class="w-full h-[1px] bg-outline-variant my-0.5"></div>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container rounded text-on-surface transition-colors" title="Toggle 3D Terrain Perspective">
+<span class="material-symbols-outlined text-base">view_in_ar</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container rounded text-on-surface transition-colors" title="Contour Graticule Layer">
+<span class="material-symbols-outlined text-base">layers</span>
+</button>
+</div>
+<!-- Terrain Cross-Section Elevation Badge (Bottom-Right HUD) -->
+<div class="absolute bottom-space-md right-space-md z-30 bg-surface-container-lowest/95 backdrop-blur rounded p-space-sm shadow-lg max-w-sm">
+<div class="flex items-center justify-between gap-space-md font-label-sm text-label-sm text-primary mb-space-2xs">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm">terrain</span>
+              DEM Telemetry Feed
+            </span>
+<span class="font-code-sm text-code-sm text-secondary bg-surface-container px-space-xs rounded">SRTM v3.0</span>
+</div>
+<div class="font-code-sm text-code-sm text-on-surface space-y-space-2xs">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Active DEM Tile:</span>
+<span class="font-medium">N30E079</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Valley Slope Gradient:</span>
+<span class="font-medium text-error">18.4° (Steep High-Energy)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Watershed Basin:</span>
+<span class="font-medium">Alaknanda Upper Headwaters</span>
+</div>
+</div>
+<!-- Micro Cross-Section SVG Sparkline -->
+<div class="mt-space-sm pt-space-xs bg-surface-container-low rounded p-1">
+<div class="flex justify-between text-[9px] font-code-sm text-on-surface-variant px-1">
+<span>3,740m (Moraine)</span>
+<span>1,890m (Joshimath)</span>
+</div>
+<svg class="w-full h-9 mt-0.5 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 200 40">
+<path d="M 0,5 Q 40,8 80,18 T 140,28 T 200,38 L 200,40 L 0,40 Z" fill="currentColor" opacity="0.15"></path>
+<path d="M 0,5 Q 40,8 80,18 T 140,28 T 200,38" stroke="currentColor" stroke-width="1.8"></path>
+<!-- Peak Breach Elevation Mark -->
+<circle cx="2" cy="5" fill="#ba1a1a" r="3"></circle>
+</svg>
+</div>
+</div>
+<!-- Dynamic Real-time Cursor Coordinates Bar (Bottom-Left HUD) -->
+<div class="absolute bottom-space-md left-space-md z-30 bg-surface-container-lowest/90 backdrop-blur px-space-sm py-space-2xs rounded shadow-md flex items-center gap-space-md font-code-sm text-code-sm text-on-surface">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm text-outline">explore</span>
+<span>CURSOR: 30°29'06"N 79°43'17"E</span>
+</div>
+<div class="text-outline">|</div>
+<div>UTM 44N 377194 3373412</div>
+<div class="text-outline">|</div>
+<div>SCALE 1:50,000</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+  // Dynamic interaction handles for simulation workbench
+  document.addEventListener('DOMContentLoaded', () => {
+    const runBtn = document.getElementById('runBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const damHeight = document.getElementById('damHeight');
+    const lakeVolume = document.getElementById('lakeVolume');
+    const breachWidth = document.getElementById('breachWidth');
+    const failDuration = document.getElementById('failDuration');
+    const downstreamReach = document.getElementById('downstreamReach');
+    const breachType = document.getElementById('breachType');
+
+    // Run action response
+    if (runBtn) {
+      runBtn.addEventListener('click', () => {
+        const originalText = runBtn.innerHTML;
+        runBtn.innerHTML = '<span class="material-symbols-outlined text-base animate-spin">progress_activity</span> Initializing 2D Mesh...';
+        runBtn.classList.remove('bg-primary');
+        runBtn.classList.add('bg-primary-container');
+        
+        setTimeout(() => {
+          runBtn.innerHTML = '<span class="material-symbols-outlined text-base">sync</span> Solving Hydrograph (T+0s)';
+          setTimeout(() => {
+            runBtn.innerHTML = originalText;
+            runBtn.classList.remove('bg-primary-container');
+            runBtn.classList.add('bg-primary');
+            alert('Hydrodynamic solver initiated for Rishi Ganga basin reach (45 km). Telemetry streams active on inspection panel.');
+          }, 1200);
+        }, 1000);
+      });
+    }
+
+    // Reset default empirical parameters
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        damHeight.value = "36.0";
+        lakeVolume.value = "4.20";
+        breachWidth.value = "42.0";
+        failDuration.value = "0.45";
+        downstreamReach.value = "45.0";
+        breachType.selectedIndex = 0;
+      });
+    }
+
+    // Dynamic reactive calculations for breach width when lake volume or height adjusts
+    function updateFroehlichEstimate() {
+      const h = parseFloat(damHeight.value) || 36.0;
+      const v = (parseFloat(lakeVolume.value) || 4.2) * 1000000;
+      // Froehlich (2008) empirical breach width approximation: B_avg ~ 0.27 * k * V_w^0.32 * h_b^0.04
+      const estWidth = (0.27 * Math.pow(v, 0.32) * Math.pow(h, 0.04)).toFixed(1);
+      if (!isNaN(estWidth) && breachWidth) {
+        breachWidth.value = estWidth;
+      }
+    }
+
+    if (lakeVolume && damHeight) {
+      lakeVolume.addEventListener('change', updateFroehlichEstimate);
+      damHeight.addEventListener('change', updateFroehlichEstimate);
+    }
+  });
+</script></main></div></body></html>

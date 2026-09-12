@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#cce5ff", "primary": "#003857", "outline": "#72787f", "surface-container": "#e3efff", "on-tertiary": "#ffffff", "surface-tint": "#326286", "tertiary": "#163653", "on-error-container": "#93000a", "on-error": "#ffffff", "tertiary-fixed-dim": "#abc9ec", "on-primary-fixed": "#001e31", "surface-container-lowest": "#ffffff", "secondary-container": "#cfe1fc", "background": "#f7f9ff", "on-secondary-fixed-variant": "#36485d", "error": "#ba1a1a", "on-primary-container": "#92c0e9", "surface-variant": "#d7e4f4", "tertiary-fixed": "#cfe4ff", "primary-fixed-dim": "#9dcbf4", "inverse-primary": "#9dcbf4", "outline-variant": "#c1c7cf", "on-tertiary-fixed-variant": "#2b4966", "on-secondary-fixed": "#091d30", "primary-container": "#1b4f72", "surface-container-low": "#edf4ff", "secondary-fixed": "#d1e4fe", "surface": "#f7f9ff", "surface-container-highest": "#d7e4f4", "on-tertiary-container": "#a0bee0", "secondary": "#4e6076", "inverse-surface": "#26313e", "secondary-fixed-dim": "#b6c8e2", "on-primary": "#ffffff", "tertiary-container": "#2f4d6b", "on-tertiary-fixed": "#001d34", "surface-bright": "#f7f9ff", "surface-container-high": "#dde9f9", "on-background": "#111d28", "on-primary-fixed-variant": "#154b6d", "inverse-on-surface": "#e8f2ff", "surface-dim": "#cfdbeb", "on-surface": "#111d28", "on-secondary": "#ffffff", "on-secondary-container": "#52647a", "on-surface-variant": "#41474e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "32px", "nav-height": "48px", "space-md": "12px", "panel-width-md": "420px", "space-lg": "16px", "space-xl": "24px", "panel-width-sm": "320px", "space-2xs": "2px", "space-sm": "8px", "timeline-height": "72px", "space-xs": "4px", "panel-width-lg": "560px" }, "fontFamily": { "code-sm": [ "JetBrains Mono" ], "body-md": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-md": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "body-sm": [ "IBM Plex Sans" ], "headline-sm": [ "IBM Plex Sans" ], "code-lg": [ "JetBrains Mono" ], "headline-xl": [ "IBM Plex Sans" ], "label-sm": [ "IBM Plex Sans" ], "code-md": [ "JetBrains Mono" ], "headline-lg": [ "IBM Plex Sans" ] }, "fontSize": { "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "600" } ], "code-lg": [ "16px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "code-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-tertiary text-on-tertiary h-nav-height"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-fixed">water_voc</span><span class="font-headline-sm text-headline-sm text-on-tertiary tracking-tight">FloodPath</span></div><span class="font-code-sm text-code-sm bg-tertiary-container text-on-tertiary-container px-space-xs py-space-2xs rounded">SIH 26161 - Inundation Model v1.2</span><nav class="hidden xl:flex items-center gap-space-xs ml-space-md" data-active-classes="bg-primary-container text-on-primary font-label-md"><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="dashboard" href="#">Dashboard</a><a aria-current="page" class="px-space-md py-space-xs rounded transition-colors bg-primary-container text-on-primary font-label-md" data-path="scenario-workbench" href="#">New Scenario</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="historical-cases" href="#">Historical Case Studies</a><a class="px-space-md py-space-xs rounded font-label-md text-label-md text-on-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors" data-path="model-settings" href="#">Settings</a></nav></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-tertiary-container px-space-sm py-space-2xs rounded"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-code-sm text-code-sm text-on-tertiary-container">DEM Grid: SRTM 30m Active</span></div><div class="flex items-center gap-space-sm pl-space-md"><div class="text-right hidden sm:block"><div class="font-label-sm text-label-sm text-on-tertiary">Anjali</div><div class="font-code-sm text-code-sm text-on-tertiary-container">DDMA Officer</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xy7v4veH8e3oTI877FEdQrvPJjbmZ7gtI0OOQuixD7pcVjY2CqZpRgXgdCJmynPlLonsniCwQMA8F9lV2VvF5Q6roeH_WXb3K_WlgejvSuZwelKM895EIkBLPm3k0QXjKBLG7rQhOR6WF9st7y2-Yh8OALVnWEqYhnhvnFWXXBhfe9ofboPbEOVptyYR65aZZRd4ykoJHYH3wr8VVSFkJK9QFIXS_qofJhW0PIiTPf9tXXUTSQTSRK7G50"/></div></div></div></header><aside class="fixed left-0 top-nav-height bottom-0 w-panel-width-sm bg-surface-container-low z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-sm px-space-xs">Operational Telemetry</div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-primary-container text-on-primary"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-base">dashboard</span><span>Overview &amp; Alerts</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm transition-colors bg-primary-container text-on-primary" data-path="scenario-workbench" href="#"><span class="material-symbols-outlined text-base">layers</span><span>Scenario Workbench</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="historical-cases" href="#"><span class="material-symbols-outlined text-base">history_edu</span><span>Historical Records</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="model-settings" href="#"><span class="material-symbols-outlined text-base">tune</span><span>DEM &amp; Engine Settings</span></a></nav></div><div class="p-space-md bg-surface-container"><div class="font-label-sm text-label-sm text-on-surface font-semibold mb-space-2xs">GIS Node Status</div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between"><span>CRS Projection</span><span>EPSG:4326 WGS84</span></div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between mt-space-2xs"><span>Hydraulic Mode</span><span>2D Shallow Water</span></div></div></aside><div class="pl-panel-width-sm"><main class="relative pt-nav-height bg-background min-h-screen w-full"><div class="flex flex-col w-full">
+<div class="flex flex-col xl:flex-row w-full min-h-[calc(100vh-48px)]">
+<!-- LEFT SIDE PANEL: TACTICAL DECISION SUPPORT & EVACUATION ADVISORY -->
+<div class="w-full xl:w-[480px] xl:shrink-0 bg-surface-container-lowest p-space-lg flex flex-col gap-space-lg overflow-y-auto shadow-md">
+<!-- Top Operational Metadata -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-error animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-error font-semibold uppercase tracking-wider">Breach Scenario Active</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-space-xs py-space-2xs rounded">RUN_ID: RSG-2026-08B</span>
+</div>
+<!-- Emergency Hazard Banner (Strict Color Mandate: bg-error text-on-error) -->
+<div class="bg-error text-on-error p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed">Critical Breach Outflow</span>
+<p class="font-headline-sm text-headline-sm leading-tight text-on-error">
+              4 Downstream Settlements in Evacuation Path. First Impact in 18 Minutes.
+            </p>
+</div>
+</div>
+</div>
+<!-- Plain-Language Executive Summary -->
+<div class="bg-surface-container-low p-space-md rounded-none">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-primary text-base">emergency_share</span>
+<span class="font-label-sm text-label-sm uppercase text-primary font-semibold">Executive Assessment</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          A 36m moraine breach at Rishi Ganga releases peak discharge of <strong class="text-primary font-semibold">6,850 m³/s</strong>. Flood wave travels 42 km downstream reaching <span class="underline decoration-error font-medium">Rini Village in 18 min</span>, <span class="underline decoration-error font-medium">Tapovan in 42 min</span>, and Joshimath valley floor in 1 hr 15 min.
+        </p>
+</div>
+<!-- Key Quantitative Readouts Grid -->
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-space-xs block">Hydrodynamic Metrics</span>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container p-space-sm">
+<div class="font-code-sm text-code-sm text-on-surface-variant uppercase">Peak Outflow</div>
+<div class="font-code-lg text-code-lg text-primary font-semibold mt-space-2xs">6,850 <span class="text-body-sm font-normal text-secondary">m³/s</span></div>
+<div class="font-code-sm text-code-sm text-secondary mt-space-2xs">hydrograph peak T+00:12</div>
+</div>
+<div class="bg-surface-container p-space-sm">
+<div class="font-code-sm text-code-sm text-on-surface-variant uppercase">Total Inundation</div>
+<div class="font-code-lg text-code-lg text-primary font-semibold mt-space-2xs">14.8 <span class="text-body-sm font-normal text-secondary">km²</span></div>
+<div class="font-code-sm text-code-sm text-secondary mt-space-2xs">valley flood extent</div>
+</div>
+<div class="bg-surface-container p-space-sm">
+<div class="font-code-sm text-code-sm text-on-surface-variant uppercase">Max Surge Depth</div>
+<div class="font-code-lg text-code-lg text-error font-semibold mt-space-2xs">12.4 <span class="text-body-sm font-normal text-secondary">m</span></div>
+<div class="font-code-sm text-code-sm text-error mt-space-2xs">Gorge bottleneck (km 6.1)</div>
+</div>
+<div class="bg-surface-container p-space-sm">
+<div class="font-code-sm text-code-sm text-on-surface-variant uppercase">Exposed Population</div>
+<div class="font-code-lg text-code-lg text-on-surface font-semibold mt-space-2xs">~2,450</div>
+<div class="font-code-sm text-code-sm text-error font-semibold mt-space-2xs">1,120 under direct surge</div>
+</div>
+</div>
+</div>
+<!-- Inline Cross-Channel Discharge & Elevation Sparkline Profile -->
+<div class="bg-surface-container-low p-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface font-semibold">Valley Profile &amp; Peak Hydrograph</span>
+<span class="font-code-sm text-code-sm text-secondary">Q [m³/s] vs km</span>
+</div>
+<div class="h-20 w-full flex items-end">
+<svg class="w-full h-full text-primary" preserveaspectratio="none" viewbox="0 0 380 70">
+<!-- Hydrograph fill -->
+<polygon class="text-secondary-container" fill="currentColor" fill-opacity="0.6" points="0,68 15,22 45,6 90,14 150,28 220,44 310,54 380,62 380,68 0,68"></polygon>
+<!-- Elevation line -->
+<path d="M0,68 L15,22 L45,6 L90,14 L150,28 L220,44 L310,54 L380,62" fill="none" stroke="#1b4f72" stroke-width="2"></path>
+<!-- Peak Indicator dot -->
+<circle class="fill-error" cx="45" cy="6" r="3.5"></circle>
+<line stroke="#ba1a1a" stroke-dasharray="2,2" stroke-width="1" x1="45" x2="45" y1="6" y2="68"></line>
+<!-- Target village markers along axis -->
+<line stroke="#72787f" stroke-dasharray="1,2" stroke-width="1" x1="90" x2="90" y1="14" y2="68"></line>
+<line stroke="#72787f" stroke-dasharray="1,2" stroke-width="1" x1="180" x2="180" y1="36" y2="68"></line>
+</svg>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-on-surface-variant mt-space-2xs">
+<span>0km (Breach)</span>
+<span class="text-error font-medium">4.8km (Rini)</span>
+<span>14.2km (Tapovan)</span>
+<span>38km (Helang)</span>
+</div>
+</div>
+<!-- Village-Level Downstream Impact Table -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Downstream Inundation Schedule</span>
+<span class="font-code-sm text-code-sm text-secondary">4 Sectors Tracked</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<th class="p-space-xs">Location</th>
+<th class="p-space-xs">Dist</th>
+<th class="p-space-xs">Arrival</th>
+<th class="p-space-xs">Depth</th>
+<th class="p-space-xs">Hazard</th>
+<th class="p-space-xs">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row 1: Rini -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="p-space-xs font-semibold text-on-surface">Rini Village</td>
+<td class="p-space-xs font-code-sm text-code-sm text-secondary">4.8 km</td>
+<td class="p-space-xs font-code-sm text-code-sm text-error font-semibold">T+00:18</td>
+<td class="p-space-xs font-code-sm text-code-sm font-semibold text-primary">11.2 m</td>
+<td class="p-space-xs">
+<span class="bg-error text-on-error font-code-sm text-code-sm px-1.5 py-0.5 font-semibold">Severe</span>
+</td>
+<td class="p-space-xs text-error font-semibold">Immediate Evacuation</td>
+</tr>
+<!-- Row 2: Tapovan -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="p-space-xs font-semibold text-on-surface">Tapovan Barrage</td>
+<td class="p-space-xs font-code-sm text-code-sm text-secondary">14.2 km</td>
+<td class="p-space-xs font-code-sm text-code-sm text-error font-semibold">T+00:42</td>
+<td class="p-space-xs font-code-sm text-code-sm font-semibold text-primary">8.6 m</td>
+<td class="p-space-xs">
+<span class="bg-error text-on-error font-code-sm text-code-sm px-1.5 py-0.5 font-semibold">Severe</span>
+</td>
+<td class="p-space-xs text-error font-semibold">Evacuation Underway</td>
+</tr>
+<!-- Row 3: Subhai -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="p-space-xs font-semibold text-on-surface">Subhai Settlement</td>
+<td class="p-space-xs font-code-sm text-code-sm text-secondary">23.5 km</td>
+<td class="p-space-xs font-code-sm text-code-sm text-primary font-semibold">T+00:58</td>
+<td class="p-space-xs font-code-sm text-code-sm text-primary">5.2 m</td>
+<td class="p-space-xs">
+<span class="bg-secondary-container text-on-secondary-container font-code-sm text-code-sm px-1.5 py-0.5 font-semibold">Moderate</span>
+</td>
+<td class="p-space-xs text-on-surface-variant font-medium">Alert Issued</td>
+</tr>
+<!-- Row 4: Helang -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="p-space-xs font-semibold text-on-surface">Helang Confluence</td>
+<td class="p-space-xs font-code-sm text-code-sm text-secondary">38.0 km</td>
+<td class="p-space-xs font-code-sm text-code-sm text-primary font-semibold">T+01:22</td>
+<td class="p-space-xs font-code-sm text-code-sm text-primary">3.4 m</td>
+<td class="p-space-xs">
+<span class="bg-secondary-container text-on-secondary-container font-code-sm text-code-sm px-1.5 py-0.5 font-semibold">Moderate</span>
+</td>
+<td class="p-space-xs text-on-surface-variant">Monitor High Ground</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full h-8 bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-xs transition-colors" id="btnExport">
+<span class="material-symbols-outlined text-base">picture_as_pdf</span>
+<span>Export District Evacuation Plan (PDF/GeoJSON)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="h-8 bg-surface-container-high hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider flex items-center justify-center gap-space-xs transition-colors" id="btnShare">
+<span class="material-symbols-outlined text-base">share</span>
+<span>Share Advisory</span>
+</button>
+<button class="h-8 bg-surface-container-high hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider flex items-center justify-center gap-space-xs transition-colors" id="btnRerun">
+<span class="material-symbols-outlined text-base">replay</span>
+<span>Re-run Parameters</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT MAIN CANVAS: INTERACTIVE TOPOGRAPHIC FLOOD MAP -->
+<div class="relative flex-1 min-h-[580px] xl:min-h-full bg-surface-container-low flex flex-col justify-between overflow-hidden">
+<!-- Map Top Toolbar & HUD Strip -->
+<div class="absolute top-space-md left-space-md right-space-md z-30 flex items-start justify-between pointer-events-none">
+<!-- Spatial Telemetry HUD -->
+<div class="pointer-events-auto bg-surface-container-lowest/95 backdrop-blur px-space-md py-space-xs shadow-sm flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">explore</span>
+<span class="font-code-sm text-code-sm text-on-surface">30°29'42"N, 79°41'58"E</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline-variant">|</span>
+<div class="font-code-sm text-code-sm text-secondary">Elev: 3,740m MSL</div>
+<span class="font-code-sm text-code-sm text-outline-variant">|</span>
+<div class="font-code-sm text-code-sm text-primary font-medium">Domain: Rishi Ganga Gorge</div>
+</div>
+<!-- Layer Controls Cluster -->
+<div class="pointer-events-auto bg-surface-container-lowest/95 backdrop-blur p-space-sm shadow-sm flex flex-col gap-space-2xs">
+<div class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider mb-space-2xs flex items-center justify-between">
+<span>GIS Map Layers</span>
+<span class="material-symbols-outlined text-sm text-secondary">layers</span>
+</div>
+<label class="flex items-center justify-between gap-space-md cursor-pointer hover:bg-surface-container px-space-xs py-space-2xs">
+<span class="font-body-sm text-body-sm text-on-surface">Extent Polygons</span>
+<input checked="" class="accent-primary w-3.5 h-3.5" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between gap-space-md cursor-pointer hover:bg-surface-container px-space-xs py-space-2xs">
+<span class="font-body-sm text-body-sm text-on-surface">Depth Gradient</span>
+<input checked="" class="accent-primary w-3.5 h-3.5" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between gap-space-md cursor-pointer hover:bg-surface-container px-space-xs py-space-2xs">
+<span class="font-body-sm text-body-sm text-on-surface">Arrival Contours</span>
+<input checked="" class="accent-primary w-3.5 h-3.5" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between gap-space-md cursor-pointer hover:bg-surface-container px-space-xs py-space-2xs">
+<span class="font-body-sm text-body-sm text-on-surface">Settlement Overlay</span>
+<input checked="" class="accent-primary w-3.5 h-3.5" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between gap-space-md cursor-pointer hover:bg-surface-container px-space-xs py-space-2xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Satellite Hybrid</span>
+<input class="accent-primary w-3.5 h-3.5" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Primary Map Canvas Representation (Topographic valley river trace with depth polygon ramps) -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" data-location="Rishi Ganga River, Chamoli, Uttarakhand" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjIrJDzPeNugfNNLheR0PxlRhDKNxdjeCRm8Lp9XNsYN48-PHBqkxfP7D32PB1HtcM_zIJ1cRJOqIwaZb_N2MWWdPzY8FkVY2xrFWJloh48apl_JHpr9Tdv7shREm6wt6uiGY03Z4lo2AX3W3nd2vXTUEVaRl2N3DvSJMnRdnWQ_XSnIG2kItzwuthgHP9TnKM7ceLYhBlyO6WXqqT9b0Hny-v052pmA9eQ0j9zq_NimRlrTwPVYbKUQ')">
+<!-- SVG Overlaid Inundation Hydrodynamic Wave Canvas -->
+<svg class="w-full h-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 1000 700">
+<!-- Topographic valley relief contours (hairline graticules) -->
+<path d="M 0,140 Q 250,180 500,120 T 1000,160" fill="none" stroke="#d7e4f4" stroke-dasharray="4,4" stroke-width="1.5"></path>
+<path d="M 0,220 Q 280,260 520,200 T 1000,240" fill="none" stroke="#d7e4f4" stroke-dasharray="4,4" stroke-width="1.5"></path>
+<path d="M 0,480 Q 260,430 550,510 T 1000,470" fill="none" stroke="#d7e4f4" stroke-dasharray="4,4" stroke-width="1.5"></path>
+<path d="M 0,560 Q 300,510 580,590 T 1000,550" fill="none" stroke="#d7e4f4" stroke-dasharray="4,4" stroke-width="1.5"></path>
+<!-- River centerline channel -->
+<path d="M 80,180 C 180,220 220,320 340,340 C 460,360 520,310 650,380 C 780,450 860,440 980,520" fill="none" id="riverChannel" stroke="#92c0e9" stroke-width="6"></path>
+<!-- Dynamic Inundation Poly - Multi-step Depth Gradient Ramp (Simulated T+00:45) -->
+<!-- Outer Inundation Margin (0-2m: #BFE3F0 equivalent) -->
+<path d="M 70,165 C 175,200 210,295 330,315 C 445,335 505,285 640,355 C 770,425 830,410 930,480 L 890,535 C 790,480 730,470 620,415 C 490,345 440,390 320,375 C 200,360 160,250 65,200 Z" fill="#cfe1fc" fill-opacity="0.6"></path>
+<!-- Intermediate Inundation (2-6m: Deep Water #1b4f72 equivalent) -->
+<path d="M 75,172 C 178,208 215,305 335,325 C 450,345 510,295 645,365 C 740,420 780,418 840,465 L 815,505 C 755,465 720,455 625,405 C 500,335 450,380 325,365 C 205,350 168,242 70,192 Z" fill="#1b4f72" fill-opacity="0.75"></path>
+<!-- Core Surge Channel (6-12m+: Deep Surge #003857) -->
+<path d="M 78,176 C 180,214 218,312 338,332 C 452,352 512,302 648,372 L 720,418 C 650,390 625,395 530,340 C 430,310 395,355 310,348 C 210,340 172,238 75,188 Z" fill="#003857" fill-opacity="0.9"></path>
+<!-- Wave Front Leading Edge Marker (at km 16.5, just past Tapovan) -->
+<circle class="animate-ping" cx="735" cy="425" fill="#ba1a1a" fill-opacity="0.3" r="9"></circle>
+<circle cx="735" cy="425" fill="#ba1a1a" r="5"></circle>
+<line stroke="#ba1a1a" stroke-width="2" x1="735" x2="735" y1="425" y2="465"></line>
+<text class="font-code-sm text-[11px] font-semibold" fill="#ba1a1a" x="745" y="465">SURGE FRONT (km 16.5)</text>
+<!-- Breach Origin Indicator -->
+<circle cx="80" cy="180" fill="#ba1a1a" r="7"></circle>
+<text class="font-label-sm text-[11px] font-bold" fill="#111d28" x="95" y="175">Rishi Ganga Dam Breach [T+00:00]</text>
+</svg>
+<!-- Settlement Overlay Pins (Positioned across the gorge) -->
+<!-- Pin 1: Rini Village (km 4.8) -->
+<div class="absolute top-[32%] left-[28%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-auto">
+<div class="bg-error text-on-error px-space-xs py-space-2xs shadow-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm font-semibold">Rini Village</span>
+<span class="font-code-sm text-code-sm bg-on-error/20 px-1">T+00:18 (11.2m)</span>
+</div>
+<div class="w-0.5 h-4 bg-error"></div>
+</div>
+<!-- Pin 2: Tapovan Barrage (km 14.2) -->
+<div class="absolute top-[48%] left-[58%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-auto">
+<div class="bg-error text-on-error px-space-xs py-space-2xs shadow-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-surface-container-lowest animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold">Tapovan Barrage</span>
+<span class="font-code-sm text-code-sm bg-on-error/20 px-1">T+00:42 (8.6m)</span>
+</div>
+<div class="w-0.5 h-4 bg-error"></div>
+</div>
+<!-- Pin 3: Subhai Settlement (km 23.5) -->
+<div class="absolute top-[58%] left-[76%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-auto">
+<div class="bg-surface-container-lowest text-on-surface px-space-xs py-space-2xs shadow-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-tertiary"></span>
+<span class="font-label-sm text-label-sm font-semibold">Subhai</span>
+<span class="font-code-sm text-code-sm text-secondary bg-surface-container px-1">T+00:58 (5.2m)</span>
+</div>
+<div class="w-0.5 h-4 bg-secondary"></div>
+</div>
+<!-- Pin 4: Helang Confluence (km 38.0) -->
+<div class="absolute top-[72%] left-[90%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-auto">
+<div class="bg-surface-container-lowest text-on-surface px-space-xs py-space-2xs shadow-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-outline"></span>
+<span class="font-label-sm text-label-sm font-semibold">Helang</span>
+<span class="font-code-sm text-code-sm text-secondary bg-surface-container px-1">T+01:22 (3.4m)</span>
+</div>
+<div class="w-0.5 h-4 bg-secondary"></div>
+</div>
+</div>
+<!-- Depth Legend Widget (Docked bottom right above scrubber) -->
+<div class="absolute bottom-24 right-space-md z-30 bg-surface-container-lowest/95 backdrop-blur p-space-sm shadow-sm flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Surge Depth Gradient</span>
+<div class="flex items-center gap-space-xs">
+<span class="w-4 h-3 bg-secondary-container"></span>
+<span class="font-code-sm text-code-sm text-on-surface">0 – 2 m (Shallow)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-4 h-3 bg-primary-container"></span>
+<span class="font-code-sm text-code-sm text-on-surface">2 – 6 m (Moderate)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-4 h-3 bg-primary"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">6 – 12 m+ (Severe Surge)</span>
+</div>
+</div>
+<!-- SIGNATURE INTERACTION: TIME-SLIDER FLOOD PROGRESSION SCRUBBER -->
+<div class="relative z-30 w-full bg-surface-container-lowest/95 backdrop-blur px-space-lg py-space-sm shadow-lg">
+<!-- Scrubber Header & Status -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<button class="w-8 h-8 bg-primary hover:bg-primary-container text-on-primary flex items-center justify-center transition-colors" id="btnPlayPause">
+<span class="material-symbols-outlined text-xl" id="playIcon">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Temporal Progression</span>
+<span class="font-code-md text-code-md font-semibold text-primary" id="scrubberStatus">
+                T+00:45 <span class="text-secondary font-normal text-body-sm">(Flood wave passing Tapovan, Wave front at km 16.5)</span>
+</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm">
+<button class="px-space-xs py-space-2xs bg-surface-container hover:bg-surface-container-high text-on-surface" id="stepBack">
+              -15m
+            </button>
+<span class="text-on-surface font-medium">Range: T+00:00 to T+03:00</span>
+<button class="px-space-xs py-space-2xs bg-surface-container hover:bg-surface-container-high text-on-surface" id="stepForward">
+              +15m
+            </button>
+</div>
+</div>
+<!-- Slider Bar & Checkpoints Track -->
+<div class="relative w-full flex flex-col py-space-xs">
+<!-- Checkpoint flags floating over timeline -->
+<div class="relative w-full h-4 font-code-sm text-code-sm text-on-surface-variant">
+<div class="absolute left-[0%] -translate-x-1/2 flex flex-col items-center">
+<span class="text-[10px] text-error font-semibold">BREACH</span>
+</div>
+<div class="absolute left-[10%] -translate-x-1/2 flex flex-col items-center">
+<span class="text-[10px] text-error font-semibold">Rini 18m</span>
+</div>
+<div class="absolute left-[23.3%] -translate-x-1/2 flex flex-col items-center">
+<span class="text-[10px] text-error font-semibold">Tapovan 42m</span>
+</div>
+<div class="absolute left-[32.2%] -translate-x-1/2 flex flex-col items-center">
+<span class="text-[10px] text-secondary">Subhai 58m</span>
+</div>
+<div class="absolute left-[45.5%] -translate-x-1/2 flex flex-col items-center">
+<span class="text-[10px] text-secondary">Helang 1h22m</span>
+</div>
+<div class="absolute right-0 flex flex-col items-end">
+<span class="text-[10px] text-outline">T+03:00 Max</span>
+</div>
+</div>
+<!-- Interactive Range Slider -->
+<input class="w-full h-2 bg-surface-container cursor-pointer accent-primary focus:outline-none" id="timelineSlider" max="180" min="0" step="1" type="range" value="45"/>
+<!-- Checkpoint tick indicators -->
+<div class="relative w-full flex justify-between h-2 mt-1">
+<div class="absolute left-[0%] w-0.5 h-2 bg-error"></div>
+<div class="absolute left-[10%] w-0.5 h-2 bg-error"></div>
+<div class="absolute left-[23.3%] w-0.5 h-2 bg-error"></div>
+<div class="absolute left-[32.2%] w-0.5 h-2 bg-secondary"></div>
+<div class="absolute left-[45.5%] w-0.5 h-2 bg-secondary"></div>
+<div class="absolute left-[100%] w-0.5 h-2 bg-outline"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const slider = document.getElementById('timelineSlider');
+    const statusLabel = document.getElementById('scrubberStatus');
+    const playBtn = document.getElementById('btnPlayPause');
+    const playIcon = document.getElementById('playIcon');
+    const stepBack = document.getElementById('stepBack');
+    const stepForward = document.getElementById('stepForward');
+
+    let isPlaying = false;
+    let playInterval = null;
+
+    function formatTime(minutes) {
+      const h = Math.floor(minutes / 60);
+      const m = minutes % 60;
+      return `T+${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+    }
+
+    function updateScrubber(val) {
+      const mins = parseInt(val, 10);
+      const timeStr = formatTime(mins);
+      let desc = "";
+
+      if (mins < 18) {
+        desc = `(Flood wave traversing Upper Gorge, front at km ${(mins * 0.26).toFixed(1)})`;
+      } else if (mins < 42) {
+        desc = `(Rini inundated with 11.2m peak, surge wave front at km ${(4.8 + (mins - 18) * 0.39).toFixed(1)})`;
+      } else if (mins < 58) {
+        desc = `(Flood wave passing Tapovan, Wave front at km ${(14.2 + (mins - 42) * 0.58).toFixed(1)})`;
+      } else if (mins < 82) {
+        desc = `(Subhai impact zone active, wave approaching Helang confluence km ${(23.5 + (mins - 58) * 0.60).toFixed(1)})`;
+      } else {
+        desc = `(Lower valley dispersion, Alaknanda main stem backwater attenuation)`;
+      }
+
+      statusLabel.innerHTML = `${timeStr} <span class="text-secondary font-normal text-body-sm">${desc}</span>`;
+    }
+
+    slider.addEventListener('input', (e) => {
+      updateScrubber(e.target.value);
+    });
+
+    stepBack.addEventListener('click', () => {
+      slider.value = Math.max(0, parseInt(slider.value, 10) - 15);
+      updateScrubber(slider.value);
+    });
+
+    stepForward.addEventListener('click', () => {
+      slider.value = Math.min(180, parseInt(slider.value, 10) + 15);
+      updateScrubber(slider.value);
+    });
+
+    playBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        playIcon.textContent = 'pause';
+        playInterval = setInterval(() => {
+          let curr = parseInt(slider.value, 10);
+          if (curr >= 180) {
+            slider.value = 0;
+          } else {
+            slider.value = curr + 1;
+          }
+          updateScrubber(slider.value);
+        }, 150);
+      } else {
+        playIcon.textContent = 'play_arrow';
+        clearInterval(playInterval);
+      }
+    });
+
+    // Mock action triggers
+    document.getElementById('btnExport').addEventListener('click', () => {
+      alert('Generating GeoJSON vector bounds and DDMA evacuation PDF packet for Chamoli District...');
+    });
+    document.getElementById('btnShare').addEventListener('click', () => {
+      alert('Live emergency advisory token copied to clipboard.');
+    });
+    document.getElementById('btnRerun').addEventListener('click', () => {
+      window.location.hash = '#scenario-workbench';
+    });
+  })();
+</script></main></div></body></html>
