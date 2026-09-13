@@ -9,6 +9,12 @@ export interface UserProfile {
   role: 'analyst' | 'guest' | string;
 }
 
+export const DEFAULT_USER: UserProfile = {
+  id: '00000000-0000-0000-0000-000000000001',
+  email: 'analyst@floodpath.internal',
+  role: 'analyst',
+};
+
 export interface LoginResponse {
   access_token: string;
   token_type: string;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { authService, UserProfile } from '../../services/auth';
 
 interface AuthPageProps {
@@ -152,9 +153,16 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onAuthenticated }) => {
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-space-md pt-space-md">
+              <Link
+                to="/"
+                className="inline-flex items-center gap-space-sm bg-primary hover:bg-primary-container text-on-primary px-space-xl py-space-md font-medium text-xs tracking-wider uppercase transition-colors shadow-md border border-primary-fixed/20"
+              >
+                <span className="material-symbols-outlined text-lg">dashboard</span>
+                <span>Open Operations Dashboard</span>
+              </Link>
               <button
                 onClick={() => setShowLoginModal(true)}
-                className="inline-flex items-center gap-space-sm bg-primary hover:bg-primary-container text-on-primary px-space-xl py-space-md font-medium text-xs tracking-wider uppercase transition-colors shadow-md border border-primary-fixed/20"
+                className="inline-flex items-center gap-space-sm bg-surface/10 hover:bg-surface/20 text-on-tertiary px-space-lg py-space-md font-medium text-xs tracking-wider uppercase transition-colors shadow-sm border border-outline-variant/30"
               >
                 <span className="material-symbols-outlined text-lg">login</span>
                 <span>Analyst Secure Login</span>
