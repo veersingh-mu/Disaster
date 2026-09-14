@@ -91,7 +91,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentUser, onLogout }) => {
           {/* Desktop Navigation Tabs */}
           <nav className="hidden md:flex items-center gap-1 ml-4 border-l border-tertiary-container pl-4">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive =
+                link.path === '/'
+                  ? location.pathname === '/' || location.pathname === '/dashboard'
+                  : location.pathname === link.path;
               return (
                 <Link
                   key={link.path}
@@ -165,7 +168,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentUser, onLogout }) => {
       {mobileMenuOpen && (
         <div className="md:hidden py-2 border-t border-outline/20 flex flex-col gap-1 bg-tertiary pb-3">
           {navLinks.map((link) => {
-            const isActive = location.pathname === link.path;
+            const isActive =
+              link.path === '/'
+                ? location.pathname === '/' || location.pathname === '/dashboard'
+                : location.pathname === link.path;
             return (
               <Link
                 key={link.path}

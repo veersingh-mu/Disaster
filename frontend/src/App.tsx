@@ -35,6 +35,7 @@ function AppRoutes({
       <main className="flex-1 flex flex-col">
         <Routes>
           <Route path="/" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/scenarios/new" element={<SiteSelectionPage />} />
           <Route path="/scenarios/:id/simulating" element={<SimulationLoadingPage />} />
           <Route path="/scenarios/:id/results" element={<ResultsPage />} />

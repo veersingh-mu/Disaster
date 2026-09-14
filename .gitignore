@@ -60,3 +60,9 @@ Thumbs.db
 *.db
 *.sqlite*
 refresh_supabase_token.py
+
+# Vercel & Cache
+.vercel/
+backend/app/storage/exports/
+worker/cache/
+
