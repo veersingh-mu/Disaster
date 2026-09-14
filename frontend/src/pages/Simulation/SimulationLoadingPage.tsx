@@ -259,7 +259,7 @@ export const SimulationLoadingPage: React.FC = () => {
 
           <div className="flex items-center gap-3 pt-1">
             <Link
-              to={`/site-selection?editScenarioId=${id}`}
+              to={`/scenarios/new?editScenarioId=${id}`}
               className="px-3.5 py-2 bg-primary text-on-primary text-xs font-semibold hover:bg-primary-container transition-colors flex items-center gap-1.5 shadow-sm"
             >
               <span className="material-symbols-outlined text-sm">tune</span>

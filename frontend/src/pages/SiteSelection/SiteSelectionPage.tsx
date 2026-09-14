@@ -65,6 +65,10 @@ export const SiteSelectionPage: React.FC = () => {
   const [searchParams] = useSearchParams();
   const editScenarioId = searchParams.get('editScenarioId');
 
+  // Geographic DEM bounds check (India & Himalayan basin coverage: 6-38°N, 68-98°E)
+  const isWithinCoverage =
+    latitude >= 6.0 && latitude <= 38.0 && longitude >= 68.0 && longitude <= 98.0;
+
   useEffect(() => {
     if (!editScenarioId) return;
 
@@ -207,25 +211,47 @@ export const SiteSelectionPage: React.FC = () => {
       return;
     }
 
+    const isWithinCoverage =
+      latitude >= 6.0 && latitude <= 38.0 && longitude >= 68.0 && longitude <= 98.0;
+
+    if (!isWithinCoverage) {
+      setFormError(
+        'Selected location is outside DEM coverage (Himalayan & Indian river basins: 6.0°–38.0° N, 68.0°–98.0° E). Please select a location within the covered belt.'
+      );
+      return;
+    }
+
     try {
       setIsSubmitting(true);
-      // 1. Create Scenario
-      const scenario = await scenariosService.createScenario({
-        name: name.trim(),
-        latitude,
-        longitude,
-        breach_type: breachType,
-        dam_height_m: damHeight,
-        dam_volume_m3: damVolume,
-        simulation_radius_km: simulationRadius,
-        is_dem_estimated: isDemEstimated,
-      });
+      let targetScenarioId: string;
 
-      // 2. Trigger Simulation Run
-      await scenariosService.triggerSimulation(scenario.id, simulationMode);
+      if (editScenarioId) {
+        // Re-use existing scenario row to prevent duplication
+        const updated = await scenariosService.updateScenario(editScenarioId, {
+          name: name.trim(),
+          simulation_radius_km: simulationRadius,
+        });
+        targetScenarioId = updated.id;
+      } else {
+        // Create new scenario
+        const scenario = await scenariosService.createScenario({
+          name: name.trim(),
+          latitude,
+          longitude,
+          breach_type: breachType,
+          dam_height_m: damHeight,
+          dam_volume_m3: damVolume,
+          simulation_radius_km: simulationRadius,
+          is_dem_estimated: isDemEstimated,
+        });
+        targetScenarioId = scenario.id;
+      }
+
+      // 2. Trigger Simulation Run against the scenario
+      await scenariosService.triggerSimulation(targetScenarioId, simulationMode);
 
       // 3. Navigate to Loading Screen
-      navigate(`/scenarios/${scenario.id}/simulating`);
+      navigate(`/scenarios/${targetScenarioId}/simulating`);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : 'Failed to initialize simulation.';
       setFormError(msg);
@@ -361,6 +387,19 @@ export const SiteSelectionPage: React.FC = () => {
                 <div>
                   <span className="text-[10px]">MEAN SLOPE:</span>
                   <div className="font-bold">{demSlope}° (Steep)</div>
+                </div>
+              </div>
+            )}
+
+            {!isWithinCoverage && (
+              <div className="mt-2 p-2.5 bg-amber-500/10 border-l-4 border-amber-500 text-on-surface text-xs font-mono flex items-start gap-2">
+                <span className="material-symbols-outlined text-base text-amber-600 mt-0.5">warning</span>
+                <div>
+                  <div className="font-bold text-amber-700 uppercase text-[11px]">Terrain Coverage Warning</div>
+                  <p className="text-[11px] text-on-surface-variant leading-relaxed mt-0.5">
+                    Terrain data unavailable for this region. Selected location is outside current DEM coverage
+                    (Himalayan &amp; Indian river basins: 6.0°–38.0° N, 68.0°–98.0° E). Please select a site within the covered belt.
+                  </p>
                 </div>
               </div>
             )}
@@ -548,8 +587,12 @@ export const SiteSelectionPage: React.FC = () => {
           {/* Submit Action */}
           <button
             type="submit"
-            disabled={isSubmitting}
-            className="mt-2 w-full py-3 bg-primary text-on-primary font-semibold text-xs uppercase tracking-wider hover:bg-primary-container transition-colors shadow-md flex items-center justify-center gap-2"
+            disabled={isSubmitting || !isWithinCoverage}
+            className={`mt-2 w-full py-3 font-semibold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2 ${
+              !isWithinCoverage
+                ? 'bg-outline-variant text-secondary cursor-not-allowed'
+                : 'bg-primary text-on-primary hover:bg-primary-container'
+            }`}
           >
             {isSubmitting ? (
               <>
@@ -558,8 +601,14 @@ export const SiteSelectionPage: React.FC = () => {
               </>
             ) : (
               <>
-                <span className="material-symbols-outlined text-base">play_arrow</span>
-                <span>Initialize & Run Simulation</span>
+                <span className="material-symbols-outlined text-base">
+                  {editScenarioId ? 'refresh' : 'play_arrow'}
+                </span>
+                <span>
+                  {editScenarioId
+                    ? 'Update & Re-run Simulation'
+                    : 'Initialize & Run Simulation'}
+                </span>
               </>
             )}
           </button>

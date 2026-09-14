@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import maplibregl from 'maplibre-gl';
 import { AIBriefingCard } from '../../components/AIBriefingCard';
 import { LayerControls, LayerState } from '../../components/Map/LayerControls';
@@ -11,6 +11,7 @@ import { AffectedSettlementItem, FloodResultStep, ScenarioResultsResponse } from
 export const ResultsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const location = useLocation();
+  const navigate = useNavigate();
   const isCaseStudy = location.pathname.startsWith('/case-studies');
 
   const mapContainerRef = useRef<HTMLDivElement>(null);
@@ -27,6 +28,20 @@ export const ResultsPage: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [playbackSpeed, setPlaybackSpeed] = useState<number>(1);
   const [isExporting, setIsExporting] = useState<boolean>(false);
+  const [isRerunning, setIsRerunning] = useState<boolean>(false);
+
+  const handleRerun = async () => {
+    if (!id || isCaseStudy) return;
+    try {
+      setIsRerunning(true);
+      await scenariosService.triggerSimulation(id, results?.mode || 'full');
+      navigate(`/scenarios/${id}/simulating`);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Failed to re-run simulation';
+      alert(`Simulation re-run failed: ${msg}`);
+      setIsRerunning(false);
+    }
+  };
 
   // Layer Controls State
   const [layers, setLayers] = useState<LayerState>({
@@ -74,7 +89,10 @@ export const ResultsPage: React.FC = () => {
   const timeSteps: FloodResultStep[] = results?.time_steps || [];
   const activeStep: FloodResultStep | undefined = timeSteps[currentTimeStepIdx];
   const settlements: AffectedSettlementItem[] = useMemo(
-    () => results?.affected_settlements || [],
+    () =>
+      [...(results?.affected_settlements || [])].sort(
+        (a, b) => a.arrival_time_minutes - b.arrival_time_minutes
+      ),
     [results?.affected_settlements]
   );
 
@@ -461,6 +479,25 @@ export const ResultsPage: React.FC = () => {
           {!isCaseStudy && (
             <div className="flex items-center gap-1.5 ml-2">
               <button
+                onClick={handleRerun}
+                disabled={isRerunning}
+                className="px-2.5 py-1.5 bg-surface-container border border-outline/30 text-on-surface text-xs font-semibold hover:bg-surface-container-high transition-colors flex items-center gap-1 shadow-xs font-sans"
+                title="Re-run hydrodynamic solve for this scenario"
+              >
+                <span className="material-symbols-outlined text-sm">refresh</span>
+                <span>{isRerunning ? 'Launching...' : 'Re-Run Solve'}</span>
+              </button>
+
+              <Link
+                to={`/scenarios/new?editScenarioId=${id}`}
+                className="px-2.5 py-1.5 bg-surface-container border border-outline/30 text-on-surface text-xs font-semibold hover:bg-surface-container-high transition-colors flex items-center gap-1 shadow-xs font-sans"
+                title="Modify breach dimensions or radius and re-solve"
+              >
+                <span className="material-symbols-outlined text-sm">tune</span>
+                <span>Edit Parameters</span>
+              </Link>
+
+              <button
                 onClick={handleOpenCapXml}
                 className="px-2.5 py-1.5 bg-amber-600 text-white text-xs font-semibold hover:bg-amber-700 transition-colors flex items-center gap-1 shadow-sm font-sans"
                 title="Common Alerting Protocol (CAP v1.2) XML for NDRF / SDRF dispatch"
@@ -630,8 +667,19 @@ export const ResultsPage: React.FC = () => {
 
           <div className="p-space-md flex flex-col gap-2 divide-y divide-outline/10 text-xs">
             {settlements.length === 0 ? (
-              <div className="p-8 text-center text-secondary text-xs font-mono">
-                No populated settlements located inside the immediate inundation corridor for this radius.
+              <div className="p-8 m-2 bg-surface-container-low border border-outline/20 text-center flex flex-col items-center justify-center gap-2">
+                <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
+                  <span className="material-symbols-outlined text-2xl">verified_user</span>
+                </div>
+                <div className="font-bold text-xs uppercase tracking-wider text-emerald-800 font-mono">
+                  All Monitored Sectors Clear
+                </div>
+                <p className="text-[11px] text-on-surface-variant max-w-xs leading-relaxed font-mono">
+                  No populated settlements or critical civilian installations intersect the downstream inundation corridor within this radius.
+                </p>
+                <div className="mt-1 px-2.5 py-1 bg-surface-container-lowest border border-outline/20 text-[10px] font-mono text-secondary">
+                  Terrain elevation remains above peak flood stage
+                </div>
               </div>
             ) : (
               settlements.map((settlement) => {

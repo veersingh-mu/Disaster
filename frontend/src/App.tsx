@@ -37,6 +37,7 @@ function AppRoutes({
           <Route path="/" element={<DashboardPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/scenarios/new" element={<SiteSelectionPage />} />
+          <Route path="/site-selection" element={<Navigate to="/scenarios/new" replace />} />
           <Route path="/scenarios/:id/simulating" element={<SimulationLoadingPage />} />
           <Route path="/scenarios/:id/results" element={<ResultsPage />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />

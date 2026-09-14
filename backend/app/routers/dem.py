@@ -15,6 +15,7 @@ def preview_dem(
     simulation_radius_km: float = Query(25.0, gt=0.0, le=500.0, description="Simulation radius in km"),
 ):
     """Provide terrain elevation, slope, and intelligent breach geometry estimates."""
+    is_within_coverage = 6.0 <= latitude <= 38.0 and 68.0 <= longitude <= 98.0
     estimates = estimate_site_geometry_from_dem(latitude, longitude)
 
     return DEMPreviewResponse(
@@ -25,7 +26,8 @@ def preview_dem(
         estimated_dam_height_m=estimates["estimated_dam_height_m"],
         estimated_dam_volume_m3=estimates["estimated_dam_volume_m3"],
         source="SRTM 30m / USGS HydroSHEDS",
-        coverage_available=True,
+        coverage_available=is_within_coverage,
         resolution_m=estimates.get("resolution_m", 30),
         is_cached=estimates.get("is_cached", False),
     )
+
